@@ -9,6 +9,8 @@ import { TypeScript as TypeScriptIcon } from "@/app/components/icons/TypeScript"
 import { Vite } from "@/app/components/icons/Vite";
 import { Vue } from "@/app/components/icons/Vue";
 
+import InteractiveHeader from "./components/fun/InteractiveHeader";
+
 import {
   Card,
   CardDescription,
@@ -55,7 +57,7 @@ const socialMedia: SocialMedia[] = [
  // mudar
 const projects: Project[] = [
   {
-    title: "1",
+    title: "Primer proyecto",
     description: "11",
     stack: [
       { label: "Vite", Icon: Vite },
@@ -64,7 +66,7 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "2",
+    title: "Segundo proyecto",
     description: "22",
     stack: [
       { label: "Next.js", Icon: Nextjs },
@@ -75,21 +77,15 @@ const projects: Project[] = [
 ];
 
 export default function Home() {
+  
   return (
-    <div className="flex min-h-screen w-full flex-col items-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black">
 
-      <header className="flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16">
-        <a
-          href="https://wickz.dev"
-          className="text-lg text-zinc-600 dark:text-zinc-400 font-semibold hover:text-zinc-700 dark:hover:text-zinc-300"
-        >
-          wickz.dev
-        </a>
-
-        hola
+      <header className="relative z-10 flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16">
+        <InteractiveHeader />
       </header>
 
-      <main className="flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:px-16 sm:items-start">
+      <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:px-16 sm:items-start">
 
         <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold tracking-tight text-black dark:text-zinc-50">
@@ -149,6 +145,8 @@ export default function Home() {
               </Card>
             ))}
           </div>
+
+          
         </div>
       </main>
     </div>
