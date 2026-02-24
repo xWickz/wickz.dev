@@ -1,5 +1,4 @@
-import type { ComponentType, SVGProps } from "react";
-
+// SVG icons
 import { GitHub } from "@/app/components/icons/GitHub";
 import { JavaScript } from "@/app/components/icons/JavaScript";
 import { LinkedIn } from "@/app/components/icons/LinkedIn";
@@ -9,8 +8,10 @@ import { TypeScript as TypeScriptIcon } from "@/app/components/icons/TypeScript"
 import { Vite } from "@/app/components/icons/Vite";
 import { Vue } from "@/app/components/icons/Vue";
 
+// Easter-Egg
 import InteractiveHeader from "./components/fun/InteractiveHeader";
 
+// Shadcn
 import {
   Card,
   CardDescription,
@@ -19,29 +20,11 @@ import {
   CardTitle,
 } from "@/app/components/ui/card";
 
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+// Interfaces
+import type { Project } from "@/app/interfaces/Projects";
+import type { SocialMedia } from "@/app/interfaces/SocialMedia";
 
-interface BaseLink {
-  label: string;
-  href: string;
-}
-
-interface SocialMedia extends BaseLink {
-  Icon: IconComponent;
-}
-
-interface StackItem {
-  label: string;
-  Icon?: IconComponent;
-}
-
-interface Project {
-  title: string;
-  description: string;
-  stack: StackItem[];
-}
-
- // mudar 
+// Settings
 const socialMedia: SocialMedia[] = [
   {
     label: "GitHub",
@@ -54,7 +37,7 @@ const socialMedia: SocialMedia[] = [
     Icon: LinkedIn,
   },
 ];
- // mudar
+
 const projects: Project[] = [
   {
     title: "Primer proyecto",
@@ -146,7 +129,7 @@ export default function Home() {
             ))}
           </div>
 
-          
+
         </div>
       </main>
     </div>

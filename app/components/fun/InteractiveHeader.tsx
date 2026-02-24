@@ -8,6 +8,7 @@ const BackgroundShader = dynamic(
 );
 
 import { useRef, useState } from "react";
+import { ModeToggle } from "../ui/modeToggle";
 
 export default function InteractiveHeader() {
   const [shaderActive, setShader] = useState(false);
@@ -28,20 +29,17 @@ export default function InteractiveHeader() {
   return (
     <>
       <BackgroundShader active={shaderActive} />
-      <header
-        className="text-lg text-zinc-600 dark:text-zinc-400 font-semibold hover:text-zinc-700 dark:hover:text-zinc-300"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-              <a
+        <a
         href="https://wickz.dev"
         target="_blank"
         rel="noopener noreferrer"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         wickz.dev
       </a>
         
-      </header>
+        <ModeToggle/>
     </>
   );
 }
