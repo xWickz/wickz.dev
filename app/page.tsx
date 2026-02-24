@@ -1,7 +1,13 @@
 import type { ComponentType, SVGProps } from "react";
 
-import { GitHub } from "@/app/components/GitHub";
-import { LinkedIn } from "@/app/components/LinkedIn";
+import { GitHub } from "@/app/components/icons/GitHub";
+import { JavaScript } from "@/app/components/icons/JavaScript";
+import { LinkedIn } from "@/app/components/icons/LinkedIn";
+import { Nextjs } from "@/app/components/icons/Nextjs";
+import { Tailwind } from "@/app/components/icons/Tailwind";
+import { TypeScript as TypeScriptIcon } from "@/app/components/icons/TypeScript";
+import { Vite } from "@/app/components/icons/Vite";
+import { Vue } from "@/app/components/icons/Vue";
 
 import {
   Card,
@@ -22,12 +28,18 @@ interface SocialMedia extends BaseLink {
   Icon: IconComponent;
 }
 
+interface StackItem {
+  label: string;
+  Icon?: IconComponent;
+}
+
 interface Project {
   title: string;
   description: string;
-  cta: string;
+  stack: StackItem[];
 }
 
+ // mudar 
 const socialMedia: SocialMedia[] = [
   {
     label: "GitHub",
@@ -40,36 +52,51 @@ const socialMedia: SocialMedia[] = [
     Icon: LinkedIn,
   },
 ];
-
+ // mudar
 const projects: Project[] = [
   {
-    title: "Proyecto Uno",
-    description: "Descripción breve del proyecto o stack usado.",
-    cta: "Ver más",
+    title: "1",
+    description: "11",
+    stack: [
+      { label: "Vite", Icon: Vite },
+      { label: "Vue", Icon: Vue },
+      { label: "JavaScript", Icon: JavaScript },
+    ],
   },
   {
-    title: "Proyecto Dos",
-    description: "Otra descripción para completar la segunda tarjeta.",
-    cta: "Ver más",
+    title: "2",
+    description: "22",
+    stack: [
+      { label: "Next.js", Icon: Nextjs },
+      { label: "TypeScript", Icon: TypeScriptIcon },
+      { label: "Tailwind", Icon: Tailwind },
+    ],
   },
 ];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-5xl flex-col items-center justify-start gap-12 py-16 px-16 sm:items-start">
+    <div className="flex min-h-screen w-full flex-col items-center bg-zinc-50 font-sans dark:bg-black">
+
+      <header className="flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16">
         <a
           href="https://wickz.dev"
           className="text-lg text-zinc-600 dark:text-zinc-400 font-semibold hover:text-zinc-700 dark:hover:text-zinc-300"
         >
           wickz.dev
         </a>
-        <div className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-0.5 tracking-tight text-black dark:text-zinc-50">
+
+        hola
+      </header>
+
+      <main className="flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:px-16 sm:items-start">
+
+        <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left">
+          <h1 className="max-w-xs text-3xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Santiago Griman
           </h1>
 
-          <p className="max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          <p className="max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
             Fullstack (almost) web developer from Venezuela. I like to build
             things and learn new technologies. I love UI/UX design, build
             backend and frontend applications and more things.
@@ -92,17 +119,32 @@ export default function Home() {
           </div>
 
           {/* Projects */}
+
+          <h2 className="max-w-xs text-2xl font-semibold tracking-tighter text-black dark:text-zinc-50">
+            Projects
+          </h2>
+
           <div className="grid w-full gap-6 sm:grid-cols-2">
-            {projects.map(({ title, description, cta }) => (
-              <Card key={title} className="h-full">
+            {projects.map(({ title, description, stack }) => (
+              <Card key={title} className="h-full w-full">
                 <CardHeader>
                   <CardTitle>{title}</CardTitle>
                   <CardDescription>{description}</CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <button className="rounded-full border border-zinc-200 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:bg-zinc-900">
-                    {cta}
-                  </button>
+                  <div className="flex flex-wrap gap-2 text-sm">
+                    {stack.map(({ label, Icon }) => (
+                      <span
+                        key={label}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 px-3 py-1 text-zinc-600 dark:border-zinc-700 dark:text-zinc-200"
+                      >
+                        {Icon ? (
+                          <Icon className="h-4 w-4" aria-hidden="true" />
+                        ) : null}
+                        {label}
+                      </span>
+                    ))}
+                  </div>
                 </CardFooter>
               </Card>
             ))}
