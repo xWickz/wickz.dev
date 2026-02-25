@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const BackgroundShader = dynamic(
-  () => import("@/app/components/fun/BackgroundShader").then((mod) => mod.BackgroundShader),
+  () => import("@/components/fun/BackgroundShader").then((mod) => mod.BackgroundShader),
   { ssr: false }
 );
 

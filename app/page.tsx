@@ -1,15 +1,5 @@
-// SVG icons
-import { GitHub } from "@/app/components/icons/GitHub";
-import { JavaScript } from "@/app/components/icons/JavaScript";
-import { LinkedIn } from "@/app/components/icons/LinkedIn";
-import { Nextjs } from "@/app/components/icons/Nextjs";
-import { Tailwind } from "@/app/components/icons/Tailwind";
-import { TypeScript as TypeScriptIcon } from "@/app/components/icons/TypeScript";
-import { Vite } from "@/app/components/icons/Vite";
-import { Vue } from "@/app/components/icons/Vue";
-
 // Easter-Egg
-import InteractiveHeader from "./components/fun/InteractiveHeader";
+import InteractiveHeader from "@/components/fun/InteractiveHeader";
 
 // Shadcn
 import {
@@ -18,46 +8,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/app/components/ui/card";
+} from "@/components/ui/card";
 
 // Interfaces
-import type { Project } from "@/app/interfaces/Projects";
-import type { SocialMedia } from "@/app/interfaces/SocialMedia";
-
-// Settings
-const socialMedia: SocialMedia[] = [
-  {
-    label: "GitHub",
-    href: "https://github.com/xWickz",
-    Icon: GitHub,
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/santiago-griman/",
-    Icon: LinkedIn,
-  },
-];
-
-const projects: Project[] = [
-  {
-    title: "Primer proyecto",
-    description: "11",
-    stack: [
-      { label: "Vite", Icon: Vite },
-      { label: "Vue", Icon: Vue },
-      { label: "JavaScript", Icon: JavaScript },
-    ],
-  },
-  {
-    title: "Segundo proyecto",
-    description: "22",
-    stack: [
-      { label: "Next.js", Icon: Nextjs },
-      { label: "TypeScript", Icon: TypeScriptIcon },
-      { label: "Tailwind", Icon: Tailwind },
-    ],
-  },
-];
+import { socialMedia } from "@/config/socialMedia";
+import { projects } from "@/config/projects";
 
 export default function Home() {
   
@@ -90,7 +45,7 @@ export default function Home() {
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-600 dark:text-zinc-400 font-semibold hover:text-zinc-700 dark:hover:text-zinc-300"
+                className="text-zinc-600 dark:text-zinc-400 font-semibold hover:text-zinc-700 dark:hover:text-zinc-300 "
               >
                 <Icon className="h-6 w-6 fill-zinc-600 transition-colors duration-150 dark:fill-zinc-400 dark:hover:fill-zinc-300" />
               </a>

@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/app/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,14 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: 'black',
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wickz.dev"),
+  metadataBase: "https://wickz.dev",
   title: {
     default: "Santiago Griman - wickz.dev",
     template: "%s - wickz.dev",
   },
   description:
-    "Personal portfolio, showcasing projects and social media links.",
+    "Fullstack (almost) web developer from Venezuela. I like to build things and learn new technologies. I love UI/UX design, build backend and frontend applications and more things.",
   keywords: [
     "Santiago Griman",
     "wickz dev",
@@ -32,11 +37,23 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://wickz.dev",
     title: "Santiago Griman · Fullstack Developer",
-    description: "Projects, ideas and experiments from Santiago Griman.",
+    description: "Fullstack (almost) web developer from Venezuela. I like to build things and learn new technologies. I love UI/UX design, build backend and frontend applications and more things.",
     siteName: "wickz.dev",
+    locale: "en-US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Santiago Griman - wickz.dev",
+      }
+    ]
   },
   alternates: {
-    canonical: "https://wickz.dev",
+    canonical: "/",
+    languages: {
+      'en-US': "/en-US",
+    }
   },
   robots: {
     index: true,
