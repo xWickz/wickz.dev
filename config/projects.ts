@@ -5,17 +5,18 @@ import { TypeScript, JavaScript, TailwindCSS, HTML5, React, Vue, Supabase, CSS }
 export const projects: Project[] = [
   {
     title: "GD Search",
-    description: "Search the most popular Geometry Dash Level (Just for Fun)",
+    description: "🔺 Search the most popular Geometry-Dash Level.",
+    href: "https://github.com/xWickz/gd-search", // fake
     stack: [
       { label: "React", Icon: React },
       { label: "TypeScript", Icon: TypeScript },
       { label: "Tailwind CSS", Icon: TailwindCSS },
-      { label: "CSS", Icon: CSS },
     ],
   },
   {
     title: "Google Translator AI",
-    description: "AI-powered translation tool for Google Translate just for fun and testing with OOP concepts in JavaScript.",
+    description: "🤖 Simple project using AI-Powered Google Translator.",
+    href: "https://github.com/xWickz/google-translator-ai",
     stack: [
       { label: "JavaScript", Icon: JavaScript },
       { label: "HTML", Icon: HTML5 },
@@ -24,7 +25,8 @@ export const projects: Project[] = [
   },
   {
     title: "JavaScript Projects",
-    description: "Some collection of personal JavaScript proyects, just for fun and learning. I made funny things like: Quiz, Podoromo, Todo List, etc.",
+    description: "📂 Collection of personal JavaScript Projects for fun.",
+    href: "https://github.com/xWickz/proyectos-javascript",
     stack: [
         { label: "JavaScript", Icon: JavaScript },
         { label: "Tailwind CSS", Icon: TailwindCSS },
@@ -35,7 +37,8 @@ export const projects: Project[] = [
   }, 
   {
     title: "Mini Forum for a Game",
-    description: "A mini forum for Last War: Survival Game, this was dedicated to my alliance in the game, including features like: create posts with WYSIWYG editor, roles, etc. Such a fun project!",
+    description: "🎮 A mini forum for a game using Vue and Supabase.",
+    href: "https://github.com/xWickz/5dg-rott",
     stack: [
         { label: "Vue", Icon: Vue },
         { label: "Tailwind CSS", Icon: TailwindCSS },

@@ -11,6 +11,7 @@ interface Project {
   title: string;
   description: string;
   stack: StackItem[];
+  href?: string;
 }
 
 export type { Project };

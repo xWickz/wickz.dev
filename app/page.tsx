@@ -1,14 +1,16 @@
-// Easter-Egg
-import InteractiveHeader from "@/components/fun/InteractiveHeader";
+import { ModeToggle } from "@/components/ui/modeToggle";
 
 // Shadcn
 import {
   Card,
+  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
 
 // Interfaces
 import { socialMedia } from "@/config/socialMedia";
@@ -17,14 +19,21 @@ import { projects } from "@/config/projects";
 export default function Home() {
   
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black">
-
+    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black animate-fade-in">
       <header className="relative z-10 flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16">
-        <InteractiveHeader />
+        <a
+        href="https://wickz.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-transform duration-150 hover:scale-500 hover:rotate-3 hover:font-extrabold"
+      >
+        wickz.dev
+      </a>
+        
+        <ModeToggle/>
       </header>
 
       <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:px-16 sm:items-start">
-
         <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Santiago Griman
@@ -59,32 +68,39 @@ export default function Home() {
           </h2>
 
           <div className="grid w-full gap-6 sm:grid-cols-2">
-            {projects.map(({ title, description, stack }) => (
+            {projects.map(({ title, description, href, stack }) => (
               <Card key={title} className="h-full w-full">
                 <CardHeader>
                   <CardTitle>{title}</CardTitle>
                   <CardDescription>{description}</CardDescription>
                 </CardHeader>
-                <CardFooter>
-                  <div className="flex flex-wrap gap-2 text-sm">
+                
+                  <CardContent>
+                    {href && (
+                    <Button variant="outline">
+                      <a href={href} target="_blank" rel="noopener noreferrer">
+                        Go to repo
+                      </a>
+                    </Button>
+                    )}
+
+                  <div className="flex flex-wrap gap-2 text-sm mt-3">
                     {stack.map(({ label, Icon }) => (
                       <span
                         key={label}
                         className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 px-3 py-1 text-zinc-600 dark:border-zinc-700 dark:text-zinc-200"
                       >
-                        {Icon ? (
+                        {Icon && (
                           <Icon className="h-4 w-4" aria-hidden="true" />
-                        ) : null}
+                        )}
                         {label}
                       </span>
                     ))}
                   </div>
-                </CardFooter>
+                  </CardContent>
               </Card>
             ))}
           </div>
-
-
         </div>
       </main>
     </div>
