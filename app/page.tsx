@@ -1,35 +1,27 @@
-import { ModeToggle } from "@/components/ui/modeToggle";
+import { Button } from "@/components/ui/button";
 
 // Shadcn
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-import { Button } from "@/components/ui/button";
-
+import { ModeToggle } from "@/components/ui/modeToggle";
+import { projects } from "@/config/projects";
 // Interfaces
 import { socialMedia } from "@/config/socialMedia";
-import { projects } from "@/config/projects";
 
 export default function Home() {
-  
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black animate-fade-in">
+    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black">
       <header className="relative z-10 flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16">
-        <a
-        href="https://wickz.dev"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        wickz.dev
-      </a>
-        
-        <ModeToggle/>
+        <a href="https://wickz.dev" target="_blank" rel="noopener noreferrer">
+          wickz.dev
+        </a>
+
+        <ModeToggle />
       </header>
 
       <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:px-16 sm:items-start">
@@ -73,15 +65,15 @@ export default function Home() {
                   <CardTitle>{title}</CardTitle>
                   <CardDescription>{description}</CardDescription>
                 </CardHeader>
-                
-                  <CardContent>
-                    {href && (
+
+                <CardContent>
+                  {href && (
                     <Button variant="outline">
                       <a href={href} target="_blank" rel="noopener noreferrer">
                         Go to repo
                       </a>
                     </Button>
-                    )}
+                  )}
 
                   <div className="flex flex-wrap gap-2 text-sm mt-3">
                     {stack.map(({ label, Icon }) => (
@@ -96,7 +88,7 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  </CardContent>
+                </CardContent>
               </Card>
             ))}
           </div>

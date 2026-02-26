@@ -1,6 +1,5 @@
-import { SocialMedia } from "@/interfaces/SocialMedia";
-
 import { GitHub, LinkedIn } from "@/components/icons/svgIcons";
+import type { SocialMedia } from "@/interfaces/SocialMedia";
 
 export const socialMedia: SocialMedia[] = [
   {
