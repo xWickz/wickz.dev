@@ -25,7 +25,6 @@ export default function Home() {
         href="https://wickz.dev"
         target="_blank"
         rel="noopener noreferrer"
-        className="transition-transform duration-150 hover:scale-500 hover:rotate-3 hover:font-extrabold"
       >
         wickz.dev
       </a>
