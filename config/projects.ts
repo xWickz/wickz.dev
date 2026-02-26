@@ -1,6 +1,14 @@
-import { Project } from "@/interfaces/Projects";
-
-import { TypeScript, JavaScript, TailwindCSS, HTML5, React, Vue, Supabase, CSS } from "@/components/icons/svgIcons";
+import {
+  CSS,
+  HTML5,
+  JavaScript,
+  React,
+  Supabase,
+  TailwindCSS,
+  TypeScript,
+  Vue,
+} from "@/components/icons/svgIcons";
+import type { Project } from "@/interfaces/Projects";
 
 export const projects: Project[] = [
   {
@@ -20,7 +28,7 @@ export const projects: Project[] = [
     stack: [
       { label: "JavaScript", Icon: JavaScript },
       { label: "HTML", Icon: HTML5 },
-      { label: "CSS", Icon: CSS   },
+      { label: "CSS", Icon: CSS },
     ],
   },
   {
@@ -28,22 +36,21 @@ export const projects: Project[] = [
     description: "📂 Collection of personal JavaScript Projects for fun.",
     href: "https://github.com/xWickz/proyectos-javascript",
     stack: [
-        { label: "JavaScript", Icon: JavaScript },
-        { label: "Tailwind CSS", Icon: TailwindCSS },
-        { label: "Vue", Icon: Vue },
-        { label: "HTML", Icon: HTML5 },
-
-    ]
-  }, 
+      { label: "JavaScript", Icon: JavaScript },
+      { label: "Tailwind CSS", Icon: TailwindCSS },
+      { label: "Vue", Icon: Vue },
+      { label: "HTML", Icon: HTML5 },
+    ],
+  },
   {
     title: "Mini Forum for a Game",
     description: "🎮 A mini forum for a game using Vue and Supabase.",
     href: "https://github.com/xWickz/5dg-rott",
     stack: [
-        { label: "Vue", Icon: Vue },
-        { label: "Tailwind CSS", Icon: TailwindCSS },
-        { label: "JavaScript", Icon: JavaScript },
-        { label: "Supabase", Icon: Supabase },
-    ]
-  }
+      { label: "Vue", Icon: Vue },
+      { label: "Tailwind CSS", Icon: TailwindCSS },
+      { label: "JavaScript", Icon: JavaScript },
+      { label: "Supabase", Icon: Supabase },
+    ],
+  },
 ];

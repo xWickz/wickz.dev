@@ -1,21 +1,21 @@
-import { projects } from "@/config/projects";
-// Interfaces
-import { socialMedia } from "@/config/socialMedia";
-import { Button } from "@/ui/button";
+import { Button } from "@/components/ui/button";
+
 // Shadcn
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/ui/card";
-import { ModeToggle } from "@/ui/modeToggle";
+} from "@/components/ui/card";
+import { ModeToggle } from "@/components/ui/modeToggle";
+import { projects } from "@/config/projects";
+// Interfaces
+import { socialMedia } from "@/config/socialMedia";
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black animate-fade-in">
+    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black">
       <header className="relative z-10 flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16">
         <a href="https://wickz.dev" target="_blank" rel="noopener noreferrer">
           wickz.dev
