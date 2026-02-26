@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: 'black',
-}
+  themeColor: "black",
+};
 
 export const metadata: Metadata = {
-  metadataBase: "https://wickz.dev",
+  metadataBase: new URL("https://wickz.dev"),
   title: {
     default: "Santiago Griman - wickz.dev",
     template: "%s - wickz.dev",
@@ -37,7 +37,8 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://wickz.dev",
     title: "Santiago Griman · Fullstack Developer",
-    description: "Fullstack (almost) web developer from Venezuela. I like to build things and learn new technologies. I love UI/UX design, build backend and frontend applications and more things.",
+    description:
+      "Fullstack (almost) web developer from Venezuela. I like to build things and learn new technologies. I love UI/UX design, build backend and frontend applications and more things.",
     siteName: "wickz.dev",
     locale: "en-US",
     images: [
@@ -46,14 +47,14 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Santiago Griman - wickz.dev",
-      }
-    ]
+      },
+    ],
   },
   alternates: {
     canonical: "/",
     languages: {
-      'en-US': "/en-US",
-    }
+      "en-US": "/en-US",
+    },
   },
   robots: {
     index: true,
@@ -71,12 +72,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider 
-        attribute="class" 
-        defaultTheme="system" 
-        enableSystem
-        disableTransitionOnChange>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
         </ThemeProvider>
       </body>
     </html>

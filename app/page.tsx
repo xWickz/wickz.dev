@@ -68,7 +68,7 @@ export default function Home() {
 
                 <CardContent>
                   {href && (
-                    <Button variant="outline">
+                    <Button variant="outline" asChild>
                       <a href={href} target="_blank" rel="noopener noreferrer">
                         Go to repo
                       </a>
