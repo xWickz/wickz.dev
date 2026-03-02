@@ -69,7 +69,12 @@ export default function Home() {
                 <CardContent>
                   {href && (
                     <Button variant="outline" asChild>
-                      <a href={href} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Go to ${title} repository`}
+                      >
                         Go to repo
                       </a>
                     </Button>
