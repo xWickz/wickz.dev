@@ -14,11 +14,11 @@ export const projects: Project[] = [
   {
     title: "GD Search",
     description: "🔺 Search the most popular Geometry-Dash Level.",
-    href: "https://github.com/xWickz/gd-search", // fake
+    href: "https://github.com/xWickz/gd-search",
     stack: [
       { label: "React", Icon: React },
       { label: "TypeScript", Icon: TypeScript },
-      { label: "Tailwind CSS", Icon: TailwindCSS },
+      { label: "Tailwind", Icon: TailwindCSS },
     ],
   },
   {
@@ -33,11 +33,12 @@ export const projects: Project[] = [
   },
   {
     title: "JavaScript Projects",
-    description: "📂 Collection of personal JavaScript Projects for fun.",
+    description: "📂 Collection of personal JavaScript Projects.",
     href: "https://github.com/xWickz/proyectos-javascript",
+    demo: "https://proyectosjs-wickz.netlify.app/",
     stack: [
       { label: "JavaScript", Icon: JavaScript },
-      { label: "Tailwind CSS", Icon: TailwindCSS },
+      { label: "Tailwind", Icon: TailwindCSS },
       { label: "Vue", Icon: Vue },
       { label: "HTML", Icon: HTML5 },
     ],
@@ -46,9 +47,10 @@ export const projects: Project[] = [
     title: "Mini Forum for a Game",
     description: "🎮 A mini forum for a game using Vue and Supabase.",
     href: "https://github.com/xWickz/5dg-rott",
+    demo: "https://rott-guides.vercel.app/",
     stack: [
       { label: "Vue", Icon: Vue },
-      { label: "Tailwind CSS", Icon: TailwindCSS },
+      { label: "Tailwind", Icon: TailwindCSS },
       { label: "JavaScript", Icon: JavaScript },
       { label: "Supabase", Icon: Supabase },
     ],

@@ -1,6 +1,9 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
+import { projects } from "@/config/projects";
+// Interfaces
+import { socialMedia } from "@/config/socialMedia";
+import { Badge } from "@/ui/badge";
+import { Button } from "@/ui/button";
+import { ButtonGroup } from "@/ui/button-group";
 // Shadcn
 import {
   Card,
@@ -8,13 +11,18 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/ui/card";
+import { ModeToggle } from "@/ui/modeToggle";
+import { Separator } from "@/ui/separator";
 
-import { ModeToggle } from "@/components/ui/modeToggle";
-import { projects } from "@/config/projects";
-
-// Interfaces
-import { socialMedia } from "@/config/socialMedia";
+const randomRes: string[] = [
+  "I am working in this! Be pacient.",
+  "Is this supposed to be working?",
+  "Working on this, but it's a bit tricky. Stay tuned!",
+  "This feature is in the works, but it's taking a bit longer than expected. Thanks for your patience!",
+  "Oops... This may not be available yet!",
+  "Wait, am I supposed to have this working? I'm on it!",
+];
 
 export default function Home() {
   return (
@@ -39,27 +47,33 @@ export default function Home() {
           <ModeToggle />
         </div>
       </header>
-
       <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:px-16 sm:items-start">
         <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold tracking-tight text-black dark:text-zinc-50">
-            Santiago Griman
+          <h1 className="max-w-xs text-3xl font-bold tracking-tight text-black dark:text-zinc-50 flex items-center gap-2">
+            Santiago Griman <Badge variant="outline">Disponible</Badge>
           </h1>
-
-          <p className="max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
-            Hybrid full-stack web developer from Venezuela. I like to build
-            things and learn new technologies. I love UI/UX design, build
-            backend and frontend applications and more things.
+          <h2 className="max-w-auto text-xl font-medium tracking-tight text-black dark:text-zinc-200">
+            I build fast, scalable web apps for startups and small businesses.
+          </h2>
+          <p className="max-w-2xl text-justify text-lg text-zinc-600 dark:text-zinc-400">
+            Full-stack web developer. I turn ideas into reliable, user-focused
+            products with clean architecture and clear communication.
           </p>
-
+          <ButtonGroup>
+            <Button asChild variant="outline">
+              <a href="#projects">View projects</a>
+            </Button>
+            <Button variant="positive" disabled={true}>
+              <a href="#projects">Contact me</a>
+            </Button>
+          </ButtonGroup>
           {/* Projects */}
-
+          <Separator />
           <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Projects
           </h2>
-
-          <div className="grid w-full gap-6 sm:grid-cols-2">
-            {projects.map(({ title, description, href, stack }) => (
+          <div className="grid w-full gap-6 sm:grid-cols-2" id="projects">
+            {projects.map(({ title, description, href, demo, stack }) => (
               <Card key={title} className="h-full w-full">
                 <CardHeader>
                   <CardTitle>{title}</CardTitle>
@@ -79,24 +93,58 @@ export default function Home() {
                       </a>
                     </Button>
                   )}
-
-                  <div className="flex flex-wrap gap-2 text-sm mt-3">
-                    {stack.map(({ label, Icon }) => (
-                      <span
-                        key={label}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-zinc-900 px-3 py-1 text-black dark:border-zinc-700 dark:text-zinc-200"
+                  <Button
+                    variant={demo ? "positive" : "destructive"}
+                    asChild={Boolean(demo)}
+                    className="ml-2"
+                    disabled={!demo}
+                  >
+                    {demo ? (
+                      <a
+                        href={demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View demo for ${title}`}
                       >
+                        View project
+                      </a>
+                    ) : (
+                      <span>Demo unavailable</span>
+                    )}
+                  </Button>
+                  <div className="flex flex-wrap gap-2 text-xs mt-3">
+                    {stack.map(({ label, Icon }) => (
+                      <Badge variant="outline" key={label}>
                         {Icon && (
-                          <Icon className="h-4 w-4" aria-hidden="true" />
+                          <Icon className="h-3 w-3" aria-hidden="true" />
                         )}
                         {label}
-                      </span>
+                      </Badge>
                     ))}
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          {/* Services */}
+          <Separator />
+          <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
+            Services
+          </h2>
+          <p className="text-black dark:text-zinc-500">
+            {randomRes[Math.floor(Math.random() * randomRes.length)]}
+          </p>
+
+          {/* Contact Me */}
+          <Separator />
+          <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
+            Contact Me
+          </h2>
+          <p className="text-black dark:text-zinc-500">
+            {randomRes[Math.floor(Math.random() * randomRes.length)]}
+          </p>
+          <Separator />
         </div>
       </main>
 

@@ -12,6 +12,7 @@ interface Project {
   description: string;
   stack: StackItem[];
   href?: string;
+  demo?: string;
 }
 
 export type { Project };
