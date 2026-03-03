@@ -1,3 +1,4 @@
+import { CarouselOrientation } from "@/components/ui/carousel-orientation";
 import { projects } from "@/config/projects";
 // Interfaces
 import { socialMedia } from "@/config/socialMedia";
@@ -12,6 +13,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/ui/carousel";
 import { ModeToggle } from "@/ui/modeToggle";
 import { Separator } from "@/ui/separator";
 
@@ -132,10 +140,9 @@ export default function Home() {
           <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Services
           </h2>
-          <p className="text-black dark:text-zinc-500">
-            {randomRes[Math.floor(Math.random() * randomRes.length)]}
-          </p>
-
+          <div className="justify-center w-full gap-6 sm:flex my-15">
+            <CarouselOrientation />
+          </div>
           {/* Contact Me */}
           <Separator />
           <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
