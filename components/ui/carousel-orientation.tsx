@@ -43,15 +43,15 @@ export function CarouselOrientation() {
       opts={{
         align: "start",
       }}
-      orientation="vertical"
-      className="w-full max-w-lg"
+      orientation="horizontal"
+      className="w-full max-w-2xl h-full"
     >
-      <CarouselContent className="-mt-1 h-67.5">
+      <CarouselContent className="-mt-1 h-67.5 w-full">
         {services.map(({ title, description }, index) => (
-          <CarouselItem key={index} className="basis-1/2 pt-1">
-            <div className="p-1">
-              <Card>
-                <CardContent className="grid items-center justify-center p-6">
+          <CarouselItem key={index} className="basis-full sm:basis-1/2 pt-1">
+            <div className="p-1 h-full">
+              <Card className="h-full">
+                <CardContent className="grid items-center justify-center p-6 gap-3">
                   <span className="text-3xl font-semibold">{title}</span>
                   <span className="text-zinc-50">{description}</span>
                 </CardContent>
