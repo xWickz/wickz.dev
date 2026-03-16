@@ -82,7 +82,10 @@ export default function Home() {
           <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
             <span className="text-blue-500/90">Personal</span> Projects
           </h2>
-          <div className="grid w-full gap-6 sm:grid-cols-2" id="projects">
+          <div
+            className="grid w-full gap-6 sm:grid-cols-2"
+            id="personalprojects"
+          >
             {personalProjects.map(
               ({ title, description, href, demo, stack }) => (
                 <Card key={title} className="h-full w-full">
@@ -145,13 +148,16 @@ export default function Home() {
           <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Projects
           </h2>
-          <div className="grid w-full gap-6 sm:grid-cols-2" id="projectss">
+          <div className="grid w-full gap-6 sm:grid-cols-2" id="projects">
             {Projects.map(
-              ({ title, description, problem, solution, results }) => (
+              ({ title, time, description, problem, solution, results }) => (
                 <Card key={title}>
                   <CardHeader>
                     <CardTitle>{title}</CardTitle>
-                    <CardDescription>{description}</CardDescription>
+                    <CardDescription>
+                      <p className="font-semibold text-xs mb-1">{time}</p>
+                      <p>{description}</p>
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Accordion type="single" collapsible className="max-w-lg">

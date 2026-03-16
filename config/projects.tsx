@@ -3,6 +3,7 @@ import type { Project } from "@/interfaces/Projects";
 export const Projects: Project[] = [
   {
     title: "Good Life Insurance",
+    time: "Jan. 2025 - Actually",
     description: (
       <>
         Good Life Insurance is a small company that provides insurance services.
