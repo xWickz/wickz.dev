@@ -30,6 +30,11 @@ const services: Services[] = [
     description:
       "I develop applications which are scalabe, secure and efficient. Using Node.js, Express and good practices.",
   },
+  {
+    title: "Automation",
+    description:
+      "I automate repetitive tasks and processes to improve efficiency and productivity.",
+  },
 ];
 
 export function CarouselOrientation() {

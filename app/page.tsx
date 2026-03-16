@@ -1,7 +1,15 @@
+import { Lightbulb, SmilePlus, TriangleAlert } from "lucide-react";
 import { CarouselOrientation } from "@/components/ui/carousel-orientation";
-import { projects } from "@/config/projects";
+import { personalProjects } from "@/config/personalprojects";
+import { Projects } from "@/config/projects";
 // Interfaces
 import { socialMedia } from "@/config/socialMedia";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/ui/accordion";
 import { Badge } from "@/ui/badge";
 import { Button } from "@/ui/button";
 import { ButtonGroup } from "@/ui/button-group";
@@ -13,13 +21,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/ui/carousel";
 import { ModeToggle } from "@/ui/modeToggle";
 import { Separator } from "@/ui/separator";
 
@@ -58,10 +59,11 @@ export default function Home() {
       <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:px-16 sm:items-start">
         <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-bold tracking-tight text-black dark:text-zinc-50 flex items-center gap-2">
-            Santiago Griman <Badge variant="outline">Disponible</Badge>
+            Santiago <span className="text-blue-500/90">Griman</span>
+            <Badge variant="outline">Available</Badge>
           </h1>
           <h2 className="max-w-auto text-xl font-medium tracking-tight text-black dark:text-zinc-200">
-            I build fast, scalable web apps for startups and small businesses.
+            I build fast, scalable web apps for startups and businesses.
           </h2>
           <p className="max-w-2xl text-justify text-lg text-zinc-600 dark:text-zinc-400">
             Full-stack web developer. I turn ideas into reliable, user-focused
@@ -75,66 +77,117 @@ export default function Home() {
               <a href="#projects">Contact me</a>
             </Button>
           </ButtonGroup>
+          {/* Personal Projects */}
+          <Separator />
+          <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
+            <span className="text-blue-500/90">Personal</span> Projects
+          </h2>
+          <div className="grid w-full gap-6 sm:grid-cols-2" id="projects">
+            {personalProjects.map(
+              ({ title, description, href, demo, stack }) => (
+                <Card key={title} className="h-full w-full">
+                  <CardHeader>
+                    <CardTitle>{title}</CardTitle>
+                    <CardDescription>{description}</CardDescription>
+                  </CardHeader>
+
+                  <CardContent>
+                    {href && (
+                      <Button variant="outline" asChild>
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Go to ${title} repository`}
+                          className="mr-2"
+                        >
+                          Go to repo
+                        </a>
+                      </Button>
+                    )}
+
+                    <Button
+                      variant={demo ? "positive" : "destructive"}
+                      asChild={Boolean(demo)}
+                      disabled={!demo}
+                    >
+                      {demo ? (
+                        <a
+                          href={demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View demo for ${title}`}
+                        >
+                          View project
+                        </a>
+                      ) : (
+                        <span>Demo unavailable</span>
+                      )}
+                    </Button>
+
+                    <div className="flex flex-wrap gap-2 text-xs mt-3">
+                      {stack.map(({ label, Icon }) => (
+                        <Badge variant="outline" key={label}>
+                          {Icon && (
+                            <Icon className="h-3 w-3" aria-hidden="true" />
+                          )}
+                          {label}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ),
+            )}
+          </div>
           {/* Projects */}
           <Separator />
           <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
             Projects
           </h2>
-          <div className="grid w-full gap-6 sm:grid-cols-2" id="projects">
-            {projects.map(({ title, description, href, demo, stack }) => (
-              <Card key={title} className="h-full w-full">
-                <CardHeader>
-                  <CardTitle>{title}</CardTitle>
-                  <CardDescription>{description}</CardDescription>
-                </CardHeader>
-
-                <CardContent>
-                  {href && (
-                    <Button variant="outline" asChild>
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Go to ${title} repository`}
-                      >
-                        Go to repo
-                      </a>
-                    </Button>
-                  )}
-                  <Button
-                    variant={demo ? "positive" : "destructive"}
-                    asChild={Boolean(demo)}
-                    className="ml-2"
-                    disabled={!demo}
-                  >
-                    {demo ? (
-                      <a
-                        href={demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`View demo for ${title}`}
-                      >
-                        View project
-                      </a>
-                    ) : (
-                      <span>Demo unavailable</span>
-                    )}
-                  </Button>
-                  <div className="flex flex-wrap gap-2 text-xs mt-3">
-                    {stack.map(({ label, Icon }) => (
-                      <Badge variant="outline" key={label}>
-                        {Icon && (
-                          <Icon className="h-3 w-3" aria-hidden="true" />
-                        )}
-                        {label}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid w-full gap-6 sm:grid-cols-2" id="projectss">
+            {Projects.map(
+              ({ title, description, problem, solution, results }) => (
+                <Card key={title}>
+                  <CardHeader>
+                    <CardTitle>{title}</CardTitle>
+                    <CardDescription>{description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Accordion type="single" collapsible className="max-w-lg">
+                      <AccordionItem value="problem">
+                        <AccordionTrigger className="flex items-center gap-2">
+                          <TriangleAlert className="w-4 h-4" />
+                          Problem
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <p>{problem}</p>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="solution">
+                        <AccordionTrigger className="flex items-center gap-2">
+                          <Lightbulb className="w-4 h-4" />
+                          Solution
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <p>{solution}</p>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="results">
+                        <AccordionTrigger className="flex items-center gap-2">
+                          <SmilePlus className="w-4 h-4" />
+                          Results
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <p>{results}</p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  </CardContent>
+                </Card>
+              ),
+            )}
           </div>
-
           {/* Services */}
           <Separator />
           <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">

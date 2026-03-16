@@ -8,9 +8,9 @@ import {
   TypeScript,
   Vue,
 } from "@/components/icons/svgIcons";
-import type { Project } from "@/interfaces/Projects";
+import type { Project } from "@/interfaces/PersonalProjects";
 
-export const projects: Project[] = [
+export const personalProjects: Project[] = [
   {
     title: "GD Search",
     description: "🔺 Search the most popular Geometry-Dash Level.",
@@ -54,5 +54,12 @@ export const projects: Project[] = [
       { label: "JavaScript", Icon: JavaScript },
       { label: "Supabase", Icon: Supabase },
     ],
+  },
+  {
+    title: "BCV: Current Rate",
+    description:
+      "💸 A simple shortcut app to check the current exchange rate of BCV (Banco Central de Venezuela).",
+    demo: "https://www.icloud.com/shortcuts/2a0b8f581a1f42eebe6bdd16c4f737f8",
+    stack: [{ label: "API", Icon: undefined }],
   },
 ];

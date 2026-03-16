@@ -1,18 +1,12 @@
-import type { ComponentType, SVGProps } from "react";
-
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
-
-interface StackItem {
-  label: string;
-  Icon?: IconComponent;
-}
+import type { ReactNode } from "react";
 
 interface Project {
   title: string;
-  description: string;
-  stack: StackItem[];
-  href?: string;
-  demo?: string;
+  time: string;
+  description: ReactNode;
+  problem: ReactNode;
+  solution: ReactNode;
+  results: ReactNode;
 }
 
 export type { Project };
