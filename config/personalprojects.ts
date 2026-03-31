@@ -2,6 +2,7 @@ import {
   CSS,
   HTML5,
   JavaScript,
+  Nextjs,
   React,
   Supabase,
   TailwindCSS,
@@ -60,6 +61,21 @@ export const personalProjects: Project[] = [
     description:
       "💸 A simple shortcut app to check the current exchange rate of BCV (Banco Central de Venezuela).",
     demo: "https://www.icloud.com/shortcuts/2a0b8f581a1f42eebe6bdd16c4f737f8",
-    stack: [{ label: "API", Icon: undefined }],
+    stack: [
+      { label: "API", Icon: undefined },
+      { label: "Apple Shortcuts", Icon: undefined },
+    ],
+  },
+  {
+    title: "Case-Shell: Hackathon Project",
+    description:
+      "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system.",
+    href: "https://github.com/xWickz/CaseShell-Hackaton",
+    demo: "https://case-shell-app-xjvxbi-1c69b9-45-90-237-156.traefik.me/",
+    stack: [
+      { label: "Next.js", Icon: Nextjs },
+      { label: "Talwind", Icon: TailwindCSS },
+      { label: "TypeScript", Icon: TypeScript },
+    ],
   },
 ];
