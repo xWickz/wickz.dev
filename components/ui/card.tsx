@@ -11,7 +11,7 @@ const Card = React.forwardRef<
     data-slot="card"
     data-size={size}
     className={cn(
-      "border border-zinc-400/10 ring-foreground/10 bg-zinc-200 dark:bg-card dark:text-card-foreground gap-4 overflow-hidden rounded-xl py-4 text-sm ring-1 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl group/card flex flex-col",
+      "border border-zinc-400/10 ring-foreground/10 bg-zinc-200 dark:bg-card dark:text-card-foreground gap-4 overflow-hidden rounded-xl py-4 text-sm ring-1 shadow-sm transition-all duration-200 has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:gap-3 data-[size=sm]:py-3 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl group/card flex flex-col hover:-translate-y-0.5 hover:shadow-md hover:ring-foreground/15",
       className,
     )}
     {...props}
@@ -41,7 +41,7 @@ const CardTitle = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
       ref={ref}
       data-slot="card-title"
       className={cn(
-        "text-base leading-snug font-medium group-data-[size=sm]/card:text-sm",
+        "text-[1.02rem] leading-snug font-semibold tracking-tight group-data-[size=sm]/card:text-sm",
         className,
       )}
       {...props}
@@ -57,7 +57,7 @@ const CardDescription = React.forwardRef<
   <div
     ref={ref}
     data-slot="card-description"
-    className={cn("dark:text-muted-foreground text-sm", className)}
+    className={cn("text-muted-foreground text-sm", className)}
     {...props}
   />
 ));

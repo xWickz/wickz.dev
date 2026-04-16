@@ -1,10 +1,9 @@
-import Contact from "@/components/sections/contact-me";
-import Footer from "@/components/sections/footer";
-import Header from "@/components/sections/header";
-import Hero from "@/components/sections/hero";
-import PersonalProjects from "@/components/sections/personal-projects";
-import WorkProjects from "@/components/sections/projects";
-import Services from "@/components/sections/services";
+import Footer from "@/sections/footer";
+import Header from "@/sections/header";
+import Hero from "@/sections/hero";
+import PersonalProjects from "@/sections/personal-projects";
+import WorkProjects from "@/sections/projects";
+import Services from "@/sections/services";
 
 export default function Page() {
   return (
@@ -14,7 +13,7 @@ export default function Page() {
         <PersonalProjects />
         <WorkProjects />
         <Services />
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </PageLayout>
   );

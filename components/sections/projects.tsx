@@ -34,7 +34,7 @@ export default function WorkProjects() {
               <CardContent>
                 <Accordion type="single" collapsible className="max-w-lg">
                   <AccordionItem value="problem">
-                    <AccordionTrigger className="flex items-center gap-2">
+                    <AccordionTrigger className="flex items-center gap-2 text-amber-700 dark:text-amber-300">
                       <TriangleAlert className="w-4 h-4" />
                       Problem
                     </AccordionTrigger>
@@ -43,7 +43,7 @@ export default function WorkProjects() {
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="solution">
-                    <AccordionTrigger className="flex items-center gap-2">
+                    <AccordionTrigger className="flex items-center gap-2 text-emerald-700 dark:text-emerald-300">
                       <Lightbulb className="w-4 h-4" />
                       Solution
                     </AccordionTrigger>
@@ -52,7 +52,7 @@ export default function WorkProjects() {
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="results">
-                    <AccordionTrigger className="flex items-center gap-2">
+                    <AccordionTrigger className="flex items-center gap-2 text-sky-700 dark:text-sky-300">
                       <SmilePlus className="w-4 h-4" />
                       Results
                     </AccordionTrigger>

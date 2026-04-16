@@ -1,4 +1,5 @@
 import {
+  Apple,
   CSS,
   HTML5,
   JavaScript,
@@ -68,7 +69,7 @@ export const personalProjects: Project[] = [
     demo: "https://www.icloud.com/shortcuts/2a0b8f581a1f42eebe6bdd16c4f737f8",
     stack: [
       { label: "API", Icon: undefined },
-      { label: "Apple Shortcuts", Icon: undefined },
+      { label: "Apple Shortcuts", Icon: Apple },
     ],
   },
   {

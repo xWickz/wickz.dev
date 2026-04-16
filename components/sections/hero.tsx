@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Badge } from "@/ui/badge";
 import { Button } from "@/ui/button";
-import { ButtonGroup } from "@/ui/button-group";
 
 export default function Hero() {
   return (
@@ -17,14 +16,9 @@ export default function Hero() {
         Full-stack web developer. I turn ideas into reliable, user-focused
         products with clean architecture and clear communication.
       </p>
-      <ButtonGroup>
-        <Button asChild variant="outline">
-          <Link href="#projects">View projects</Link>
-        </Button>
-        <Button variant="positive" disabled={true}>
-          <Link href="#projects">Contact me</Link>
-        </Button>
-      </ButtonGroup>
+      <Button asChild variant="positive">
+        <Link href="#projects">View projects</Link>
+      </Button>
     </>
   );
 }

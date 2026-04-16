@@ -32,7 +32,7 @@ const services: Services[] = [
     id: "backend-development",
     title: "Backend Development",
     description:
-      "I develop applications which are scalabe, secure and efficient. Using Node.js, Express and good practices.",
+      "I develop applications which are scalable, secure and efficient. Using Node.js, Express and good practices.",
   },
   {
     id: "automation",
@@ -62,8 +62,10 @@ export function CarouselOrientation() {
             <div className="p-1 h-full">
               <Card className="h-full">
                 <CardContent className="grid items-center justify-center p-6 gap-3">
-                  <span className="text-3xl font-semibold">{title}</span>
-                  <span className="text-zinc-50">{description}</span>
+                  <span className="text-2xl font-semibold tracking-tight">
+                    {title}
+                  </span>
+                  <span className="text-muted-foreground">{description}</span>
                 </CardContent>
               </Card>
             </div>

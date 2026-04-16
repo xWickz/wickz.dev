@@ -18,47 +18,38 @@ export default function PersonalProjects() {
       <div className="grid w-full gap-6 sm:grid-cols-2" id="personalprojects">
         {personalProjects.map(
           ({ id, title, description, href, demo, stack }) => (
-            <Card key={id} className="h-full w-full">
+            <Card key={id} className="flex flex-col h-full w-full">
               <CardHeader>
                 <CardTitle>{title}</CardTitle>
                 <CardDescription>{description}</CardDescription>
               </CardHeader>
 
-              <CardContent>
-                {href && (
-                  <Button variant="outline" asChild>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Go to ${title} repository`}
-                      className="mr-2"
-                    >
-                      Go to repo
-                    </a>
-                  </Button>
-                )}
-
-                <Button
-                  variant={demo ? "positive" : "destructive"}
-                  asChild={Boolean(demo)}
-                  disabled={!demo}
-                >
-                  {demo ? (
-                    <a
-                      href={demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`View demo for ${title}`}
-                    >
-                      View project
-                    </a>
-                  ) : (
-                    <span>Demo unavailable</span>
+              <CardContent className="flex flex-grow flex-col justify-end space-y-4">
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {href && (
+                    <Button variant="outline" asChild>
+                      <a href={href} target="_blank" rel="noopener noreferrer">
+                        Go to repo
+                      </a>
+                    </Button>
                   )}
-                </Button>
 
-                <div className="flex flex-wrap gap-2 text-xs mt-3">
+                  <Button
+                    variant={demo ? "positive" : "destructive"}
+                    asChild={Boolean(demo)}
+                    disabled={!demo}
+                  >
+                    {demo ? (
+                      <a href={demo} target="_blank" rel="noopener noreferrer">
+                        View project
+                      </a>
+                    ) : (
+                      <span>Demo unavailable</span>
+                    )}
+                  </Button>
+                </div>
+
+                <div className="flex flex-wrap gap-2 text-xs">
                   {stack.map(({ label, Icon }) => (
                     <Badge variant="outline" key={label}>
                       {Icon && <Icon className="h-3 w-3" aria-hidden="true" />}

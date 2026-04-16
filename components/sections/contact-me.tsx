@@ -1,5 +1,5 @@
 const randomRes: string[] = [
-  "I am working in this! Be pacient.",
+  "I am working in this! Be patient.",
   "Is this supposed to be working?",
   "Working on this, but it's a bit tricky. Stay tuned!",
   "This feature is in the works, but it's taking a bit longer than expected. Thanks for your patience!",
