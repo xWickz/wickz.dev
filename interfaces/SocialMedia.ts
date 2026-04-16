@@ -1,5 +1,13 @@
 import type { ComponentType, SVGProps } from "react";
 
+type SocialPlatform =
+  | "GitHub"
+  | "LinkedIn"
+  | "Twitter"
+  | "Facebook"
+  | "Instagram"
+  | "Gmail";
+
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
 interface BaseLink {
@@ -8,7 +16,8 @@ interface BaseLink {
 }
 
 interface SocialMedia extends BaseLink {
+  label: SocialPlatform;
   Icon: IconComponent;
 }
 
-export type { SocialMedia };
+export type { SocialMedia, SocialPlatform };

@@ -10,27 +10,32 @@ import {
 } from "@/components/ui/carousel";
 
 interface Services {
+  id: string;
   title: string;
   description: string;
 }
 
 const services: Services[] = [
   {
+    id: "web-development",
     title: "Web Development",
     description:
       "I build responsive and performant web applications using modern technologies.",
   },
   {
+    id: "ui-ux-design",
     title: "UI/UX Design",
     description:
       "I create intuitive and visually appealing user interfaces that enhance user experience.",
   },
   {
+    id: "backend-development",
     title: "Backend Development",
     description:
       "I develop applications which are scalabe, secure and efficient. Using Node.js, Express and good practices.",
   },
   {
+    id: "automation",
     title: "Automation",
     description:
       "I automate repetitive tasks and processes to improve efficiency and productivity.",
@@ -52,8 +57,8 @@ export function CarouselOrientation() {
       className="w-full max-w-2xl h-full"
     >
       <CarouselContent className="-mt-1 h-67.5 w-full">
-        {services.map(({ title, description }, index) => (
-          <CarouselItem key={index} className="basis-full sm:basis-1/2 pt-1">
+        {services.map(({ id, title, description }) => (
+          <CarouselItem key={id} className="basis-full sm:basis-1/2 pt-1">
             <div className="p-1 h-full">
               <Card className="h-full">
                 <CardContent className="grid items-center justify-center p-6 gap-3">
