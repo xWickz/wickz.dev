@@ -1,8 +1,8 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-
 import { Button } from "@/ui/button";
 import {
   DropdownMenu,
@@ -10,10 +10,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
-
 export function ModeToggle() {
   const { setTheme } = useTheme();
-
+  const q = useTranslations("ModeToggle");
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -29,15 +28,15 @@ export function ModeToggle() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="font-sans">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          {q("light")}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+          {q("dark")}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+          {q("system")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

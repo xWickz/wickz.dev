@@ -1,0 +1,65 @@
+{
+  "ModeToggle": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "Hero": {
+    "badge": "Disponible",
+    "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
+    "longDesc": "Desarrollador web full-stack. Convierto las ideas en productos fiables y centrados en el usuario, con una arquitectura sencilla y una comunicación clara.",
+    "CTAPrimary": "Ver proyectos"
+  },
+  "PersonalProjects": {
+    "title1": "Proyectos",
+    "title2": "Personales",
+    "CTARepo": "Ver en GitHub",
+    "CTADemo": "Ver demo",
+    "CTANoDemo": "Demo no disponible"
+  },
+  "PersonalProjects_Data": {
+    "gd-search": {
+      "title": "GD Search",
+      "description": "Buscar el nivel más popular de Geometry-Dash."
+    },
+    "google-translator-ai": {
+      "title": "Traductor de Google con IA",
+      "description": "Proyecto simple usando el Traductor de Google con IA."
+    },
+    "javascript-projects": {
+      "title": "Proyectos de JavaScript",
+      "description": "Colección de proyectos personales de JavaScript usando Vue."
+    },
+    "mini-forum-game": {
+      "title": "Mini Foro para un Juego",
+      "description": "Un mini-foro para un juego usando Vue y Supabase."
+    },
+    "bcv-rate-shortcut": {
+      "title": "Atajo de Tasa de BCV",
+      "description": "Una aplicación simple de acceso directo para verificar la tasa de cambio actual de BCV (Banco Central de Venezuela)."
+    },
+    "case-shell": {
+      "title": "Case-Shell: Proyecto de Hackathon 🏆 (4to Lugar)",
+      "description": "Investigar incidentes técnicos dentro de un entorno virtual, explorar archivos, usar el terminal y resolver el caso como si estuvieras dentro del sistema."
+    },
+    "collections-dev": {
+      "title": "Colecciones para Desarrolladores",
+      "description": "Blog personal donde comparto proyectos, información, recursos y más relacionado con el desarrollo web y la programación."
+    }
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "CTAProblem": "Problema",
+    "CTASolution": "Solución",
+    "CTAResults": "Resultados"
+  },
+  "Projects_Data": {
+    "good-life-insurance": {
+      "time": "Ene. 2025 - Actualmente",
+      "description": "Good Life Insurance es una pequeña empresa que ofrece servicios de seguros.",
+      "problem": "La empresa no tenía presencia en Internet (solo en Instagram) y el proceso de registrar de nuevos clientes era lento e ineficaz (a través del correo electrónico y las llamadas telefónicas), lo que hacía que la captación de nuevos clientes resultara difícil y llevara mucho tiempo tanto a los clientes como a la empresa.",
+      "solution": "Desarrollé una página web para la empresa, con toda la información sobre los servicios que ofrecen y un formulario de contacto para que los nuevos clientes puedan ponerse en contacto fácilmente.",
+      "results": "- La empresa cuenta ahora con una <strong>página web profesional</strong>. <br />- El proceso de registro está ahora <strong>automatizado</strong>."
+    }
+  }
+}

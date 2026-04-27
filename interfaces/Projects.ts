@@ -1,7 +1,11 @@
 import type { ReactNode } from "react";
 
 interface Project {
+  id: string;
   title: string;
+}
+
+interface Details extends Project {
   time: string;
   description: ReactNode;
   problem: ReactNode;
@@ -9,4 +13,4 @@ interface Project {
   results: ReactNode;
 }
 
-export type { Project };
+export type { Project, Details };

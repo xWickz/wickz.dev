@@ -1,3 +1,4 @@
+import { cn } from "@/components/lib/utils";
 import Footer from "@/sections/footer";
 import Header from "@/sections/header";
 import Hero from "@/sections/hero";
@@ -8,11 +9,20 @@ import Services from "@/sections/services";
 export default function Page() {
   return (
     <PageLayout>
-      <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left">
+      <div
+        className={cn(
+          "absolute inset-0",
+          "[background-size:20px_20px]",
+          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+        )}
+      />
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-zinc-50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+      <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left z-10">
         <Hero />
         <PersonalProjects />
         <WorkProjects />
-        <Services />
+        {/* <Services /> */}
         {/* <Contact /> */}
       </div>
     </PageLayout>

@@ -22,8 +22,8 @@ interface StackItem {
 
 interface Project {
   id: string | number;
-  title: string;
-  description: string;
+  /* title: string;
+  description: string; */
   stack: StackItem[];
   href?: string;
   demo?: string;
