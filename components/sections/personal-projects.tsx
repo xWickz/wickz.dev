@@ -13,11 +13,11 @@ export default function PersonalProjects() {
   const t = useTranslations("PersonalProjects");
   const q = useTranslations("PersonalProjects_Data");
   return (
-    <>
+    <section className="flex w-full flex-col gap-6">
       <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
         <span className="text-blue-500/90">{t("title1")}</span> {t("title2")}
       </h2>
-      <div className="grid w-full gap-6 sm:grid-cols-2" id="personalprojects">
+      <div className="grid w-full gap-8 sm:grid-cols-2" id="personalprojects">
         {personalProjects.map(({ id, href, demo, stack }) => (
           <Card key={id} className="flex flex-col h-full w-full">
             <CardHeader>
@@ -62,6 +62,6 @@ export default function PersonalProjects() {
           </Card>
         ))}
       </div>
-    </>
+    </section>
   );
 }

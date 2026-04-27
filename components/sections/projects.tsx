@@ -18,11 +18,11 @@ export default function WorkProjects() {
   const t = useTranslations("Projects");
   const q = useTranslations("Projects_Data");
   return (
-    <>
+    <section className="flex w-full flex-col gap-6">
       <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
         {t("title")}
       </h2>
-      <div className="grid w-full gap-6 sm:grid-cols-2" id="projects">
+      <div className="grid w-full gap-8 sm:grid-cols-2" id="projects">
         {Projects.map(({ id, title }) => (
           <Card key={title}>
             <CardHeader>
@@ -71,6 +71,6 @@ export default function WorkProjects() {
           </Card>
         ))}
       </div>
-    </>
+    </section>
   );
 }

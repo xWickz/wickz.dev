@@ -5,22 +5,15 @@ import Hero from "@/sections/hero";
 import PersonalProjects from "@/sections/personal-projects";
 import WorkProjects from "@/sections/projects";
 import Services from "@/sections/services";
-
+import { Separator } from "@/ui/separator";
 export default function Page() {
   return (
     <PageLayout>
-      <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
-        )}
-      />
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-zinc-50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
       <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left z-10">
         <Hero />
+        <Separator />
         <PersonalProjects />
+        <Separator />
         <WorkProjects />
         {/* <Services /> */}
         {/* <Contact /> */}
@@ -32,7 +25,7 @@ export default function Page() {
 const PageLayout = ({ children }: { children: React.ReactNode }) => (
   <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-zinc-50 font-sans dark:bg-black">
     <Header />
-    <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-start gap-12 px-6 pb-16 sm:items-start sm:px-16">
+    <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-start gap-16 px-6 pb-16 sm:items-start sm:px-16">
       {children}
     </main>
     <Footer />

@@ -14,7 +14,7 @@ export default function Hero() {
       <h2 className="max-w-auto text-xl font-medium tracking-tight text-black dark:text-zinc-200">
         {t("shortDesc")}
       </h2>
-      <p className="max-w-2xl text-justify text-lg text-zinc-600 dark:text-zinc-400">
+      <p className="max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
         {t("longDesc")}
       </p>
       <Button asChild variant="positive">
