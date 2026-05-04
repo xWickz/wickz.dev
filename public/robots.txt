@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wickz.dev/sitemap.xml
