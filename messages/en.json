@@ -11,6 +11,7 @@
     "CTAPrimary": "View projects"
   },
   "PersonalProjects": {
+    "featured": "Featured Projects",
     "title1": "Personal",
     "title2": "Projects",
     "CTARepo": "View on GitHub",
@@ -39,7 +40,7 @@
       "description": "A simple shortcut app to check the current exchange rate of BCV (Banco Central de Venezuela)."
     },
     "case-shell": {
-      "title": "Case-Shell: Hackathon Project 🏆 (4th Place)",
+      "title": "Case-Shell",
       "description": "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system."
     },
     "collections-dev": {

@@ -3,8 +3,13 @@ import { ModeToggle } from "@/ui/modeToggle";
 
 export default function Header() {
   return (
-    <header className="relative z-10 flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16">
-      <a href="https://wickz.dev" target="_blank" rel="noopener noreferrer">
+    <header className="relative z-4 flex w-full items-center justify-between px-4 py-1 sm:px-5 border-b border-zinc-200 dark:border-zinc-700 ">
+      <a
+        href="https://wickz.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-bold hover:underline hover:underline-offset-4 transition-all duration-500"
+      >
         wickz.dev
       </a>
 
@@ -17,7 +22,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon className="h-6 w-6 fill-zinc-600 transition-colors duration-150 dark:fill-zinc-400 dark:hover:fill-zinc-300" />
+            <Icon className="h-5 w-5 fill-zinc-600 transition-colors duration-150 dark:fill-zinc-400 dark:hover:fill-zinc-300" />
           </a>
         ))}
         <ModeToggle />
