@@ -11,6 +11,7 @@
     "CTAPrimary": "Ver proyectos"
   },
   "PersonalProjects": {
+    "featured": "Proyectos Destacados",
     "title1": "Proyectos",
     "title2": "Personales",
     "CTARepo": "Ver en GitHub",
@@ -19,7 +20,7 @@
   },
   "PersonalProjects_Data": {
     "gd-search": {
-      "title": "GD Search",
+      "title": "Buscador de Geometry Dash",
       "description": "Buscar el nivel más popular de Geometry-Dash."
     },
     "google-translator-ai": {
@@ -31,15 +32,15 @@
       "description": "Colección de proyectos personales de JavaScript usando Vue."
     },
     "mini-forum-game": {
-      "title": "Mini Foro para un Juego",
-      "description": "Un mini-foro para un juego usando Vue y Supabase."
+      "title": "Foro para Juego",
+      "description": "Un pequeño foro para el juego Last War. ¡Especificamente para grupos!"
     },
     "bcv-rate-shortcut": {
       "title": "Atajo de Tasa de BCV",
       "description": "Una aplicación simple de acceso directo para verificar la tasa de cambio actual de BCV (Banco Central de Venezuela)."
     },
     "case-shell": {
-      "title": "Case-Shell: Proyecto de Hackathon 🏆 (4to Lugar)",
+      "title": "CaseShell",
       "description": "Investigar incidentes técnicos dentro de un entorno virtual, explorar archivos, usar el terminal y resolver el caso como si estuvieras dentro del sistema."
     },
     "collections-dev": {

@@ -1,8 +1,8 @@
 import { Badge } from "@/ui/badge";
 export default function Footer() {
   return (
-    <footer className="relative z-10 flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-16 text-zinc-600 dark:text-zinc-400">
-      <p>Santiago Griman - 2026</p>
+    <footer className="relative z-4 flex w-full items-center justify-between px-4 py-1 sm:px-5 border-t border-zinc-200 dark:border-zinc-700">
+      <p className="font-semibold text-zinc-200">Santiago Griman</p>
       <Badge variant="outline">wickzcs@gmail.com</Badge>
     </footer>
   );

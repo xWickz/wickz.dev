@@ -14,12 +14,28 @@ import type { Project } from "@/interfaces/PersonalProjects";
 
 export const personalProjects: Project[] = [
   {
-    id: "gd-search",
-    href: "https://github.com/xWickz/gd-search",
+    id: "bcv-rate-shortcut",
+    demo: "https://www.icloud.com/shortcuts/2a0b8f581a1f42eebe6bdd16c4f737f8",
+    stack: [{ label: "Apple Shortcuts", Icon: Apple }],
+  },
+  {
+    id: "case-shell",
+    href: "https://github.com/xWickz/CaseShell-Hackaton",
+    demo: "https://caseshell.wickz.dev",
     stack: [
-      { label: "React", Icon: React },
-      { label: "TypeScript", Icon: TypeScript },
+      { label: "Next.js", Icon: Nextjs },
       { label: "Tailwind", Icon: TailwindCSS },
+      { label: "TypeScript", Icon: TypeScript },
+    ],
+  },
+  {
+    id: "collections-dev",
+    demo: "https://collections-dev.vercel.app/",
+    href: "https://github.com/xWickz/collections.dev",
+    stack: [
+      { label: "Next.js", Icon: Nextjs },
+      { label: "Tailwind", Icon: TailwindCSS },
+      { label: "TypeScript", Icon: TypeScript },
     ],
   },
   {
@@ -54,28 +70,12 @@ export const personalProjects: Project[] = [
     ],
   },
   {
-    id: "bcv-rate-shortcut",
-    demo: "https://www.icloud.com/shortcuts/2a0b8f581a1f42eebe6bdd16c4f737f8",
-    stack: [{ label: "Apple Shortcuts", Icon: Apple }],
-  },
-  {
-    id: "case-shell",
-    href: "https://github.com/xWickz/CaseShell-Hackaton",
-    demo: "https://caseshell.wickz.dev",
+    id: "gd-search",
+    href: "https://github.com/xWickz/gd-search",
     stack: [
-      { label: "Next.js", Icon: Nextjs },
-      { label: "Tailwind", Icon: TailwindCSS },
+      { label: "React", Icon: React },
       { label: "TypeScript", Icon: TypeScript },
-    ],
-  },
-  {
-    id: "collections-dev",
-    demo: "https://collections-dev.vercel.app/",
-    href: "https://github.com/xWickz/collections.dev",
-    stack: [
-      { label: "Next.js", Icon: Nextjs },
       { label: "Tailwind", Icon: TailwindCSS },
-      { label: "TypeScript", Icon: TypeScript },
     ],
   },
 ];
