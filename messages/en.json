@@ -13,8 +13,8 @@
   },
   "PersonalProjects": {
     "featured": "Featured Projects",
-    "title1": "Projects",
-    "title2": "Personal",
+    "title": "Personal Projects",
+    "subtitle": "Projects",
     "CTARepo": "View on GitHub",
     "CTADemo": "View demo",
     "CTANoDemo": "Demo unavailable"
@@ -22,23 +22,23 @@
   "PersonalProjects_Data": {
     "gd-search": {
       "title": "GD Search",
-      "description": "Search the most popular Geometry-Dash Level."
+      "description": "What do you think of the game Geometry Dash? Check out the most popular level in this game."
     },
     "google-translator-ai": {
       "title": "Google Translator with AI",
-      "description": "Simple project using AI-Powered Google Translator."
+      "description": "Let's take good shit further! Using the AI-powered Google Translate API, I created this."
     },
     "javascript-projects": {
       "title": "JavaScript Projects",
-      "description": "Collection of personal JavaScript Projects using Vue."
+      "description": "A collection of over +10 projects that I made to practice JavaScript."
     },
     "mini-forum-game": {
       "title": "Mini Forum for a Game",
-      "description": "A mini forum for a game using Vue and Supabase."
+      "description": "A small forum for the game Last War. Specifically for alliances!"
     },
     "bcv-rate-shortcut": {
       "title": "BCV Rate Shortcut",
-      "description": "A simple shortcut app to check the current exchange rate of BCV (Banco Central de Venezuela)."
+      "description": "An iOS shortcut to check the current exchange rate from the BCV (Central Bank of Venezuela)."
     },
     "case-shell": {
       "title": "Case-Shell",

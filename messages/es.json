@@ -13,8 +13,8 @@
   },
   "PersonalProjects": {
     "featured": "Proyectos Destacados",
-    "title1": "Proyectos",
-    "title2": "Personales",
+    "title": "Proyectos Personales",
+    "subtitle": "Proyectos",
     "CTARepo": "Ver en GitHub",
     "CTADemo": "Ver demo",
     "CTANoDemo": "Demo no disponible"
@@ -22,15 +22,15 @@
   "PersonalProjects_Data": {
     "gd-search": {
       "title": "Buscador de Geometry Dash",
-      "description": "Buscar el nivel más popular de Geometry-Dash."
+      "description": "¿Qué opinas del juego Geometry Dash? Busca el nivel más popular de este juego."
     },
     "google-translator-ai": {
       "title": "Traductor de Google con IA",
-      "description": "Proyecto simple usando el Traductor de Google con IA."
+      "description": "¡Vamos más allá! Utilizando la API de Google Translator potenciada por IA, he creado esto."
     },
     "javascript-projects": {
       "title": "Proyectos de JavaScript",
-      "description": "Colección de proyectos personales de JavaScript usando Vue."
+      "description": "Una colección de +10 proyectos para practicar JavaScript."
     },
     "mini-forum-game": {
       "title": "Foro para Juego",
@@ -38,7 +38,7 @@
     },
     "bcv-rate-shortcut": {
       "title": "Atajo de Tasa de BCV",
-      "description": "Una aplicación simple de acceso directo para verificar la tasa de cambio actual de BCV (Banco Central de Venezuela)."
+      "description": "Un atajo (shortcut) de iOS para consultar la tasa de cambio actual del BCV (Banco Central de Venezuela)."
     },
     "case-shell": {
       "title": "CaseShell",
