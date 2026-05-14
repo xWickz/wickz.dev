@@ -1,16 +1,14 @@
-import { cn } from "@/components/lib/utils";
 import Contact from "@/sections/contact-me";
 import Footer from "@/sections/footer";
 import Header from "@/sections/header";
 import Hero from "@/sections/hero";
 import PersonalProjects from "@/sections/personal-projects";
 import WorkProjects from "@/sections/projects";
-import Services from "@/sections/services";
-import { Separator } from "@/ui/separator";
+
 export default function Page() {
   return (
     <PageLayout>
-      <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left z-10">
+      <div className="flex w-full max-w-[100rem] flex-col items-center gap-4 text-center sm:text-left mx-auto z-10">
         <Hero />
         <PersonalProjects />
         <WorkProjects />
