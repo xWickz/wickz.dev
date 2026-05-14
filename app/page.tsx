@@ -1,4 +1,5 @@
 import { cn } from "@/components/lib/utils";
+import Contact from "@/sections/contact-me";
 import Footer from "@/sections/footer";
 import Header from "@/sections/header";
 import Hero from "@/sections/hero";
@@ -11,12 +12,10 @@ export default function Page() {
     <PageLayout>
       <div className="flex w-full flex-col items-center gap-4 text-center sm:items-start sm:text-left z-10">
         <Hero />
-        <Separator />
         <PersonalProjects />
-        <Separator />
         <WorkProjects />
         {/* <Services /> */}
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </PageLayout>
   );

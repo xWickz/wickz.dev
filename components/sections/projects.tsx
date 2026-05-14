@@ -14,15 +14,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/ui/card";
+import { Separator } from "@/ui/separator";
 export default function WorkProjects() {
   const t = useTranslations("Projects");
   const q = useTranslations("Projects_Data");
   return (
-    <section className="flex w-full flex-col gap-6 mb-12">
-      <div className="mt-12">
+    <section className="flex w-full flex-col gap-6" id="projects">
+      <div className="mt-3">
         <div className="relative block">
           <div
-            className="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,_#d4d4d8_0px,_#d4d4d8_2px,_transparent_1px,_transparent_10px)]"
+            className="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
             aria-hidden="true"
           ></div>
 
@@ -31,6 +32,7 @@ export default function WorkProjects() {
           </h2>
         </div>
       </div>
+      <Separator />
       <div className="grid w-full gap-8 sm:grid-cols-2" id="projects">
         {Projects.map(({ id, title }) => (
           <Card key={title} className="max-w-lg">

@@ -1,21 +1,23 @@
-const randomRes: string[] = [
-  "I am working in this! Be patient.",
-  "Is this supposed to be working?",
-  "Working on this, but it's a bit tricky. Stay tuned!",
-  "This feature is in the works, but it's taking a bit longer than expected. Thanks for your patience!",
-  "Oops... This may not be available yet!",
-  "Wait, am I supposed to have this working? I'm on it!",
-];
-
+import { useTranslations } from "next-intl";
+import { Separator } from "@/ui/separator";
 export default function Contact() {
+  const t = useTranslations("contact-me");
   return (
     <>
-      <h2 className="max-w-xs text-2xl font-semibold tracking-tight text-black dark:text-zinc-50">
-        Contact Me
-      </h2>
-      <p className="text-black dark:text-zinc-500">
-        {randomRes[Math.floor(Math.random() * randomRes.length)]}
-      </p>
+      <Separator />
+      <section className="sm:w-1/2 justify-center sm:mx-auto flex flex-col">
+        <h2 className="font-bold text-zinc-500 dark:text-zinc-500">
+          {t("title")}
+        </h2>
+        <h1 className="max-w-lg text-4xl sm:text-7xl font-semibold tracking-tight text-zinc-600 dark:text-zinc-200 ">
+          {t("message")} <br />
+          <span className="text-zinc-400 dark:text-zinc-50 hover_blink hover:underline hover:underline-offset-14">
+            <a href="mailto:wickzcs@gmail.com" className="blink_effect">
+              wickzcs@gmail.com
+            </a>
+          </span>
+        </h1>
+      </section>
     </>
   );
 }
