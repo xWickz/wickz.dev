@@ -64,10 +64,7 @@ export default function PersonalProjects() {
           ></div>
 
           <h2 className="pl-1 max-w-2xl text-4xl text-zinc-600 dark:text-zinc-200 font-bold tracking-tighter hover_blink select-none">
-            <span className="blink_effect">
-              <span className="text-blue-500/90">{t("title1")}</span>{" "}
-              {t("title2")}
-            </span>
+            <span className="blink_effect">{t("title")}</span>
           </h2>
         </div>
       </div>
@@ -194,7 +191,7 @@ export default function PersonalProjects() {
         </div>
 
         <h2 className="max-w-2xl text-3xl text-zinc-600 dark:text-zinc-200 font-bold tracking-tighter hover_blink select-none">
-          <span className="blink_effect">{t("title1")}</span>
+          <span className="blink_effect">{t("subtitle")}</span>
         </h2>
         <div className="grid w-full gap-3 sm:grid-cols-1">
           {compactProjects.map(({ id, href, demo, stack }) => (
