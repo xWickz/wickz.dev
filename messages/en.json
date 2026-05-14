@@ -9,7 +9,8 @@
     "badge": "Available",
     "shortDesc": "I build fast, scalable web apps for startups and businesses.",
     "longDesc": "Full-stack web developer. I turn ideas into reliable, user-focused products with clean architecture and clear communication.",
-    "CTAPrimary": "View projects"
+    "CTAPrimary": "View projects",
+    "CTASecondary": "Contact me"
   },
   "PersonalProjects": {
     "featured": "Featured Projects",
