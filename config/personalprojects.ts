@@ -14,11 +14,6 @@ import type { Project } from "@/interfaces/PersonalProjects";
 
 export const personalProjects: Project[] = [
   {
-    id: "bcv-rate-shortcut",
-    demo: "https://www.icloud.com/shortcuts/2a0b8f581a1f42eebe6bdd16c4f737f8",
-    stack: [{ label: "Apple Shortcuts", Icon: Apple }],
-  },
-  {
     id: "case-shell",
     href: "https://github.com/xWickz/CaseShell-Hackaton",
     demo: "https://caseshell.wickz.dev",
@@ -39,15 +34,6 @@ export const personalProjects: Project[] = [
     ],
   },
   {
-    id: "google-translator-ai",
-    href: "https://github.com/xWickz/google-translator-ai",
-    stack: [
-      { label: "JavaScript", Icon: JavaScript },
-      { label: "HTML", Icon: HTML5 },
-      { label: "CSS", Icon: CSS },
-    ],
-  },
-  {
     id: "javascript-projects",
     href: "https://github.com/xWickz/proyectos-javascript",
     demo: "https://proyectosjs-wickz.netlify.app/",
@@ -57,6 +43,20 @@ export const personalProjects: Project[] = [
       { label: "Vue", Icon: Vue },
       { label: "HTML", Icon: HTML5 },
     ],
+  },
+  {
+    id: "google-translator-ai",
+    href: "https://github.com/xWickz/google-translator-ai",
+    stack: [
+      { label: "JavaScript", Icon: JavaScript },
+      { label: "HTML", Icon: HTML5 },
+      { label: "CSS", Icon: CSS },
+    ],
+  },
+  {
+    id: "bcv-rate-shortcut",
+    demo: "https://www.icloud.com/shortcuts/2a0b8f581a1f42eebe6bdd16c4f737f8",
+    stack: [{ label: "Apple Shortcuts", Icon: Apple }],
   },
   {
     id: "mini-forum-game",
