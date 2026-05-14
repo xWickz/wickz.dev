@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="mt-4 items-center justify-center flex sm:items-start sm:justify-start">
           <ButtonGroup>
             <Button variant="positive">
-              <a href="mailto:wickzcs@gmail.com">Contactáme</a>
+              <a href="mailto:wickzcs@gmail.com">{t("CTASecondary")}</a>
             </Button>
             <Button variant="outline">
               <a

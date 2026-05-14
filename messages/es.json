@@ -9,7 +9,8 @@
     "badge": "Disponible",
     "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
     "longDesc": "Desarrollador web full-stack. Convierto las ideas en productos fiables y centrados en el usuario, con una arquitectura sencilla y una comunicación clara.",
-    "CTAPrimary": "Ver proyectos"
+    "CTAPrimary": "Ver proyectos",
+    "CTASecondary": "Contactáme"
   },
   "PersonalProjects": {
     "featured": "Proyectos Destacados",
