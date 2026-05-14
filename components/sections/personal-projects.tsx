@@ -102,7 +102,11 @@ export default function PersonalProjects() {
                       data-active={isActive ? "true" : "false"}
                       aria-pressed={isActive}
                       aria-label={`Reproducir vista previa de ${q(`${id}.title`)}`}
-                      onMouseEnter={() => {
+                      onPointerEnter={(event) => {
+                        if (event.pointerType !== "mouse") {
+                          return;
+                        }
+
                         if (activeMediaId && activeMediaId !== id) {
                           stopVideo(activeMediaId);
                         }
@@ -124,11 +128,11 @@ export default function PersonalProjects() {
                           return String(id);
                         })
                       }
-                      onMouseLeave={() => {
-                        stopVideo(String(id));
-                        setActiveMediaId(null);
-                      }}
-                      onBlur={() => {
+                      onPointerLeave={(event) => {
+                        if (event.pointerType !== "mouse") {
+                          return;
+                        }
+
                         stopVideo(String(id));
                         setActiveMediaId(null);
                       }}
@@ -138,11 +142,11 @@ export default function PersonalProjects() {
                         alt={media.alt}
                         width={640}
                         height={360}
-                        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 data-[active=true]:opacity-0"
+                        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 group-data-[active=true]:opacity-0"
                         loading="lazy"
                       />
                       <video
-                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 data-[active=true]:opacity-100"
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-data-[active=true]:opacity-100"
                         src={media.videoSrc}
                         muted
                         playsInline

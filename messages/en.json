@@ -13,8 +13,8 @@
   },
   "PersonalProjects": {
     "featured": "Featured Projects",
-    "title1": "Personal",
-    "title2": "Projects",
+    "title1": "Projects",
+    "title2": "Personal",
     "CTARepo": "View on GitHub",
     "CTADemo": "View demo",
     "CTANoDemo": "Demo unavailable"
