@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="px-5 w-full">
         <Separator />
       </div>
-      <footer className="relative z-4 flex w-full items-end justify-between px-4 pb-3 pt-12 mt-12 sm:px-5 border-zinc-200 dark:border-zinc-700 ">
+      <footer className="relative z-4 flex w-full max-w-[100rem] items-end justify-between px-4 pb-3 pt-12 mt-12 sm:px-5 border-zinc-200 dark:border-zinc-700 ">
         <div className="flex items-center gap-3 text-zinc-600 dark:text-zinc-200 font-semibold text-sm">
           {socialLinks.map(({ label, href }) => (
             <a
@@ -36,7 +36,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <span className="font-bold text-zinc-600 dark:text-zinc-200 flex flex-col tracking-tight text-lg">
+        <span className="font-bold text-zinc-600 dark:text-zinc-200 flex flex-col tracking-tight text-2xl">
           {Object.entries(links).map(([name, href]) => (
             <a
               key={href}

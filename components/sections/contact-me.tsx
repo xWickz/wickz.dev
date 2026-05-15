@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <Separator />
-      <section className="sm:w-1/2 justify-center sm:mx-auto flex flex-col">
+      <section className="flex flex-col">
         <h2 className="font-bold text-zinc-500 dark:text-zinc-500">
           {t("title")}
         </h2>
