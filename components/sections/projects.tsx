@@ -51,7 +51,12 @@ export default function WorkProjects() {
                     {t("CTAProblem")}
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p>{q(`${id}.problem`)}</p>
+                    <p>
+                      {q.rich(`${id}.problem`, {
+                        strong: (chunks) => <strong>{chunks}</strong>,
+                        br: () => <br />,
+                      })}
+                    </p>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="solution">
