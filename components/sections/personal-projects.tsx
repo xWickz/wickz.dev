@@ -156,7 +156,16 @@ export default function PersonalProjects() {
                     <div className="flex flex-col gap-2 p-0 items-center text-center sm:items-start sm:text-left">
                       <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
                         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 tracking-tighter text-center sm:text-left">
-                          {q(`${id}.title`)}
+                          <a
+                            href={demo}
+                            target="_blank"
+                            rel="noopener"
+                            className="hover_blink hover:text-zinc-300 transition-colors"
+                          >
+                            <span className="blink_effect">
+                              {q(`${id}.title`)}
+                            </span>
+                          </a>
                         </h2>
                         {demo && (
                           <a
@@ -189,16 +198,13 @@ export default function PersonalProjects() {
             );
           })}
         </div>
-
-        <h2 className="max-w-2xl text-3xl text-zinc-600 dark:text-zinc-200 font-bold tracking-tighter hover_blink select-none">
-          <span className="blink_effect">{t("subtitle")}</span>
-        </h2>
         <div className="grid w-full gap-3 sm:grid-cols-1">
           {compactProjects.map(({ id, href, demo, stack }) => (
             <Card key={id} className="h-fit w-full">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 w-full justify-center">
                   <span className="pr-1 text-sm">{q(`${id}.title`)}</span>
+
                   {demo && (
                     <a
                       href={demo}

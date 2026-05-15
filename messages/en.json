@@ -51,7 +51,7 @@
     }
   },
   "Projects": {
-    "title": "Projects",
+    "title": "Experience",
     "CTAProblem": "Problem",
     "CTASolution": "Solution",
     "CTAResults": "Results"
@@ -71,7 +71,7 @@
   },
   "links": {
     "home": "Home",
-    "personal-projects": "Personal Projects",
-    "projects": "Projects"
+    "personal-projects": "Projects",
+    "projects": "Experience"
   }
 }
