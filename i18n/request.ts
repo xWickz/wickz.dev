@@ -1,6 +1,7 @@
 import { getRequestConfig } from "next-intl/server";
 
 const locales = ["en", "es"] as const;
+const localeCookieName = "MY_LOCALE";
 
 function getPreferredLocale(acceptLanguageHeader: string | null) {
   if (!acceptLanguageHeader) {
@@ -20,7 +21,9 @@ function getPreferredLocale(acceptLanguageHeader: string | null) {
 
   for (const { locale } of languages) {
     const matchedLocale = locales.find((supportedLocale) => {
-      return locale === supportedLocale || locale.startsWith(`${supportedLocale}-`);
+      return (
+        locale === supportedLocale || locale.startsWith(`${supportedLocale}-`)
+      );
     });
 
     if (matchedLocale) {
@@ -32,9 +35,14 @@ function getPreferredLocale(acceptLanguageHeader: string | null) {
 }
 
 export default getRequestConfig(async () => {
-  const { headers } = await import("next/headers");
+  const { headers, cookies } = await import("next/headers");
   const requestHeaders = await headers();
-  const locale = getPreferredLocale(requestHeaders.get("accept-language"));
+  const requestCookies = await cookies();
+  const cookieLocale = requestCookies.get(localeCookieName)?.value;
+  const validCookieLocale = locales.find((value) => value === cookieLocale);
+  const locale =
+    validCookieLocale ??
+    getPreferredLocale(requestHeaders.get("accept-language"));
 
   return {
     locale,

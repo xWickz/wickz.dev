@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { socialMedia } from "@/config/socialMedia";
+import LanguageSwitcher from "@/i18n/utils";
 import { ModeToggle } from "@/ui/modeToggle";
 
 const links = {
@@ -37,8 +38,8 @@ export default function Header() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
-          <div className="hidden items-center gap-2 sm:flex">
+        <div className="flex items-center gap-1">
+          <div className="hidden items-center gap-1.5 sm:flex">
             {socialMedia.map(({ label, href, Icon }) => (
               <a
                 key={label}
@@ -51,6 +52,7 @@ export default function Header() {
                 <Icon className="size-5 fill-zinc-600 transition-colors duration-150 dark:fill-zinc-400 dark:hover:fill-zinc-300 blink_effect" />
               </a>
             ))}
+            <LanguageSwitcher />
             <ModeToggle />
           </div>
 
@@ -96,6 +98,7 @@ export default function Header() {
                 <Icon className="size-5 fill-zinc-600 transition-colors duration-150 dark:fill-zinc-400 dark:hover:fill-zinc-300 blink_effect" />
               </a>
             ))}
+            <LanguageSwitcher />
             <ModeToggle />
           </div>
         </div>
