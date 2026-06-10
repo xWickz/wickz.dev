@@ -34,6 +34,16 @@ export const personalProjects: Project[] = [
     ],
   },
   {
+    id: "notidev",
+    demo: "https://notidev.vercel.app",
+    href: "",
+    stack: [
+      { label: "Tanstack Start", Icon: React },
+      { label: "Tailwind", Icon: TailwindCSS },
+      { label: "TypeScript", Icon: TypeScript },
+    ],
+  },
+  {
     id: "javascript-projects",
     href: "https://github.com/xWickz/proyectos-javascript",
     demo: "https://proyectosjs-wickz.netlify.app/",

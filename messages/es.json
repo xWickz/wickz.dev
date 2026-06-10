@@ -6,10 +6,8 @@
   },
   "Hero": {
     "thisIs": "Este es",
-    "badge": "Disponible",
     "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
     "longDesc": "Desarrollador web full-stack. Convierto las ideas en productos fiables y centrados en el usuario, con una arquitectura sencilla y una comunicación clara.",
-    "CTAPrimary": "Ver proyectos",
     "CTASecondary": "Contactáme"
   },
   "PersonalProjects": {
@@ -43,11 +41,15 @@
     },
     "case-shell": {
       "title": "CaseShell",
-      "description": "Investigar incidentes técnicos dentro de un entorno virtual, explorar archivos, usar el terminal y resolver el caso como si estuvieras dentro del sistema. Cocinamos una mierda tan buena, que quedamos de cuarto lugar en la hackatón."
+      "description": "Investigar incidentes técnicos dentro de un entorno virtual, explorar archivos, usar el terminal y resolver el caso como si estuvieras dentro del sistema. Cocinamos algo tan bueno, que quedamos de cuarto lugar en la hackatón."
     },
     "collections-dev": {
       "title": "Colecciones para Desarrolladores",
       "description": "Blog personal donde comparto proyectos, información, recursos y más relacionado con el desarrollo web y la programación. No busques más, este es el sitio."
+    },
+    "notidev": {
+      "title": "NotiDev",
+      "description": "Una plataforma para compartir noticias diarias automatizada con n8n"
     }
   },
   "Projects": {

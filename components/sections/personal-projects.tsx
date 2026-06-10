@@ -140,7 +140,7 @@ export default function PersonalProjects() {
                         width={640}
                         height={360}
                         className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 group-data-[active=true]:opacity-0"
-                        loading="lazy"
+                        loading="eager"
                       />
                       <video
                         className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-data-[active=true]:opacity-100"

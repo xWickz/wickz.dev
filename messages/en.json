@@ -6,10 +6,8 @@
   },
   "Hero": {
     "thisIs": "This is",
-    "badge": "Available",
     "shortDesc": "I build fast, scalable web apps for startups and businesses.",
     "longDesc": "Full-stack web developer. I turn ideas into reliable, user-focused products with clean architecture and clear communication.",
-    "CTAPrimary": "View projects",
     "CTASecondary": "Contact me"
   },
   "PersonalProjects": {
@@ -27,7 +25,7 @@
     },
     "google-translator-ai": {
       "title": "Google Translator with AI",
-      "description": "Let's take good shit further! Using the AI-powered Google Translate API, I created this."
+      "description": "Taking things further! Using the AI-powered Google Translate API, I created this."
     },
     "javascript-projects": {
       "title": "JavaScript Projects",
@@ -43,11 +41,15 @@
     },
     "case-shell": {
       "title": "Case-Shell",
-      "description": "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system. We cooked up such a great shit that we came in fourth place at the hackathon."
+      "description": "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system. We built something so great that we came in fourth place at the hackathon."
     },
     "collections-dev": {
       "title": "Collections for Developers",
       "description": "Personal blog where I share projects, information, resources and more related to web development and programming. Do not search more, this is the place."
+    },
+    "notidev": {
+      "title": "NotiDev",
+      "description": "A platform to share daily news automatized with n8n"
     }
   },
   "Projects": {
@@ -58,7 +60,7 @@
   },
   "Projects_Data": {
     "good-life-insurance": {
-      "time": "Jan. 2025 - Actually",
+      "time": "Jan. 2025 - Present",
       "description": "Good Life Insurance is a small company that provides insurance services.",
       "problem": "The company did not have a strong online presence, leading to <strong>the loss of potential customers</strong>, a <strong>slow and manual</strong> registration process, and a failure to <strong>provide information</strong> about the services it offers.",
       "solution": "Through a collaborative effort, we successfully developed a professional website that addressed existing issues and strengthened the brand with a strong online presence.",

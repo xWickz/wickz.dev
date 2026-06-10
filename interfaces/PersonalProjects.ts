@@ -11,7 +11,8 @@ type TechLabel =
   | "HTML"
   | "CSS"
   | "API"
-  | "Apple Shortcuts";
+  | "Apple Shortcuts"
+  | "Tanstack Start";
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 

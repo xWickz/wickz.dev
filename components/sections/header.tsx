@@ -17,9 +17,7 @@ export default function Header() {
     <header className="relative z-4 w-full max-w-[100rem] border-b border-zinc-200 px-4 py-2 dark:border-zinc-700 sm:px-5">
       <div className="flex items-center justify-between">
         <a
-          href="https://wickz.dev"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/"
           className="font-bold hover:underline hover:underline-offset-4 transition-all duration-500"
         >
           wickz.dev
