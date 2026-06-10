@@ -9,9 +9,6 @@ export default function Hero() {
   return (
     <section className="z-10 mt-12 relative flex w-full flex-col" id="home">
       <div className="flex flex-col">
-        <h2 className="font-bold tracking-[5px] text-black dark:text-zinc-300/40">
-          {t("thisIs").toUpperCase()}
-        </h2>
         <div className="relative inline-block">
           <div
             className="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
@@ -23,15 +20,17 @@ export default function Hero() {
             </span>
           </h1>
         </div>
-        <h2 className="max-w-2xl text-md text-left sm:text-lg text-zinc-600 dark:text-zinc-200 font-bold tracking-tight mt-2">
-          {t("longDesc")}
+        <h2 className="max-w-2xl text-md text-left sm:text-lg text-zinc-600 dark:text-zinc-200 font-semibold tracking-tight mt-2">
+          {t.rich("longDesc", {
+            strong: (chunks) => <strong>{chunks}</strong>,
+          })}
         </h2>
         <div className="mt-4 items-center justify-center flex sm:items-start sm:justify-start">
           <ButtonGroup>
-            <Button variant="positive">
+            <Button variant="positive" asChild>
               <a href="mailto:wickzcs@gmail.com">{t("CTASecondary")}</a>
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" asChild>
               <a
                 href="https://x.com/wickzdev"
                 target="_blank"
@@ -42,7 +41,7 @@ export default function Hero() {
                 Twitter
               </a>
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" asChild>
               <a
                 href="https://github.com/xWickz"
                 target="_blank"

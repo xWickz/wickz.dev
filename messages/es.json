@@ -7,7 +7,7 @@
   "Hero": {
     "thisIs": "Este es",
     "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
-    "longDesc": "Desarrollador web full-stack. Convierto las ideas en productos fiables y centrados en el usuario, con una arquitectura sencilla y una comunicación clara.",
+    "longDesc": "<strong>Desarrollador web full-stack</strong>. Convierto las ideas en <strong>productos fiables</strong> y centrados en el usuario, con una <strong>arquitectura sencilla</strong> y una comunicación clara.",
     "CTASecondary": "Contactáme"
   },
   "PersonalProjects": {
@@ -41,7 +41,7 @@
     },
     "case-shell": {
       "title": "CaseShell",
-      "description": "Investigar incidentes técnicos dentro de un entorno virtual, explorar archivos, usar el terminal y resolver el caso como si estuvieras dentro del sistema. Cocinamos algo tan bueno, que quedamos de cuarto lugar en la hackatón."
+      "description": "Investigar incidentes técnicos dentro de un entorno virtual, explorar archivos, usar el terminal y resolver el caso como si estuvieras dentro del sistema. Cocinamos algo tan bueno, que quedamos de <highlight>🏆 4to lugar en la hackatón</highlight>"
     },
     "collections-dev": {
       "title": "Colecciones para Desarrolladores",

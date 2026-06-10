@@ -7,7 +7,7 @@
   "Hero": {
     "thisIs": "This is",
     "shortDesc": "I build fast, scalable web apps for startups and businesses.",
-    "longDesc": "Full-stack web developer. I turn ideas into reliable, user-focused products with clean architecture and clear communication.",
+    "longDesc": "<strong>Full-stack web developer</strong>. I turn ideas into <strong>reliable, user-focused products</strong> with <strong>clean architecture</strong> and clear communication.",
     "CTASecondary": "Contact me"
   },
   "PersonalProjects": {
@@ -41,7 +41,7 @@
     },
     "case-shell": {
       "title": "Case-Shell",
-      "description": "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system. We built something so great that we came in fourth place at the hackathon."
+      "description": "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system. We built something so great that we came in <highlight>🏆 4th place at the hackathon</highlight>"
     },
     "collections-dev": {
       "title": "Collections for Developers",

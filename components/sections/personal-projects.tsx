@@ -189,7 +189,13 @@ export default function PersonalProjects() {
                         )}
                       </div>
                       <p className="text-lg text-zinc-600 dark:text-zinc-300 font-semibold tracking-tighter">
-                        {q(`${id}.description`)}
+                        {q.rich(`${id}.description`, {
+                          highlight: (chunks) => (
+                            <span className="bg-amber-500/10 text-amber-700 dark:text-amber-400 font-bold px-1.5 py-0.5 rounded inline-block">
+                              {chunks}
+                            </span>
+                          ),
+                        })}
                       </p>
                     </div>
                   </div>
