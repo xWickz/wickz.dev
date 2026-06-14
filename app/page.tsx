@@ -8,7 +8,7 @@ import WorkProjects from "@/sections/projects";
 export default function Page() {
   return (
     <PageLayout>
-      <div className="flex w-full max-w-[100rem] flex-col gap-6 text-center sm:text-left mx-auto z-10">
+      <div className="flex w-7xl max-w-[100rem] flex-col gap-6 text-center sm:text-left mx-auto z-10">
         <Hero />
         <PersonalProjects />
         <WorkProjects />

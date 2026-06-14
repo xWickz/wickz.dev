@@ -20,9 +20,11 @@ export default function Hero() {
             </span>
           </h1>
         </div>
-        <h2 className="max-w-2xl text-md text-left sm:text-lg text-zinc-600 dark:text-zinc-200 font-semibold tracking-tight mt-2">
+        <h2 className="max-w-2xl text-md text-left sm:text-lg text-zinc-600 dark:text-zinc-400 font-normal tracking-tight mt-2">
           {t.rich("longDesc", {
-            strong: (chunks) => <strong>{chunks}</strong>,
+            strong: (chunks) => (
+              <strong className="dark:text-zinc-200">{chunks}</strong>
+            ),
           })}
         </h2>
         <div className="mt-4 items-center justify-center flex sm:items-start sm:justify-start">

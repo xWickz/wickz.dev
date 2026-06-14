@@ -155,7 +155,7 @@ export default function PersonalProjects() {
                     </button>
                     <div className="flex flex-col gap-2 p-0 items-center text-center sm:items-start sm:text-left">
                       <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-                        <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 tracking-tighter text-center sm:text-left">
+                        <h2 className="text-4xl font-semibold text-zinc-900 dark:text-zinc-50 tracking-tighter text-center sm:text-left">
                           <a
                             href={demo}
                             target="_blank"
@@ -174,7 +174,7 @@ export default function PersonalProjects() {
                             rel="noopener"
                             className="hover_blink"
                           >
-                            <SquareArrowOutUpRight className="size-4 text-zinc-500 blink_effect" />
+                            <SquareArrowOutUpRight className="size-5 text-zinc-500 blink_effect" />
                           </a>
                         )}
                         {href && (
@@ -184,7 +184,7 @@ export default function PersonalProjects() {
                             rel="noopener"
                             className="hover_blink"
                           >
-                            <GitHub className="size-4 text-zinc-500 blink_effect" />
+                            <GitHub className="size-5 text-zinc-500 blink_effect" />
                           </a>
                         )}
                       </div>

@@ -14,7 +14,7 @@ export default function Header() {
   const t = useTranslations("links");
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="relative z-4 w-full max-w-[100rem] border-b border-zinc-200 px-4 py-2 dark:border-zinc-700 sm:px-5">
+    <header className="relative z-4 w-7xl max-w-[100rem] px-4 py-5 dark:border-zinc-700 sm:px-5">
       <div className="flex items-center justify-between">
         <a
           href="/"
