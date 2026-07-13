@@ -13,6 +13,7 @@ import {
 import type { Project } from "@/interfaces/PersonalProjects";
 
 export const personalProjects: Project[] = [
+  // FEATURED
   {
     id: "case-shell",
     href: "https://github.com/xWickz/CaseShell-Hackaton",
@@ -31,6 +32,21 @@ export const personalProjects: Project[] = [
       { label: "Next.js", Icon: Nextjs },
       { label: "Tailwind", Icon: TailwindCSS },
       { label: "TypeScript", Icon: TypeScript },
+    ],
+  },
+  // FEATURED
+
+  // NORMAL
+  {
+    id: "url-shortcut",
+    href: "https://github.com/xWickz/url-shortener",
+    demo: "https://shortener.wickz.dev/",
+    newproject: true,
+    stack: [
+      { label: "React", Icon: React },
+      { label: "AWS Lambda" },
+      { label: "AWS DynamoDB" },
+      { label: "API Gateway" },
     ],
   },
   {

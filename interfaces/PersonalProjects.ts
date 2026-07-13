@@ -12,7 +12,10 @@ type TechLabel =
   | "CSS"
   | "API"
   | "Apple Shortcuts"
-  | "Tanstack Start";
+  | "Tanstack Start"
+  | "AWS Lambda"
+  | "AWS DynamoDB"
+  | "API Gateway";
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -28,6 +31,7 @@ interface Project {
   stack: StackItem[];
   href?: string;
   demo?: string;
+  newproject?: boolean;
 }
 
 export type { Project, StackItem };
