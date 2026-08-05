@@ -1,0 +1,88 @@
+{
+  "SEO": {
+    "title": "Santiago Grimán: Full-Stack Developer",
+    "description": "Full-stack web developer passionate about building modern, fast, and accessible experiences. Personal portfolio of Santiago Griman."
+  },
+  "ModeToggle": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Hero": {
+    "thisIs": "This is",
+    "shortDesc": "I build fast, scalable web apps for startups and businesses.",
+    "longDesc": "<strong>Full-stack web developer</strong>. I turn ideas into <strong>reliable, user-focused products</strong> with <strong>clean architecture</strong> and clear communication.",
+    "CTASecondary": "Contact me"
+  },
+  "PersonalProjects": {
+    "featured": "Featured Projects",
+    "title": "Personal Projects",
+    "subtitle": "Projects",
+    "CTARepo": "View on GitHub",
+    "CTADemo": "View demo",
+    "CTANoDemo": "Demo unavailable",
+    "new": "NEW!"
+  },
+  "PersonalProjects_Data": {
+    "gd-search": {
+      "title": "GD Search",
+      "description": "What do you think of the game Geometry Dash? Check out the most popular level in this game."
+    },
+    "google-translator-ai": {
+      "title": "Google Translator with AI",
+      "description": "Taking things further! Using the AI-powered Google Translate API, I created this."
+    },
+    "javascript-projects": {
+      "title": "JavaScript Projects",
+      "description": "A collection of over +10 projects that I made to practice JavaScript."
+    },
+    "mini-forum-game": {
+      "title": "Mini Forum for a Game",
+      "description": "A small forum for the game Last War. Specifically for alliances!"
+    },
+    "bcv-rate-shortcut": {
+      "title": "BCV Rate Shortcut",
+      "description": "An iOS shortcut to check the current exchange rate from the BCV (Central Bank of Venezuela)."
+    },
+    "case-shell": {
+      "title": "Case-Shell",
+      "description": "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system. We built something so great that we came in <span class=\"text-amber-500 dark:text-amber-400 font-semibold\">🏆 4th place at the hackathon</span>"
+    },
+    "collections-dev": {
+      "title": "Collections for Developers",
+      "description": "Personal blog where I share projects, information, resources and more related to web development and programming. Do not search more, this is the place."
+    },
+    "notidev": {
+      "title": "NotiDev",
+      "description": "A platform to share daily news automatized with n8n"
+    },
+    "url-shortcut": {
+      "title": "URL Shortener",
+      "description": "A simple URL shortener built with React Frontend and AWS Services as Backend."
+    }
+  },
+  "Projects": {
+    "title": "Experience",
+    "CTAProblem": "Problem",
+    "CTASolution": "Solution",
+    "CTAResults": "Results"
+  },
+  "Projects_Data": {
+    "good-life-insurance": {
+      "time": "Jan. 2025 - Present",
+      "description": "Good Life Insurance is a small company that provides insurance services.",
+      "problem": "The company did not have a strong online presence, leading to <strong>the loss of potential customers</strong>, a <strong>slow and manual</strong> registration process, and a failure to <strong>provide information</strong> about the services it offers.",
+      "solution": "Through a collaborative effort, we successfully developed a professional website that addressed existing issues and strengthened the brand with a strong online presence.",
+      "results": "- The company now has a <strong>professional website</strong>.<br></br>- The registration process is now <strong>automated</strong>.<br></br>- The company has gained <strong>+50%</strong> more customers after gaining exposure on social media.<br></br>- The company has expanded by <strong>+40%</strong> following this growth."
+    }
+  },
+  "contact-me": {
+    "title": "Contact",
+    "message": "Let's make something memorable."
+  },
+  "links": {
+    "home": "Home",
+    "personal-projects": "Projects",
+    "projects": "Experience"
+  }
+}

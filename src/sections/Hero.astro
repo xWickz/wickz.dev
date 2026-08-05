@@ -1,0 +1,71 @@
+---
+// src/components/Hero.astro
+import GitHub from "../components/icons/GitHub.astro";
+import XformerlyTwitter from "../components/icons/X.astro";
+import { ButtonGroup } from "@/components/ui/button-group";
+import { Button } from "@/components/ui/button";
+
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+
+const t = useTranslations(lang, "Hero");
+---
+
+<section class="z-10 mt-12 relative flex w-full flex-col" id="home">
+  <div class="flex flex-col">
+    <div class="relative inline-block">
+      <div
+        class="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
+        aria-hidden="true"
+      >
+      </div>
+      <h1
+        class="pl-1 max-w-xl text-4xl sm:text-7xl font-bold tracking-tight text-black dark:text-zinc-200 hover_blink select-none"
+      >
+        <span class="blink_effect">
+          Santiago <span class="text-blue-500/90">Griman</span>
+        </span>
+      </h1>
+    </div>
+
+    <h2
+      class="max-w-2xl text-md text-left sm:text-lg text-zinc-600 dark:text-zinc-400 font-normal tracking-tight mt-2 [&_strong]:dark:text-zinc-200"
+      set:html={t("longDesc")}
+    />
+
+    <div
+      class="mt-4 flex items-center justify-center sm:items-start sm:justify-start"
+    >
+      <ButtonGroup>
+        <Button variant="positive" href="mailto:wickzcs@gmail.com">
+          {t("CTASecondary")}
+        </Button>
+        <Button
+          variant="outline"
+          href="https://x.com/wickzdev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1"
+        >
+          <XformerlyTwitter class="size-3" />
+          Twitter
+        </Button>
+        <Button
+          variant="outline"
+          href="https://github.com/xWickz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1"
+        >
+          <GitHub class="size-3" />
+          GitHub
+        </Button>
+      </ButtonGroup>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+---
+import { Separator } from "@/components/ui/Separator";
+import CvDownload from "@/components/ui/cv-download.astro";
+import { useTranslations } from "@/i18n/utils";
+import { NAV_LINKS } from "@/lib/constants";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+const t = useTranslations(lang, "links");
+
+const socialLinks = [
+  { label: "X", href: "https://x.com/wickzdev" },
+  { label: "GitHub", href: "https://github.com/xWickz" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-griman/" },
+] as const;
+---
+
+<div class="px-5 w-full max-w-[100rem]">
+  <Separator />
+</div>
+<footer
+  class="relative z-4 flex w-full max-w-[100rem] items-end justify-between px-4 pb-3 pt-12 mt-12 sm:px-5 border-zinc-200 dark:border-zinc-700"
+>
+  <div
+    class="flex items-center gap-3 text-zinc-600 dark:text-zinc-200 font-semibold text-sm"
+  >
+    <CvDownload lang={lang} />
+    {
+      socialLinks.map(({ label, href }) => (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener"
+          class="hover:underline hover:dark:text-zinc-100 hover:text-zinc-500"
+        >
+          {label}
+        </a>
+      ))
+    }
+  </div>
+  <span
+    class="font-bold text-zinc-600 dark:text-zinc-200 flex flex-col tracking-tight text-2xl"
+  >
+    {
+      Object.entries(NAV_LINKS).map(([name, href]) => (
+        <a
+          href={href}
+          class="hover:underline hover:dark:text-zinc-100 hover:text-zinc-500"
+        >
+          {t(name)}
+        </a>
+      ))
+    }
+  </span>
+</footer>

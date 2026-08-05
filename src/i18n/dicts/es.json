@@ -1,0 +1,88 @@
+{
+  "SEO": {
+    "title": "Santiago Grimán: Full-Stack Developer",
+    "description": "Desarrollador web full-stack apasionado por crear experiencias modernas, rápidas y accesibles. Portfolio personal de Santiago Grimán."
+  },
+  "ModeToggle": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "Hero": {
+    "thisIs": "Este es",
+    "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
+    "longDesc": "<strong>Desarrollador web full-stack</strong>. Convierto las ideas en <strong>productos fiables</strong> y centrados en el usuario, con una <strong>arquitectura sencilla</strong> y una comunicación clara.",
+    "CTASecondary": "Contactáme"
+  },
+  "PersonalProjects": {
+    "featured": "Proyectos Destacados",
+    "title": "Proyectos Personales",
+    "subtitle": "Proyectos",
+    "CTARepo": "Ver en GitHub",
+    "CTADemo": "Ver demo",
+    "CTANoDemo": "Demo no disponible",
+    "new": "¡NUEVO!"
+  },
+  "PersonalProjects_Data": {
+    "gd-search": {
+      "title": "Buscador de Geometry Dash",
+      "description": "¿Qué opinas del juego Geometry Dash? Busca el nivel más popular de este juego."
+    },
+    "google-translator-ai": {
+      "title": "Traductor de Google con IA",
+      "description": "¡Vamos más allá! Utilizando la API de Google Translator potenciada por IA, he creado esto."
+    },
+    "javascript-projects": {
+      "title": "Proyectos de JavaScript",
+      "description": "Una colección de +10 proyectos para practicar JavaScript."
+    },
+    "mini-forum-game": {
+      "title": "Foro para Juego",
+      "description": "Un pequeño foro para el juego Last War. ¡Especificamente para grupos!"
+    },
+    "bcv-rate-shortcut": {
+      "title": "Atajo de Tasa de BCV",
+      "description": "Un atajo (shortcut) de iOS para consultar la tasa de cambio actual del BCV (Banco Central de Venezuela)."
+    },
+    "case-shell": {
+      "title": "CaseShell",
+      "description": "Investigar incidentes técnicos dentro de un entorno virtual, explorar archivos, usar el terminal y resolver el caso como si estuvieras dentro del sistema. Cocinamos algo tan bueno, que quedamos de <span class=\"text-amber-500 dark:text-amber-400 font-semibold\">🏆 4to lugar en la hackatón</span>"
+    },
+    "collections-dev": {
+      "title": "Colecciones para Desarrolladores",
+      "description": "Blog personal donde comparto proyectos, información, recursos y más relacionado con el desarrollo web y la programación. No busques más, este es el sitio."
+    },
+    "notidev": {
+      "title": "NotiDev",
+      "description": "Una plataforma para compartir noticias diarias automatizada con n8n"
+    },
+    "url-shortcut": {
+      "title": "Acortador de Enlaces",
+      "description": "Un acortador de enlaces simple construido con React en el Frontend y servicios de AWS en el Backend."
+    }
+  },
+  "Projects": {
+    "title": "Experiencia",
+    "CTAProblem": "Problema",
+    "CTASolution": "Solución",
+    "CTAResults": "Resultados"
+  },
+  "Projects_Data": {
+    "good-life-insurance": {
+      "time": "Ene. 2025 - Actualmente",
+      "description": "Good Life Insurance es una pequeña empresa que ofrece servicios de seguros.",
+      "problem": "La empresa no contaba con una presencia fuerte en línea, llevando a <strong>pérdida de clientes</strong> potenciales, y un proceso de registro <strong>lento y manual</strong> además de no <strong>facilitar la información</strong> sobre los servicios que ofrecen.",
+      "solution": "Tras trabajo conjunto, se logró desarrollar una página web profesional, cubriendo los problemas existentes y potenciando la marca con una fuerte presencia en línea.",
+      "results": "- La empresa cuenta ahora con una <strong>página web profesional</strong>.<br></br>- El proceso de registro está ahora <strong>automatizado</strong>.<br></br>- La empresa ha conseguido <strong>+50%</strong> de clientes tras exponerse en redes.<br></br>- La empresa se ha expandido en un <strong>40%</strong> tras el crecimiento."
+    }
+  },
+  "contact-me": {
+    "title": "Contacto",
+    "message": "Hagamos algo memorable."
+  },
+  "links": {
+    "home": "Inicio",
+    "personal-projects": "Proyectos",
+    "projects": "Experiencia"
+  }
+}

@@ -1,0 +1,182 @@
+---
+import ExternalLink from "@/components/icons/ExternalLink.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import { personalProjects } from "@/config/personal-projects";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+
+const t = useTranslations(lang, "PersonalProjects_Data");
+
+const featuredProjects = personalProjects.slice(0, 2);
+
+const featuredMedia = {
+  "case-shell": {
+    imageSrc: "/featured-projects/caseshell-banner.webp",
+    videoSrc: "/featured-projects/caseshell-demo.mp4",
+    alt: "Vista previa del proyecto CaseShell",
+  },
+  "collections-dev": {
+    imageSrc: "/featured-projects/collections-banner-01.webp",
+    videoSrc: "/featured-projects/collections-demo.mp4",
+    alt: "Vista previa del proyecto Collections",
+  },
+} as const;
+---
+
+<div class="grid w-full gap-6">
+  {
+    featuredProjects.map(({ id, href, demo }) => {
+      const media =
+        featuredMedia[id as keyof typeof featuredMedia] ??
+        ({
+          imageSrc:
+            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          videoSrc:
+            "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+          alt: "Vista previa del proyecto personal",
+        } as const);
+
+      const projectTitle = t(`${id}.title`);
+      const projectDesc = t(`${id}.description`);
+
+      return (
+        <div class="overflow-hidden">
+          <div class="pl-4 border-t p-4">
+            <div class="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] items-start">
+              <button
+                type="button"
+                class="featured-project-card group relative aspect-video w-full overflow-hidden bg-zinc-100/70 text-left dark:bg-zinc-900"
+                data-project-id={id}
+                data-active="false"
+                aria-pressed="false"
+                aria-label={`Reproducir vista previa de ${projectTitle}`}
+              >
+                <img
+                  src={media.imageSrc}
+                  alt={media.alt}
+                  width={640}
+                  height={360}
+                  class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 group-data-[active=true]:opacity-0"
+                  loading="eager"
+                />
+                <video
+                  class="project-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-data-[active=true]:opacity-100"
+                  src={media.videoSrc}
+                  muted
+                  playsinline
+                  preload="metadata"
+                />
+              </button>
+
+              <div class="flex flex-col gap-2 p-0 items-center text-center sm:items-start sm:text-left">
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+                  <h2 class="text-4xl font-semibold text-zinc-900 dark:text-zinc-50 tracking-tighter text-center sm:text-left">
+                    <a
+                      href={demo}
+                      target="_blank"
+                      rel="noopener"
+                      class="hover_blink hover:text-zinc-300 transition-colors"
+                    >
+                      <span class="blink_effect">{projectTitle}</span>
+                    </a>
+                  </h2>
+                  {demo && (
+                    <a
+                      href={demo}
+                      target="_blank"
+                      rel="noopener"
+                      class="hover_blink"
+                    >
+                      <ExternalLink class="size-5 text-zinc-500 blink_effect" />
+                    </a>
+                  )}
+                  {href && (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener"
+                      class="hover_blink"
+                    >
+                      <GitHub class="size-5 text-zinc-500 blink_effect" />
+                    </a>
+                  )}
+                </div>
+                <p
+                  class="text-lg text-zinc-600 dark:text-zinc-300 font-semibold tracking-tighter"
+                  set:html={projectDesc}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
+
+<script>
+  // Lógica client-side para controlar la reproducción de los videos en hover/click
+  const cards = document.querySelectorAll<HTMLButtonElement>(
+    ".featured-project-card",
+  );
+
+  cards.forEach((card) => {
+    const video = card.querySelector<HTMLVideoElement>(".project-video");
+    if (!video) return;
+
+    const startVideo = () => {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    };
+
+    const stopVideo = () => {
+      video.pause();
+      video.currentTime = 0;
+    };
+
+    card.addEventListener("pointerenter", (e) => {
+      if (e.pointerType !== "mouse") return;
+      startVideo();
+    });
+
+    card.addEventListener("pointerleave", (e) => {
+      if (e.pointerType !== "mouse") return;
+      if (card.getAttribute("data-active") !== "true") {
+        stopVideo();
+      }
+    });
+
+    card.addEventListener("click", () => {
+      const isActive = card.getAttribute("data-active") === "true";
+
+      // Detener los demás videos si hay otro activo
+      cards.forEach((otherCard) => {
+        if (otherCard !== card) {
+          otherCard.setAttribute("data-active", "false");
+          otherCard.setAttribute("aria-pressed", "false");
+          const otherVideo =
+            otherCard.querySelector<HTMLVideoElement>(".project-video");
+          if (otherVideo) {
+            otherVideo.pause();
+            otherVideo.currentTime = 0;
+          }
+        }
+      });
+
+      if (isActive) {
+        card.setAttribute("data-active", "false");
+        card.setAttribute("aria-pressed", "false");
+        stopVideo();
+      } else {
+        card.setAttribute("data-active", "true");
+        card.setAttribute("aria-pressed", "true");
+        startVideo();
+      }
+    });
+  });
+</script>

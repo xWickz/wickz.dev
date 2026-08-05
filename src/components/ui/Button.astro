@@ -1,0 +1,78 @@
+---
+import { cn } from "@/lib/utils";
+
+interface Props {
+  variant?:
+    | "default"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "destructive"
+    | "positive"
+    | "link";
+  size?:
+    "default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg";
+  class?: string;
+  href?: string;
+  asChild?: boolean;
+  [key: string]: any;
+}
+
+const {
+  variant = "default",
+  size = "default",
+  class: className = "",
+  href,
+  asChild = false,
+  ...rest
+} = Astro.props;
+
+const variantClasses: Record<string, string> = {
+  default: "bg-primary text-primary-foreground hover:bg-primary/80",
+  outline:
+    "border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+  secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+  ghost: "hover:bg-muted hover:text-foreground dark:hover:bg-muted/50",
+  destructive:
+    "bg-destructive/10 hover:bg-destructive/20 text-destructive dark:bg-destructive/20 dark:hover:bg-destructive/30",
+  positive:
+    "border-border dark:border-input bg-green-500/10 hover:bg-green-500/20 dark:bg-green-500/20 text-green-500 dark:hover:bg-green-500/30",
+  link: "text-primary underline-offset-4 hover:underline",
+};
+
+const sizeClasses: Record<string, string> = {
+  default: "h-8 gap-1.5 px-2.5",
+  xs: "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs [&_svg:not([class*='size-'])]:size-3",
+  sm: "h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] [&_svg:not([class*='size-'])]:size-3.5",
+  lg: "h-9 gap-1.5 px-2.5",
+  icon: "size-8",
+  "icon-xs":
+    "size-6 rounded-[min(var(--radius-md),10px)] [&_svg:not([class*='size-'])]:size-3",
+  "icon-sm": "size-7 rounded-[min(var(--radius-md),12px)]",
+  "icon-lg": "size-9",
+};
+
+const baseClasses =
+  "rounded-lg border border-transparent text-sm font-medium inline-flex items-center justify-center whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none select-none [&_svg:not([class*='size-'])]:size-4";
+
+const finalClass = cn(
+  baseClasses,
+  variantClasses[variant],
+  sizeClasses[size],
+  className,
+);
+
+const Tag = href ? "a" : "button";
+---
+
+{
+  Tag === "a" ? (
+    <a href={href} class={finalClass} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button class={finalClass} {...rest}>
+      <slot />
+    </button>
+  )
+}

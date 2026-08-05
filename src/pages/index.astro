@@ -1,0 +1,65 @@
+---
+import { SITE } from "@/lib/constants";
+
+// Redirect root to default Spanish locale
+const redirectUrl = "/es/";
+const canonicalAbsolute = new URL(redirectUrl, SITE.url).href;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+
+    <!-- Primary Meta Tags -->
+    <title>{SITE.title}</title>
+    <meta name="description" content={SITE.description} />
+    <meta name="author" content={SITE.author} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={SITE.url} />
+    <meta property="og:title" content={SITE.title} />
+    <meta property="og:description" content={SITE.description} />
+    <meta
+      property="og:image"
+      content={new URL("/og-image.png", SITE.url).href}
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="wickz.dev" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={SITE.title} />
+    <meta name="twitter:description" content={SITE.description} />
+    <meta
+      name="twitter:image"
+      content={new URL("/og-image.png", SITE.url).href}
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalAbsolute} />
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="es" href={new URL("/es/", SITE.url).href} />
+    <link rel="alternate" hreflang="en" href={new URL("/en/", SITE.url).href} />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL("/es/", SITE.url).href}
+    />
+  </head>
+  <body>
+    <p>Redirigiendo a <a href={redirectUrl}>{redirectUrl}</a>...</p>
+  </body>
+</html>

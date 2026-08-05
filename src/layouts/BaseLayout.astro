@@ -1,0 +1,121 @@
+---
+import "@/styles/global.css";
+import Header from "@/sections/Header.astro";
+import Footer from "@/sections/Footer.astro";
+import { SITE } from "@/lib/constants";
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = "Santiago Grimán — Full-Stack Developer",
+  description = "Desarrollador web full-stack apasionado por crear experiencias modernas y accesibles.",
+  lang = "es",
+  ogImage = "/og-image.png",
+  canonicalURL = SITE.url,
+} = Astro.props;
+
+const ogImageAbsolute = new URL(ogImage, Astro.site || SITE.url).href;
+const canonicalAbsolute = new URL(canonicalURL, Astro.site || SITE.url).href;
+const localeString = lang === "en" ? "en_US" : "es_ES";
+---
+
+<!doctype html>
+<html lang={lang} class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#18181b" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalAbsolute} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageAbsolute} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:locale" content={localeString} />
+    <meta property="og:site_name" content="wickz.dev" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalAbsolute} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbsolute} />
+    <meta name="twitter:image:alt" content={title} />
+    <meta name="twitter:creator" content="@wickzdev" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalAbsolute} />
+
+    <!-- Alternate hreflang -->
+    <link
+      rel="alternate"
+      hreflang="es"
+      href={new URL("/es/", Astro.site || SITE.url).href}
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href={new URL("/en/", Astro.site || SITE.url).href}
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL("/es/", Astro.site || SITE.url).href}
+    />
+
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="relative flex min-h-screen max-w-full flex-col items-center overflow-x-hidden bg-zinc-50 font-sans dark:bg-black text-foreground antialiased"
+  >
+    <Header lang={lang} />
+    <main
+      class="relative z-10 flex w-full flex-col items-center justify-start gap-16 px-4 pb-16 sm:items-start sm:px-5"
+    >
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>
