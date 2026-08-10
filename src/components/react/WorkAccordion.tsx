@@ -32,10 +32,9 @@ export function WorkAccordion({
 }) {
   return (
     <Accordion type="single" collapsible className="max-w-lg">
-      {/* ITEM: PROBLEMA */}
       <AccordionItem value="problem">
         <AccordionTrigger className="flex items-center gap-2 text-amber-700 dark:text-amber-300">
-          <TriangleAlert className="size-4" />
+          <TriangleAlert className="size-4" aria-hidden="true" />
           {translations.CTAProblem}
         </AccordionTrigger>
         <AccordionContent>
@@ -43,10 +42,9 @@ export function WorkAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      {/* ITEM: SOLUCIÓN */}
       <AccordionItem value="solution">
         <AccordionTrigger className="flex items-center gap-2 text-emerald-700 dark:text-emerald-300">
-          <Lightbulb className="size-4" />
+          <Lightbulb className="size-4" aria-hidden="true" />
           {translations.CTASolution}
         </AccordionTrigger>
         <AccordionContent>
@@ -54,10 +52,9 @@ export function WorkAccordion({
         </AccordionContent>
       </AccordionItem>
 
-      {/* ITEM: RESULTADOS */}
       <AccordionItem value="results">
         <AccordionTrigger className="flex items-center gap-2 text-sky-700 dark:text-sky-300">
-          <SmilePlus className="size-4" />
+          <SmilePlus className="size-4" aria-hidden="true" />
           {translations.CTAResults}
         </AccordionTrigger>
         <AccordionContent>

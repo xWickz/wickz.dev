@@ -1,5 +1,6 @@
 ---
 import { SITE } from "@/lib/constants";
+import "@/styles/global.css";
 
 // Redirect root to default Spanish locale
 const redirectUrl = "/es/";
@@ -7,7 +8,7 @@ const canonicalAbsolute = new URL(redirectUrl, SITE.url).href;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,7 +60,12 @@ const canonicalAbsolute = new URL(redirectUrl, SITE.url).href;
       href={new URL("/es/", SITE.url).href}
     />
   </head>
-  <body>
-    <p>Redirigiendo a <a href={redirectUrl}>{redirectUrl}</a>...</p>
+  <body
+    class="relative flex min-h-screen max-w-full flex-col items-center overflow-x-hidden bg-zinc-50 font-sans dark:bg-black text-foreground antialiased"
+  >
+    <main
+      class="relative z-10 flex w-full flex-col items-center justify-start gap-16 px-4 pb-16 sm:items-start sm:px-5"
+    >
+    </main>
   </body>
 </html>

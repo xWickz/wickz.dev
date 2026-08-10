@@ -1,0 +1,35 @@
+---
+import Layout from "@/layouts/BaseLayout.astro";
+import { useTranslations } from "@/i18n/utils";
+import { SUPPORTED_LANGUAGES, DEFAULT_LANG } from "@/lib/constants";
+
+const lang = Astro.url.pathname.startsWith("/en") ? "en" : DEFAULT_LANG;
+const t = useTranslations(lang, "SEO");
+---
+
+<Layout
+  title={`404 — ${lang === "es" ? "Página no encontrada" : "Page not found"}`}
+  description={lang === "es" ? "La página que buscas no existe o fue movida." : "The page you're looking for doesn't exist or has been moved."}
+  lang={lang}
+  canonicalURL="/404"
+>
+  <div class="flex w-full max-w-[100rem] flex-col items-center justify-center gap-6 py-20 text-center mx-auto z-10">
+    <span class="text-8xl font-bold tracking-tighter text-zinc-300 dark:text-zinc-700 select-none">
+      404
+    </span>
+    <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-200">
+      {lang === "es" ? "Página no encontrada" : "Page not found"}
+    </h1>
+    <p class="max-w-md text-zinc-500 dark:text-zinc-400">
+      {lang === "es"
+        ? "La página que buscas no existe o fue movida. Regresa al inicio para seguir explorando."
+        : "The page you're looking for doesn't exist or has been moved. Head back home to keep exploring."}
+    </p>
+    <a
+      href={lang === "es" ? "/es/" : "/en/"}
+      class="mt-4 inline-flex items-center rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-black dark:hover:bg-zinc-300 transition-colors"
+    >
+      {lang === "es" ? "Volver al inicio" : "Back home"}
+    </a>
+  </div>
+</Layout>

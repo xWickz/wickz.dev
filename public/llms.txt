@@ -1,0 +1,27 @@
+# llms.txt — wickz.dev
+
+> Portfolio personal de Santiago Grimán, desarrollador full-stack.
+> Construido con Astro 7 + React 19 + Tailwind CSS 4.
+
+## Sitio
+- **URL**: https://wickz.dev
+- **Idiomas**: Español (es), English (en)
+- **Tipo**: Portfolio personal / Static Site
+
+## Páginas
+- Home (ES): https://wickz.dev/es/
+- Home (EN): https://wickz.dev/en/
+- 404: https://wickz.dev/404
+
+## Stack
+- **Framework**: Astro 7 (SSG)
+- **UI**: React 19 (islas interactivas)
+- **Estilos**: Tailwind CSS 4 + shadcn/ui + Radix UI
+- **Íconos**: Lucide React + SVG components
+- **Tooling**: Biome (lint + format), pnpm, Sharp
+
+## Contacto
+- **Email**: wickzcs@gmail.com
+- **GitHub**: https://github.com/xWickz
+- **X / Twitter**: https://x.com/wickzdev
+- **LinkedIn**: https://www.linkedin.com/in/santiago-griman/

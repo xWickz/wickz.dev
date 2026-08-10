@@ -86,6 +86,31 @@ const localeString = lang === "en" ? "en_US" : "es_ES";
       href={new URL("/es/", Astro.site || SITE.url).href}
     />
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Santiago Grimán",
+      url: SITE.url,
+      email: SITE.email,
+      jobTitle: "Full-Stack Developer",
+      description: description,
+      sameAs: [
+        "https://github.com/xWickz",
+        "https://x.com/wickzdev",
+        "https://www.linkedin.com/in/santiago-griman/",
+      ],
+      knowsAbout: [
+        "Web Development",
+        "TypeScript",
+        "React",
+        "Astro",
+        "Node.js",
+        "Tailwind CSS",
+        "Full-Stack Development",
+      ],
+    })} />
+
     <script is:inline>
       const theme = (() => {
         if (
