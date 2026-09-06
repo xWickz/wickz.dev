@@ -14,9 +14,10 @@ export const SITE = {
 } as const;
 
 export const NAV_LINKS = {
-  home: "/#home",
-  "personal-projects": "/#personal-projects",
-  projects: "/#projects",
+  home: "#home",
+  services: "#services",
+  projects: "#projects",
+  "personal-projects": "#personal-projects",
 } as const;
 
 export const SUPPORTED_LANGUAGES = ["es", "en"] as const;

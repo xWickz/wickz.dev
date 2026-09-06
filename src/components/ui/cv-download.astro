@@ -1,6 +1,6 @@
 ---
 import { CV_PATH } from "@/lib/constants";
-import { FileDown } from "lucide-react";
+import { FileText } from "lucide-react";
 
 interface Props {
   lang?: string;
@@ -8,15 +8,16 @@ interface Props {
 
 const { lang = "es" } = Astro.props;
 
-const label = lang === "es" ? "Descargar CV" : "Download CV";
+const label = lang === "es" ? "Ver currículum vitae" : "View resume";
 ---
 
 <a
   href={CV_PATH}
-  download
+  target="_blank"
+  rel="noopener noreferrer"
   class="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 active:scale-95 transition-all"
   aria-label={label}
 >
-  <FileDown className="size-3.5" />
+  <FileText className="size-3.5" />
   <span>CV</span>
 </a>

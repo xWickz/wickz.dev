@@ -19,7 +19,7 @@ const t = useTranslations(lang, "links");
 >
   <div class="flex items-center justify-between">
     <a
-      href="/"
+      href={`/${lang}/`}
       class="font-bold hover:underline hover:underline-offset-4 transition-all duration-500"
     >
       wickz.dev
@@ -40,7 +40,7 @@ const t = useTranslations(lang, "links");
 
     <div class="flex items-center gap-2">
       <CvDownload lang={lang} />
-      <LanguageToggle />
+      <LanguageToggle lang={lang} />
       <ThemeToggle />
       <div class="hidden items-center gap-2 sm:flex">
         {

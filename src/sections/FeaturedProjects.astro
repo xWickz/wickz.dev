@@ -120,7 +120,6 @@ const featuredMedia = {
 </div>
 
 <script>
-  // Lógica client-side para controlar la reproducción de los videos en hover/click
   const cards = document.querySelectorAll<HTMLButtonElement>(
     ".featured-project-card",
   );
@@ -154,7 +153,6 @@ const featuredMedia = {
     card.addEventListener("click", () => {
       const isActive = card.getAttribute("data-active") === "true";
 
-      // Detener los demás videos si hay otro activo
       cards.forEach((otherCard) => {
         if (otherCard !== card) {
           otherCard.setAttribute("data-active", "false");

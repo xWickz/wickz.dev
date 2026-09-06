@@ -1,0 +1,102 @@
+---
+import {
+  Globe,
+  Rocket,
+  Sparkles,
+  QrCode,
+  ShoppingBag,
+  Smartphone,
+} from "lucide-react";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/Card";
+import { Separator } from "@/components/ui/Separator";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+
+const t = useTranslations(lang, "Services");
+const q = useTranslations(lang, "Services_Data");
+
+const services = [
+  {
+    id: "web-dev",
+    Icon: Globe,
+  },
+  {
+    id: "landing-pages",
+    Icon: Rocket,
+  },
+  {
+    id: "portfolios",
+    Icon: Sparkles,
+  },
+  {
+    id: "digital-menus",
+    Icon: QrCode,
+  },
+  {
+    id: "web-catalogs",
+    Icon: ShoppingBag,
+  },
+  {
+    id: "cross-platform",
+    Icon: Smartphone,
+  },
+] as const;
+---
+
+<section class="flex w-full flex-col gap-6" id="services">
+  <div class="mt-12">
+    <div class="relative block">
+      <div
+        class="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <h2
+        class="pl-1 max-w-2xl text-4xl text-zinc-600 dark:text-zinc-200 font-bold tracking-tighter hover_blink select-none"
+      >
+        <span class="blink_effect">{t("title")}</span>
+      </h2>
+    </div>
+
+    <p
+      class="mt-2 text-zinc-600 dark:text-zinc-400 text-sm sm:text-base max-w-2xl font-normal tracking-tight"
+    >
+      {t("subtitle")}
+    </p>
+  </div>
+
+  <Separator />
+
+  <div class="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      services.map(({ id, Icon }) => (
+        <Card className="h-full hover_blink">
+          <CardHeader>
+            <div class="flex items-center gap-3">
+              <div class="flex size-9 items-center justify-center rounded-lg border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900 shrink-0">
+                <Icon className="size-4.5 text-zinc-700 dark:text-zinc-300 blink_effect" />
+              </div>
+              <CardTitle className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+                {q(`${id}.title`)}
+              </CardTitle>
+            </div>
+            <CardDescription className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mt-2">
+              {q(`${id}.description`)}
+            </CardDescription>
+          </CardHeader>
+        </Card>
+      ))
+    }
+  </div>
+</section>

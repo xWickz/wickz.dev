@@ -76,12 +76,43 @@
       "results": "- La empresa cuenta ahora con una <strong>página web profesional</strong>.<br></br>- El proceso de registro está ahora <strong>automatizado</strong>.<br></br>- La empresa ha conseguido <strong>+50%</strong> de clientes tras exponerse en redes.<br></br>- La empresa se ha expandido en un <strong>40%</strong> tras el crecimiento."
     }
   },
+  "Services": {
+    "title": "Servicios",
+    "subtitle": "¿Tienes una idea o negocio en mente? Estas son las soluciones que desarrollo para ayudarte a crecer."
+  },
+  "Services_Data": {
+    "web-dev": {
+      "title": "Desarrollo Web Full-Stack",
+      "description": "Aplicaciones web modernas, seguras y escalables construidas a medida con arquitecturas limpias y APIs de alto rendimiento."
+    },
+    "landing-pages": {
+      "title": "Landing Pages de Alta Conversión",
+      "description": "Páginas de aterrizaje optimizadas para convertir visitantes en clientes, con tiempos de carga ultrarrápidos y diseño persuasivo."
+    },
+    "portfolios": {
+      "title": "Portafolios & Sitios Personales",
+      "description": "Sitios web únicos y memorables para destacar tu marca personal, habilidades y proyectos con una presentación impecable."
+    },
+    "digital-menus": {
+      "title": "Digitalización de Menús & QR",
+      "description": "Cartas y menús digitales interactivos para restaurantes, actualizables en tiempo real y accesibles desde el móvil sin descargas."
+    },
+    "web-catalogs": {
+      "title": "Catálogos Web Interactivos",
+      "description": "Muestrarios digitales ordenados y visuales para exhibir tus productos o servicios y facilitar el contacto con compradores."
+    },
+    "cross-platform": {
+      "title": "Apps Multiplataforma",
+      "description": "Aplicaciones móviles fluidas para iOS y Android compartiendo lógica de negocio, con estética cuidada y rendimiento nativo."
+    }
+  },
   "contact-me": {
     "title": "Contacto",
     "message": "Hagamos algo memorable."
   },
   "links": {
     "home": "Inicio",
+    "services": "Servicios",
     "personal-projects": "Proyectos",
     "projects": "Experiencia"
   }

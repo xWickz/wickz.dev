@@ -76,12 +76,43 @@
       "results": "- The company now has a <strong>professional website</strong>.<br></br>- The registration process is now <strong>automated</strong>.<br></br>- The company has gained <strong>+50%</strong> more customers after gaining exposure on social media.<br></br>- The company has expanded by <strong>+40%</strong> following this growth."
     }
   },
+  "Services": {
+    "title": "Services",
+    "subtitle": "Have an idea or business in mind? Here are the solutions I build to help you grow."
+  },
+  "Services_Data": {
+    "web-dev": {
+      "title": "Full-Stack Web Development",
+      "description": "Modern, secure, and scalable web applications custom-built with clean architecture and high-performance APIs."
+    },
+    "landing-pages": {
+      "title": "High-Converting Landing Pages",
+      "description": "Engaging landing pages engineered to convert visitors into customers, with lightning-fast load times and persuasive design."
+    },
+    "portfolios": {
+      "title": "Portfolios & Personal Sites",
+      "description": "Unique and memorable websites to showcase your personal brand, skills, and projects with an impeccable presentation."
+    },
+    "digital-menus": {
+      "title": "Digital Menus & QR Codes",
+      "description": "Interactive digital menus for restaurants and cafes, easily updatable in real-time and accessible instantly on mobile with no downloads."
+    },
+    "web-catalogs": {
+      "title": "Interactive Web Catalogs",
+      "description": "Structured, visual digital catalogs to display your products or services and streamline direct contact with buyers."
+    },
+    "cross-platform": {
+      "title": "Cross-Platform Apps",
+      "description": "Smooth mobile applications for iOS and Android sharing business logic, with polished aesthetics and native-grade performance."
+    }
+  },
   "contact-me": {
     "title": "Contact",
     "message": "Let's make something memorable."
   },
   "links": {
     "home": "Home",
+    "services": "Services",
     "personal-projects": "Projects",
     "projects": "Experience"
   }
