@@ -1,7 +1,7 @@
 {
   "SEO": {
     "title": "Portfolio de Wickz - Programador Web",
-    "description": "Desarrollador web full-stack apasionado por crear experiencias modernas, rápidas y accesibles. Portfolio personal de Santiago Grimán."
+    "description": "Desarrollador web apasionado por crear experiencias modernas, rápidas y accesibles. Portfolio personal de Santiago Grimán."
   },
   "ModeToggle": {
     "light": "Claro",
@@ -11,7 +11,7 @@
   "Hero": {
     "thisIs": "Este es",
     "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
-    "longDesc": "<strong>Desarrollador web full-stack</strong>. Convierto las ideas en <strong>productos fiables</strong> y centrados en el usuario, con una <strong>arquitectura sencilla</strong> y una comunicación clara.",
+    "longDesc": "<strong>Desarrollador web</strong>. Convierto las ideas en <strong>productos fiables</strong> y centrados en el usuario, con una <strong>arquitectura sencilla</strong> y una comunicación clara.",
     "CTASecondary": "Contactáme"
   },
   "PersonalProjects": {

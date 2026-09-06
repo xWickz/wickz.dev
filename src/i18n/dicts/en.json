@@ -1,7 +1,7 @@
 {
   "SEO": {
     "title": "Portfolio of Wickz - Web Developer",
-    "description": "Full-stack web developer passionate about building modern, fast, and accessible experiences. Personal portfolio of Santiago Griman."
+    "description": "Web developer passionate about building modern, fast, and accessible experiences. Personal portfolio of Santiago Griman."
   },
   "ModeToggle": {
     "light": "Light",
@@ -11,7 +11,7 @@
   "Hero": {
     "thisIs": "This is",
     "shortDesc": "I build fast, scalable web apps for startups and businesses.",
-    "longDesc": "<strong>Full-stack web developer</strong>. I turn ideas into <strong>reliable, user-focused products</strong> with <strong>clean architecture</strong> and clear communication.",
+    "longDesc": "<strong>Web developer</strong>. I turn ideas into <strong>reliable, user-focused products</strong> with <strong>clean architecture</strong> and clear communication.",
     "CTASecondary": "Contact me"
   },
   "PersonalProjects": {
