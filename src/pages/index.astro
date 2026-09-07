@@ -1,3 +1,45 @@
 ---
-return Astro.redirect("/es/", 302);
+
 ---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santiago Griman - Web Developer</title>
+    <meta http-equiv="refresh" content="0;url=/es/" />
+    <link rel="canonical" href="https://wickz.dev/es/" />
+    <meta name="robots" content="noindex, follow" />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html,
+      body {
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script is:inline>
+      (() => {
+        let stored = "";
+        try {
+          stored = localStorage.getItem("preferred-lang") || "";
+        } catch {}
+
+        const browser = (navigator.language || "").slice(0, 2);
+        const lang =
+          stored === "en" || stored === "es"
+            ? stored
+            : browser === "en"
+              ? "en"
+              : "es";
+
+        window.location.replace("/" + lang + "/" + window.location.hash);
+      })();
+    </script>
+  </head>
+  <body class="bg-black"></body>
+</html>
