@@ -1,8 +1,14 @@
 import type { ReactNode } from "react";
 
+interface ProjectStat {
+  value: string;
+  key: string;
+}
+
 interface Project {
   id: string;
   title: string;
+  stats?: ProjectStat[];
 }
 
 interface Details extends Project {
@@ -13,4 +19,4 @@ interface Details extends Project {
   results: ReactNode;
 }
 
-export type { Project, Details };
+export type { Project, ProjectStat, Details };

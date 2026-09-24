@@ -1,7 +1,7 @@
 {
   "SEO": {
-    "title": "Portfolio de Wickz - Programador Web",
-    "description": "Desarrollador web apasionado por crear experiencias modernas, rápidas y accesibles. Portfolio personal de Santiago Grimán."
+    "title": "Santiago Grimán - Desarrollo Web, Catálogos y Menús Digitales",
+    "description": "Desarrollador web. Creo páginas web, landing pages, catálogos web y menús digitales con QR para negocios y emprendedores. Sitios rápidos y pensados para vender."
   },
   "ModeToggle": {
     "light": "Claro",
@@ -12,7 +12,8 @@
     "thisIs": "Este es",
     "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
     "longDesc": "<strong>Desarrollador web</strong>. Convierto las ideas en <strong>productos fiables</strong> y centrados en el usuario, con una <strong>arquitectura sencilla</strong> y una comunicación clara.",
-    "CTASecondary": "Contactáme"
+    "CTASecondary": "Contáctame",
+    "available": "Disponible para nuevos proyectos"
   },
   "PersonalProjects": {
     "featured": "Proyectos Destacados",
@@ -73,12 +74,21 @@
       "description": "Good Life Insurance es una pequeña empresa que ofrece servicios de seguros.",
       "problem": "La empresa no contaba con una presencia fuerte en línea, llevando a <strong>pérdida de clientes</strong> potenciales, y un proceso de registro <strong>lento y manual</strong> además de no <strong>facilitar la información</strong> sobre los servicios que ofrecen.",
       "solution": "Tras trabajo conjunto, se logró desarrollar una página web profesional, cubriendo los problemas existentes y potenciando la marca con una fuerte presencia en línea.",
-      "results": "- La empresa cuenta ahora con una <strong>página web profesional</strong>.<br></br>- El proceso de registro está ahora <strong>automatizado</strong>.<br></br>- La empresa ha conseguido <strong>+50%</strong> de clientes tras exponerse en redes.<br></br>- La empresa se ha expandido en un <strong>40%</strong> tras el crecimiento."
+      "results": "- La empresa cuenta ahora con una <strong>página web profesional</strong>.<br></br>- El proceso de registro está ahora <strong>automatizado</strong>.<br></br>- La empresa ha conseguido <strong>+50%</strong> de clientes tras exponerse en redes.<br></br>- La empresa se ha expandido en un <strong>40%</strong> tras el crecimiento.",
+      "stats": {
+        "clients": "más clientes tras exponerse en redes",
+        "growth": "de crecimiento de la empresa"
+      }
     }
   },
   "Services": {
     "title": "Servicios",
-    "subtitle": "¿Tienes una idea o negocio en mente? Estas son las soluciones que desarrollo para ayudarte a crecer."
+    "subtitle": "¿Tienes una idea o negocio en mente? Estas son las soluciones que desarrollo para ayudarte a crecer.",
+    "demo": "Demo:",
+    "demos": "Demos:",
+    "CTAQuote": "Solicitar cotización",
+    "quoteSubject": "Cotización",
+    "quoteBody": "Hola Santiago,\n\nMe interesa el servicio de {service}.\n\n- Mi negocio / proyecto:\n- Qué necesito:\n- Para cuándo lo necesito:\n- Presupuesto aproximado:\n\n¡Gracias!"
   },
   "Services_Data": {
     "web-dev": {
@@ -108,7 +118,8 @@
   },
   "contact-me": {
     "title": "Contacto",
-    "message": "Hagamos algo memorable."
+    "message": "Hagamos algo memorable.",
+    "response": "Cuéntame tu idea por correo. Normalmente respondo en menos de 24 horas."
   },
   "links": {
     "home": "Inicio",

@@ -4,12 +4,12 @@
  */
 
 export const SITE = {
-  title: "Santiago Grimán — Full-Stack Developer",
+  title: "Santiago Grimán - Desarrollo Web, Catálogos y Menús Digitales",
   description:
-    "Desarrollador web full-stack apasionado por crear experiencias modernas y accesibles.",
+    "Desarrollador web. Creo páginas web, landing pages, catálogos web y menús digitales con QR para negocios y emprendedores. Sitios rápidos y pensados para vender.",
   url: "https://wickz.dev",
   author: "Santiago Grimán",
-  email: "wickzcs@gmail.com",
+  email: "hi@wickz.dev",
   locale: "es",
 } as const;
 

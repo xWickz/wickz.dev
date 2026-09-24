@@ -5,6 +5,7 @@ import XformerlyTwitter from "../components/icons/X.astro";
 import { ButtonGroup } from "@/components/ui/button-group";
 import { Button } from "@/components/ui/button";
 
+import { SITE } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 
 interface Props {
@@ -18,6 +19,11 @@ const t = useTranslations(lang, "Hero");
 
 <section class="z-10 mt-12 relative flex w-full flex-col" id="home">
   <div class="flex flex-col">
+    <p
+      class="mb-3 w-fit self-center sm:self-start rounded-md border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 text-xs font-medium tracking-tight text-zinc-600 dark:text-zinc-400"
+    >
+      {t("available")}
+    </p>
     <div class="relative inline-block">
       <div
         class="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
@@ -42,7 +48,7 @@ const t = useTranslations(lang, "Hero");
       class="mt-4 flex items-center justify-center sm:items-start sm:justify-start"
     >
       <ButtonGroup>
-        <Button variant="positive" href="mailto:wickzcs@gmail.com">
+        <Button variant="positive" href={`mailto:${SITE.email}`}>
           {t("CTASecondary")}
         </Button>
         <Button

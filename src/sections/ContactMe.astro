@@ -1,5 +1,6 @@
 ---
 import { Separator } from "@/components/ui/Separator";
+import { SITE } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 
 interface Props {
@@ -23,9 +24,14 @@ const t = useTranslations(lang, "contact-me");
     <span
       class="text-zinc-400 dark:text-zinc-50 hover_blink hover:underline hover:underline-offset-14"
     >
-      <a href="mailto:hi@wickz.dev" class="blink_effect break-all">
-        hi@wickz.dev
+      <a href={`mailto:${SITE.email}`} class="blink_effect break-all">
+        {SITE.email}
       </a>
     </span>
+  </p>
+  <p
+    class="mt-4 max-w-xl text-sm sm:text-base text-zinc-600 dark:text-zinc-400 tracking-tight"
+  >
+    {t("response")}
   </p>
 </section>

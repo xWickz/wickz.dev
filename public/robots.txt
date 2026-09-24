@@ -3,17 +3,14 @@
 User-agent: *
 Allow: /
 
-# Block AI crawlers and scrapers
+# AI search assistants (ChatGPT-User, Claude-User, PerplexityBot) are allowed
+# so the site can be recommended in AI answers.
+
+# Block AI training crawlers and scrapers
 User-agent: GPTBot
 Disallow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
 User-agent: Claude-Web
-Disallow: /
-
-User-agent: Claude-User
 Disallow: /
 
 User-agent: anthropic-ai
@@ -23,9 +20,6 @@ User-agent: Google-Extended
 Disallow: /
 
 User-agent: CCBot
-Disallow: /
-
-User-agent: PerplexityBot
 Disallow: /
 
 User-agent: Omgilibot

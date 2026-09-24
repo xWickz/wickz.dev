@@ -17,7 +17,7 @@ export const socialMedia: readonly SocialMedia[] = [
   },
   {
     label: "Gmail",
-    href: "mailto:wickzcs@gmail.com",
+    href: "mailto:hi@wickz.dev",
     Icon: Gmail,
   },
 ] as const;
