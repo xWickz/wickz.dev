@@ -48,7 +48,7 @@ const socialLinks = [
     {
       Object.entries(NAV_LINKS).map(([name, href]) => (
         <a
-          href={href}
+          href={`/${lang}/${href}`}
           class="hover:underline hover:dark:text-zinc-100 hover:text-zinc-500"
         >
           {t(name)}

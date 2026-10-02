@@ -8,9 +8,10 @@ import { NAV_LINKS } from "@/lib/constants";
 
 interface Props {
   lang?: string;
+  altHref?: string;
 }
 
-const { lang = "es" } = Astro.props;
+const { lang = "es", altHref } = Astro.props;
 const t = useTranslations(lang, "links");
 ---
 
@@ -29,7 +30,7 @@ const t = useTranslations(lang, "links");
       {
         Object.entries(NAV_LINKS).map(([name, href]) => (
           <a
-            href={href}
+            href={`/${lang}/${href}`}
             class="hover:underline hover:dark:text-zinc-100 hover:text-zinc-500 hover_blink"
           >
             <p class="blink_effect">{t(name)}</p>
@@ -40,7 +41,7 @@ const t = useTranslations(lang, "links");
 
     <div class="flex items-center gap-2">
       <CvDownload lang={lang} />
-      <LanguageToggle lang={lang} />
+      <LanguageToggle lang={lang} href={altHref} />
       <ThemeToggle />
       <div class="hidden items-center gap-2 sm:flex">
         {
@@ -78,7 +79,7 @@ const t = useTranslations(lang, "links");
       {
         Object.entries(NAV_LINKS).map(([name, href]) => (
           <a
-            href={href}
+            href={`/${lang}/${href}`}
             class="mobile-link hover:underline hover:dark:text-zinc-100 hover:text-zinc-500 hover_blink"
           >
             <span class="blink_effect">{t(name)}</span>

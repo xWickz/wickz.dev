@@ -12,8 +12,11 @@ interface Props {
   lang?: string;
   ogImage?: string;
   canonicalURL?: string;
-  /** Idiomas en los que existe esta misma página (para hreflang). */
-  alternateLangs?: readonly string[];
+  /**
+   * Rutas de esta página en cada idioma (para hreflang y el toggle).
+   * Por defecto: la misma ruta con otro prefijo de idioma.
+   */
+  translations?: Partial<Record<string, string>>;
   noindex?: boolean;
   /** Nodos JSON-LD propios de la página (se suman a Person + WebSite). */
   jsonLd?: Record<string, unknown>[];
@@ -25,7 +28,6 @@ const {
   lang = "es",
   ogImage = "/og-image.png",
   canonicalURL = Astro.url.pathname,
-  alternateLangs = SUPPORTED_LANGUAGES,
   noindex = false,
   jsonLd = [],
 } = Astro.props;
@@ -35,15 +37,20 @@ const ogImageAbsolute = new URL(ogImage, site).href;
 const canonicalAbsolute = new URL(canonicalURL, site).href;
 const toLocale = (l: string) => (l === "en" ? "en_US" : "es_VE");
 
-// /es/servicios/x/ -> /servicios/x/ ; la misma ruta en otro idioma es /{lang}{rest}
 const rest = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/)/, "");
+const translations =
+  Astro.props.translations ??
+  Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}${rest}`]));
+const paths = Object.entries(translations).filter(
+  (e): e is [string, string] => !!e[1],
+);
 const alternates =
-  alternateLangs.length > 1
-    ? alternateLangs.map((l) => ({
-        hreflang: l,
-        href: new URL(`/${l}${rest}`, site).href,
-      }))
+  paths.length > 1
+    ? paths.map(([l, p]) => ({ hreflang: l, href: new URL(p, site).href }))
     : [];
+// Toggle de idioma: la página traducida o, si no existe, el home del otro idioma
+const otherLang = lang === "en" ? "es" : "en";
+const altHref = translations[otherLang] ?? `/${otherLang}/`;
 const xDefault = alternates.find((a) => a.hreflang === DEFAULT_LANG);
 ---
 
@@ -143,7 +150,7 @@ const xDefault = alternates.find((a) => a.hreflang === DEFAULT_LANG);
   <body
     class="relative flex min-h-screen max-w-full flex-col items-center overflow-x-hidden bg-zinc-50 font-sans dark:bg-black text-foreground antialiased"
   >
-    <Header lang={lang} />
+    <Header lang={lang} altHref={altHref} />
     <main
       class="relative z-10 flex w-full flex-col items-center justify-start gap-16 px-4 pb-16 sm:items-start sm:px-5"
     >
