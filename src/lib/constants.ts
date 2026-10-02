@@ -4,9 +4,9 @@
  */
 
 export const SITE = {
-  title: "wickz (Santiago Griman) | Desarrollador web en Cabimas",
+  title: "wickz (Santiago Griman) | Desarrollador web de Venezuela",
   description:
-    "Desarrollador web en Cabimas, Zulia. Creo catálogos web, menús digitales con QR, landing pages y apps a medida para negocios en Venezuela.",
+    "Desarrollador web en Venezuela. Creo catálogos web, menús digitales con QR, landing pages y apps a medida para negocios y emprendedores.",
   url: "https://wickz.dev",
   author: "Santiago Griman",
   email: "hi@wickz.dev",

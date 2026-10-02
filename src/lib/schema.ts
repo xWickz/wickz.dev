@@ -18,14 +18,10 @@ export const SAME_AS = [
 
 const ADDRESS = {
   "@type": "PostalAddress",
-  addressLocality: "Cabimas",
-  addressRegion: "Zulia",
   addressCountry: "VE",
 };
 
 const AREA_SERVED = [
-  { "@type": "City", name: "Cabimas" },
-  { "@type": "State", name: "Zulia" },
   { "@type": "Country", name: "Venezuela" },
 ];
 

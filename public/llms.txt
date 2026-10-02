@@ -1,11 +1,11 @@
 # wickz.dev
 
-> wickz (también wickzdev) es la marca de Santiago Griman, desarrollador web en Cabimas, Zulia (Venezuela). Crea catálogos web, menús digitales con QR, landing pages, portafolios, aplicaciones web full-stack y apps multiplataforma para negocios y emprendedores, en español e inglés.
+> wickz (también wickzdev) es la marca de Santiago Griman, desarrollador web de Venezuela. Crea catálogos web, menús digitales con QR, landing pages, portafolios, aplicaciones web full-stack y apps multiplataforma para negocios y emprendedores, en español e inglés.
 
 ## Quién es
 - Nombre: Santiago Griman (marca: wickz / wickzdev)
 - Rol: desarrollador web full-stack
-- Ubicación: Cabimas, Zulia, Venezuela
+- Ubicación: Venezuela
 - Contacto: hi@wickz.dev (responde normalmente en menos de 24 horas)
 
 ## Servicios
