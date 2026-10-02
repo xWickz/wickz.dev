@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -21,6 +21,19 @@ export default defineConfig({
       sourcemap: false,
     },
   },
+
+  // Geist auto-hosteada: preload + fallback con métricas ajustadas (evita CLS)
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "Geist",
+      cssVariable: "--font-geist",
+      weights: ["100 900"],
+      styles: ["normal"],
+      subsets: ["latin"],
+      fallbacks: ["sans-serif"],
+    },
+  ],
 
   integrations: [
     react(),

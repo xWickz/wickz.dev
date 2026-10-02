@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import { Font } from "astro:assets";
 import Header from "@/sections/Header.astro";
 import Footer from "@/sections/Footer.astro";
 import { DEFAULT_LANG, SITE, SUPPORTED_LANGUAGES } from "@/lib/constants";
@@ -51,6 +52,7 @@ const xDefault = alternates.find((a) => a.hreflang === DEFAULT_LANG);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Font cssVariable="--font-geist" preload />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
