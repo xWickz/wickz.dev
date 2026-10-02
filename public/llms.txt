@@ -22,9 +22,15 @@
 ## Páginas clave
 - Inicio (ES): https://wickz.dev/es/
 - Home (EN): https://wickz.dev/en/
-- Servicios: https://wickz.dev/es/#services
-- Experiencia: https://wickz.dev/es/#projects
-- Proyectos: https://wickz.dev/es/#personal-projects
+- Catálogos web: https://wickz.dev/es/servicios/catalogos-web/
+- Menú digital con QR: https://wickz.dev/es/servicios/menu-digital-qr/
+- Landing pages: https://wickz.dev/es/servicios/landing-pages/
+- Desarrollo web full-stack: https://wickz.dev/es/servicios/desarrollo-web-full-stack/
+- Caso Good Life Insurance: https://wickz.dev/es/casos/good-life-insurance/
+- Demos de catálogos web: https://wickz.dev/es/casos/catalogos-web-demos/
+- Menú digital Don Chaker: https://wickz.dev/es/casos/menu-digital-don-chaker/
+- Blog: https://wickz.dev/es/blog/
+- En inglés: https://wickz.dev/en/services/web-catalogs/, https://wickz.dev/en/services/qr-digital-menu/, https://wickz.dev/en/services/landing-pages/, https://wickz.dev/en/services/full-stack-web-development/, https://wickz.dev/en/case-studies/good-life-insurance/
 
 ## Perfiles
 - GitHub: https://github.com/xWickz
