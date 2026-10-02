@@ -6,6 +6,7 @@ import PersonalProjects from "@/sections/PersonalProjects.astro";
 import WorkProjects from "@/sections/WorkProjects.astro";
 import ContactMe from "@/sections/ContactMe.astro";
 import { useTranslations } from "@/i18n/utils";
+import { businessSchema } from "@/lib/schema";
 
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
@@ -19,7 +20,7 @@ const t = useTranslations(lang, "SEO");
   title={t("title")}
   description={t("description")}
   lang={lang}
-  canonicalURL={`/${lang}/`}
+  jsonLd={businessSchema(lang)}
 >
   <div
     class="flex w-full max-w-[100rem] flex-col gap-6 text-center sm:text-left mx-auto z-10"
