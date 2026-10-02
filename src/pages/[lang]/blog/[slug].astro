@@ -1,0 +1,90 @@
+---
+// Artículo del blog: /es/blog/{slug}/
+import { type CollectionEntry, render } from "astro:content";
+import Layout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
+import FaqList from "@/components/ui/faq-list.astro";
+import CtaBlock from "@/components/ui/cta-block.astro";
+import { useTranslations } from "@/i18n/utils";
+import { blogPath, entryLang, entrySlug, getPosts, readingMinutes } from "@/lib/routes";
+import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
+
+export async function getStaticPaths() {
+  const posts = await getPosts("es");
+  return posts.map((post) => ({
+    params: { lang: entryLang(post), slug: entrySlug(post) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as { post: CollectionEntry<"blog"> };
+const { data } = post;
+const lang = entryLang(post);
+const t = useTranslations(lang, "Page");
+const path = blogPath(post);
+const { Content } = await render(post);
+const fmt = new Intl.DateTimeFormat(lang, { dateStyle: "long" });
+
+const crumbs = [
+  { name: t("home"), path: `/${lang}/` },
+  { name: t("blog"), path: `/${lang}/blog/` },
+  { name: data.h1, path },
+];
+---
+
+<Layout
+  title={data.title}
+  description={data.description}
+  lang={lang}
+  translations={{ [lang]: path }}
+  noindex={data.draft}
+  jsonLd={[
+    breadcrumbSchema(crumbs),
+    articleSchema({
+      type: "BlogPosting",
+      headline: data.h1,
+      description: data.description,
+      path,
+      lang,
+      published: data.published,
+      updated: data.updated,
+    }),
+    ...(data.faqs.length ? [faqSchema(data.faqs)] : []),
+  ]}
+>
+  <article class="flex w-full max-w-[100rem] flex-col gap-10 mx-auto mt-8 z-10">
+    <header class="flex flex-col gap-4 max-w-3xl">
+      <Breadcrumbs label={t("breadcrumb")} items={crumbs} />
+      <h1
+        class="text-4xl sm:text-5xl font-bold tracking-tight text-black dark:text-zinc-200"
+      >
+        {data.h1}
+      </h1>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400">
+        {t("by")} <a href={`/${lang}/`} rel="author" class="font-semibold hover:underline">Santiago Griman (wickz)</a>
+        {" · "}
+        <time datetime={data.published.toISOString()}>{fmt.format(data.published)}</time>
+        {
+          data.updated && (
+            <>
+              {" · "}
+              {t("updated")}{" "}
+              <time datetime={data.updated.toISOString()}>{fmt.format(data.updated)}</time>
+            </>
+          )
+        }
+        {" · "}
+        {readingMinutes(post.body)} {t("minRead")}
+      </p>
+    </header>
+
+    <div
+      class="prose prose-zinc dark:prose-invert max-w-3xl prose-headings:tracking-tight prose-a:text-blue-500/90 prose-a:underline-offset-4"
+    >
+      <Content />
+    </div>
+
+    <FaqList title={t("faq")} faqs={data.faqs} />
+    <CtaBlock lang={lang} />
+  </article>
+</Layout>
