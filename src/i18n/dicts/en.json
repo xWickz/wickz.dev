@@ -127,5 +127,24 @@
     "services": "Services",
     "personal-projects": "Projects",
     "projects": "Experience"
+  },
+  "Page": {
+    "home": "Home",
+    "services": "Services",
+    "cases": "Case studies",
+    "blog": "Blog",
+    "breadcrumb": "Breadcrumb",
+    "faq": "Frequently asked questions",
+    "related": "You might also like",
+    "demos": "Demos",
+    "ctaTitle": "Have a project in mind?",
+    "ctaText": "Tell me what you need. I usually reply within 24 hours.",
+    "ctaButton": "Request a quote",
+    "seeService": "See details",
+    "readCase": "Read the full case",
+    "updated": "Updated",
+    "published": "Published",
+    "minRead": "min read",
+    "by": "By"
   }
 }

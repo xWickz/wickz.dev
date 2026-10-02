@@ -127,5 +127,24 @@
     "services": "Servicios",
     "personal-projects": "Proyectos",
     "projects": "Experiencia"
+  },
+  "Page": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "cases": "Casos",
+    "blog": "Blog",
+    "breadcrumb": "Ruta de navegación",
+    "faq": "Preguntas frecuentes",
+    "related": "También te puede interesar",
+    "demos": "Demos",
+    "ctaTitle": "¿Tienes un proyecto en mente?",
+    "ctaText": "Cuéntame qué necesitas. Normalmente respondo en menos de 24 horas.",
+    "ctaButton": "Solicitar cotización",
+    "seeService": "Ver detalles",
+    "readCase": "Ver caso completo",
+    "updated": "Actualizado",
+    "published": "Publicado",
+    "minRead": "min de lectura",
+    "by": "Por"
   }
 }

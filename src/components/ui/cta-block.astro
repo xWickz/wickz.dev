@@ -1,0 +1,37 @@
+---
+import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/i18n/utils";
+import { SITE } from "@/lib/constants";
+
+interface Props {
+  lang: string;
+  /** Servicio para prellenar el asunto/cuerpo del correo. */
+  service?: string;
+}
+
+const { lang, service } = Astro.props;
+const t = useTranslations(lang, "Page");
+const s = useTranslations(lang, "Services");
+
+const subject = service ? `${s("quoteSubject")}: ${service}` : s("quoteSubject");
+const body = s("quoteBody").replace("{service}", service ?? "");
+const href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+---
+
+<section
+  class="flex w-full max-w-3xl flex-col gap-3 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6"
+>
+  <h2 class="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+    {t("ctaTitle")}
+  </h2>
+  <p class="text-zinc-600 dark:text-zinc-400">{t("ctaText")}</p>
+  <div class="flex flex-wrap items-center gap-3">
+    <Button variant="positive" href={href}>{t("ctaButton")}</Button>
+    <a
+      href={`mailto:${SITE.email}`}
+      class="text-sm text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-4"
+    >
+      {SITE.email}
+    </a>
+  </div>
+</section>

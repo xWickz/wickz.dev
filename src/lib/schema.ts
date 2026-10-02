@@ -62,22 +62,45 @@ export function siteSchema(lang: string) {
   ];
 }
 
-export function businessSchema(lang: string) {
-  const t = useTranslations(lang, "SEO");
-  const q = useTranslations(lang, "Services_Data");
-  const serviceId = (id: string) => `${SITE.url}/${lang}/#service-${id}`;
+/** @id del Service: el de su página si existe, si no un ancla del home. */
+export const serviceId = (id: string, lang: string, path?: string) =>
+  path ? `${SITE.url}${path}#service` : `${SITE.url}/${lang}/#service-${id}`;
 
-  const serviceNodes = services.map(({ id }) => ({
+export function serviceSchema(opts: {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+}) {
+  return {
     "@type": "Service",
-    "@id": serviceId(id),
-    name: q(`${id}.title`),
-    serviceType: q(`${id}.title`),
-    description: q(`${id}.description`),
-    // TODO(fase 2): apuntar a /{lang}/servicios/{slug}/ cuando exista la página
-    url: `${SITE.url}/${lang}/#services`,
+    "@id": opts.id,
+    name: opts.name,
+    serviceType: opts.name,
+    description: opts.description,
+    url: opts.url,
     provider: { "@id": BUSINESS_ID },
     areaServed: AREA_SERVED,
-  }));
+  };
+}
+
+/** @param servicePaths ruta de la página de cada servicio (por id), si existe */
+export function businessSchema(
+  lang: string,
+  servicePaths: Partial<Record<string, string>> = {},
+) {
+  const t = useTranslations(lang, "SEO");
+  const q = useTranslations(lang, "Services_Data");
+
+  const serviceNodes = services.map(({ id }) => {
+    const path = servicePaths[id];
+    return serviceSchema({
+      id: serviceId(id, lang, path),
+      name: q(`${id}.title`),
+      description: q(`${id}.description`),
+      url: `${SITE.url}${path ?? `/${lang}/#services`}`,
+    });
+  });
 
   return [
     {
@@ -106,4 +129,54 @@ export function businessSchema(lang: string) {
     },
     ...serviceNodes,
   ];
+}
+
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE.url}${item.path}`,
+    })),
+  };
+}
+
+export function faqSchema(faqs: { q: string; a: string }[]) {
+  return {
+    "@type": "FAQPage",
+    mainEntity: faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+}
+
+export function articleSchema(opts: {
+  type?: "Article" | "BlogPosting";
+  headline: string;
+  description: string;
+  path: string;
+  lang: string;
+  published: Date;
+  updated?: Date;
+}) {
+  const url = `${SITE.url}${opts.path}`;
+  return {
+    "@type": opts.type ?? "Article",
+    "@id": `${url}#article`,
+    headline: opts.headline,
+    description: opts.description,
+    url,
+    mainEntityOfPage: url,
+    inLanguage: opts.lang,
+    image: `${SITE.url}/og-image.png`,
+    datePublished: opts.published.toISOString(),
+    dateModified: (opts.updated ?? opts.published).toISOString(),
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": PERSON_ID },
+    isPartOf: { "@id": WEBSITE_ID },
+  };
 }

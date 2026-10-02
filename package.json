@@ -37,6 +37,7 @@
     "typescript": "^7.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^26.4.1"
   }
 }

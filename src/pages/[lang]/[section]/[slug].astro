@@ -1,0 +1,168 @@
+---
+// Páginas de servicio (/es/servicios/x/, /en/services/x/) y de caso
+// (/es/casos/x/, /en/case-studies/x/), generadas desde src/content.
+import { render } from "astro:content";
+import { ArrowUpRight } from "lucide-react";
+import Layout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
+import FaqList from "@/components/ui/faq-list.astro";
+import CtaBlock from "@/components/ui/cta-block.astro";
+import { useTranslations } from "@/i18n/utils";
+import {
+  type PageEntry,
+  SECTIONS,
+  entryLang,
+  entrySlug,
+  findPage,
+  getPages,
+  pagePath,
+  translationsOf,
+} from "@/lib/routes";
+import { SITE } from "@/lib/constants";
+import {
+  articleSchema,
+  breadcrumbSchema,
+  faqSchema,
+  serviceId,
+  serviceSchema,
+} from "@/lib/schema";
+
+export async function getStaticPaths() {
+  const all = await getPages();
+  return all.map((entry) => ({
+    params: {
+      lang: entryLang(entry),
+      section: SECTIONS[entry.collection][entryLang(entry)],
+      slug: entrySlug(entry),
+    },
+    props: { entry, all },
+  }));
+}
+
+const { entry, all } = Astro.props as { entry: PageEntry; all: PageEntry[] };
+const lang = entryLang(entry);
+const t = useTranslations(lang, "Page");
+const { data } = entry;
+const path = pagePath(entry);
+const isService = entry.collection === "services";
+const { Content } = await render(entry);
+
+const related = data.related
+  .map((key) => findPage(all, key, lang))
+  .filter((e): e is PageEntry => !!e);
+
+const crumbs = [
+  { name: t("home"), path: `/${lang}/` },
+  isService
+    ? { name: t("services"), path: `/${lang}/#services` }
+    : { name: t("cases"), path: `/${lang}/#projects` },
+  { name: data.name, path },
+];
+
+const jsonLd = [
+  breadcrumbSchema(crumbs),
+  isService
+    ? serviceSchema({
+        id: serviceId(data.key, lang, path),
+        name: data.name,
+        description: data.description,
+        url: `${SITE.url}${path}`,
+      })
+    : articleSchema({
+        headline: data.h1,
+        description: data.description,
+        path,
+        lang,
+        published: data.published,
+        updated: data.updated,
+      }),
+  ...(data.faqs.length ? [faqSchema(data.faqs)] : []),
+];
+---
+
+<Layout
+  title={data.title}
+  description={data.description}
+  lang={lang}
+  translations={translationsOf(entry, all)}
+  jsonLd={jsonLd}
+>
+  <article class="flex w-full max-w-[100rem] flex-col gap-10 mx-auto mt-8 z-10">
+    <header class="flex flex-col gap-4">
+      <Breadcrumbs label={t("breadcrumb")} items={crumbs} />
+      <h1
+        class="max-w-4xl text-4xl sm:text-6xl font-bold tracking-tight text-black dark:text-zinc-200"
+      >
+        {data.h1}
+      </h1>
+      <p class="max-w-3xl text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 tracking-tight">
+        {data.lead}
+      </p>
+    </header>
+
+    <div
+      class="prose prose-zinc dark:prose-invert max-w-3xl prose-headings:tracking-tight prose-a:text-blue-500/90 prose-a:underline-offset-4"
+    >
+      <Content />
+    </div>
+
+    {
+      data.demos.length > 0 && (
+        <section class="flex flex-col gap-4">
+          <h2 class="text-3xl text-zinc-600 dark:text-zinc-200 font-bold tracking-tighter">
+            {t("demos")}
+          </h2>
+          <ul class="grid gap-3 sm:grid-cols-2 max-w-3xl">
+            {data.demos.map((demo) => (
+              <li>
+                <a
+                  href={demo.href}
+                  target="_blank"
+                  rel="noopener"
+                  class="flex h-full flex-col gap-1 rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
+                >
+                  <span class="inline-flex items-center gap-1 font-semibold text-zinc-800 dark:text-zinc-100">
+                    {demo.label}
+                    <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                  </span>
+                  <span class="text-sm text-zinc-600 dark:text-zinc-400">
+                    {demo.note}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <FaqList title={t("faq")} faqs={data.faqs} />
+
+    <CtaBlock lang={lang} service={isService ? data.name : undefined} />
+
+    {
+      related.length > 0 && (
+        <nav aria-labelledby="related-title" class="flex flex-col gap-3">
+          <h2
+            id="related-title"
+            class="text-xl font-bold tracking-tight text-zinc-700 dark:text-zinc-300"
+          >
+            {t("related")}
+          </h2>
+          <ul class="flex flex-wrap gap-2">
+            {related.map((e) => (
+              <li>
+                <a
+                  href={pagePath(e)}
+                  class="inline-flex rounded-md border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 text-sm text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
+                >
+                  {e.data.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
+  </article>
+</Layout>
