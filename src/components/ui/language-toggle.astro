@@ -15,10 +15,6 @@ const { lang = "es" } = Astro.props;
 </button>
 
 <script>
-  const LANG_KEY = "preferred-lang";
-  const SUPPORTED = ["es", "en"];
-  const DEFAULT = "es";
-
   function getCurrentLang(): string {
     const path = window.location.pathname;
     if (path.startsWith("/en")) return "en";
@@ -51,7 +47,6 @@ const { lang = "es" } = Astro.props;
   btn?.addEventListener("click", () => {
     const current = getCurrentLang();
     const next = switchLang(current);
-    localStorage.setItem(LANG_KEY, next);
     updateLabel(next);
     window.location.href = getTargetUrl(next);
   });
