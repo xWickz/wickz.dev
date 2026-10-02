@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
 import { fileURLToPath } from "node:url";
 
 // https://astro.build/config
@@ -21,7 +22,13 @@ export default defineConfig({
     },
   },
 
-  integrations: [react()],
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => !page.endsWith("/404/"),
+      i18n: { defaultLocale: "es", locales: { es: "es", en: "en" } },
+    }),
+  ],
 
   // Performance & SEO
   prefetch: {

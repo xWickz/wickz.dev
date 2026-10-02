@@ -15,4 +15,4 @@ User-agent: Omgili
 User-agent: Timpibot
 Disallow: /
 
-Sitemap: https://wickz.dev/sitemap.xml
+Sitemap: https://wickz.dev/sitemap-index.xml
