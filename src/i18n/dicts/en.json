@@ -1,7 +1,7 @@
 {
   "SEO": {
-    "title": "Santiago Grimán - Web Development, Catalogs & Digital Menus",
-    "description": "Web developer. I build websites, landing pages, web catalogs and QR digital menus for businesses and entrepreneurs. Fast sites designed to sell."
+    "title": "wickz (Santiago Griman) | Web Developer in Venezuela",
+    "description": "Web developer in Cabimas, Venezuela. I build web catalogs, QR digital menus, landing pages and custom web apps for businesses."
   },
   "ModeToggle": {
     "light": "Light",
@@ -11,9 +11,10 @@
   "Hero": {
     "thisIs": "This is",
     "shortDesc": "I build fast, scalable web apps for startups and businesses.",
-    "longDesc": "<strong>Web developer</strong>. I turn ideas into <strong>reliable, user-focused products</strong> with <strong>clean architecture</strong> and clear communication.",
+    "longDesc": "I'm Santiago Griman, also known as <strong>wickz</strong>. I build <strong>web catalogs</strong>, <strong>QR digital menus</strong>, landing pages and custom web apps, with <strong>simple architecture</strong> and clear communication.",
     "CTASecondary": "Contact me",
-    "available": "Available for new projects"
+    "available": "Available for new projects",
+    "role": "Web developer in Cabimas, Venezuela"
   },
   "PersonalProjects": {
     "featured": "Featured Projects",

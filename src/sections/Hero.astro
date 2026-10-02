@@ -24,22 +24,29 @@ const t = useTranslations(lang, "Hero");
     >
       {t("available")}
     </p>
-    <div class="relative inline-block">
-      <div
-        class="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
-        aria-hidden="true"
-      >
-      </div>
-      <h1
-        class="pl-1 max-w-xl text-4xl sm:text-7xl font-bold tracking-tight text-black dark:text-zinc-200 hover_blink select-none"
-      >
-        <span class="blink_effect">
-          Santiago <span class="text-blue-500/90">Griman</span>
+    <h1 class="flex flex-col">
+      <span class="relative inline-block">
+        <span
+          class="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
+          aria-hidden="true"
+        >
         </span>
-      </h1>
-    </div>
+        <span
+          class="block pl-1 max-w-xl text-4xl sm:text-7xl font-bold tracking-tight text-black dark:text-zinc-200 hover_blink select-none"
+        >
+          <span class="blink_effect">
+            Santiago <span class="text-blue-500/90">Griman</span>
+          </span>
+        </span>
+      </span>
+      <span
+        class="pl-1 mt-1 text-sm sm:text-base font-medium tracking-tight text-zinc-600 dark:text-zinc-400"
+      >
+        wickz · {t("role")}
+      </span>
+    </h1>
 
-    <h2
+    <p
       class="max-w-2xl text-md text-left sm:text-lg text-zinc-600 dark:text-zinc-400 font-normal tracking-tight mt-2 [&_strong]:dark:text-zinc-200"
       set:html={t("longDesc")}
     />

@@ -4,11 +4,11 @@
  */
 
 export const SITE = {
-  title: "Santiago Grimán - Desarrollo Web, Catálogos y Menús Digitales",
+  title: "wickz (Santiago Griman) | Desarrollador web en Cabimas",
   description:
-    "Desarrollador web. Creo páginas web, landing pages, catálogos web y menús digitales con QR para negocios y emprendedores. Sitios rápidos y pensados para vender.",
+    "Desarrollador web en Cabimas, Zulia. Creo catálogos web, menús digitales con QR, landing pages y apps a medida para negocios en Venezuela.",
   url: "https://wickz.dev",
-  author: "Santiago Grimán",
+  author: "Santiago Griman",
   email: "hi@wickz.dev",
   locale: "es",
 } as const;
