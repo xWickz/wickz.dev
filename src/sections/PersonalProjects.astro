@@ -71,6 +71,7 @@ const compactProjects = personalProjects.slice(2);
                     target="_blank"
                     rel="noopener"
                     class="hover_blink"
+                    aria-label={lang === "en" ? `Open ${q(`${id}.title`)} demo` : `Abrir demo de ${q(`${id}.title`)}`}
                   >
                     <SquareArrowOutUpRight className="w-4 h-4 text-zinc-500 blink_effect" />
                   </a>
@@ -82,6 +83,7 @@ const compactProjects = personalProjects.slice(2);
                     target="_blank"
                     rel="noopener"
                     class="hover_blink"
+                    aria-label={lang === "en" ? `${q(`${id}.title`)} source code on GitHub` : `Código de ${q(`${id}.title`)} en GitHub`}
                   >
                     <GitHub class="w-4 h-4 text-zinc-500 blink_effect" />
                   </a>

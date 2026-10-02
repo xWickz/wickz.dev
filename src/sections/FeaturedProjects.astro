@@ -13,17 +13,16 @@ const { lang = "es" } = Astro.props;
 const t = useTranslations(lang, "PersonalProjects_Data");
 
 const featuredProjects = personalProjects.slice(0, 2);
+const isEn = lang === "en";
 
 const featuredMedia = {
   "case-shell": {
     imageSrc: "/featured-projects/caseshell-banner.webp",
     videoSrc: "/featured-projects/caseshell-demo.mp4",
-    alt: "Vista previa del proyecto CaseShell",
   },
   "collections-dev": {
     imageSrc: "/featured-projects/collections-banner-01.webp",
     videoSrc: "/featured-projects/collections-demo.mp4",
-    alt: "Vista previa del proyecto Collections",
   },
 } as const;
 ---
@@ -38,7 +37,6 @@ const featuredMedia = {
             "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
           videoSrc:
             "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-          alt: "Vista previa del proyecto personal",
         } as const);
 
       const projectTitle = t(`${id}.title`);
@@ -54,15 +52,16 @@ const featuredMedia = {
                 data-project-id={id}
                 data-active="false"
                 aria-pressed="false"
-                aria-label={`Reproducir vista previa de ${projectTitle}`}
+                aria-label={isEn ? `Play ${projectTitle} preview` : `Reproducir vista previa de ${projectTitle}`}
               >
                 <img
                   src={media.imageSrc}
-                  alt={media.alt}
-                  width={640}
-                  height={360}
+                  alt={isEn ? `${projectTitle} project preview` : `Vista previa del proyecto ${projectTitle}`}
+                  width={1600}
+                  height={900}
                   class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 group-data-[active=true]:opacity-0"
-                  loading="eager"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <video
                   class="project-video absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-data-[active=true]:opacity-100"
@@ -91,6 +90,7 @@ const featuredMedia = {
                       target="_blank"
                       rel="noopener"
                       class="hover_blink"
+                      aria-label={isEn ? `Open ${projectTitle} demo` : `Abrir demo de ${projectTitle}`}
                     >
                       <ExternalLink class="size-5 text-zinc-500 blink_effect" />
                     </a>
@@ -101,6 +101,7 @@ const featuredMedia = {
                       target="_blank"
                       rel="noopener"
                       class="hover_blink"
+                      aria-label={isEn ? `${projectTitle} source code on GitHub` : `Código de ${projectTitle} en GitHub`}
                     >
                       <GitHub class="size-5 text-zinc-500 blink_effect" />
                     </a>
