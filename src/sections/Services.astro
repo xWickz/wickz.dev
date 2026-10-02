@@ -11,6 +11,7 @@ import { Separator } from "@/components/ui/Separator";
 import { services } from "@/config/services";
 import { SITE } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
+import { findPage, getPages, pagePath } from "@/lib/routes";
 
 interface Props {
   lang?: string;
@@ -20,6 +21,8 @@ const { lang = "es" } = Astro.props;
 
 const t = useTranslations(lang, "Services");
 const q = useTranslations(lang, "Services_Data");
+const p = useTranslations(lang, "Page");
+const pages = await getPages();
 ---
 
 <section class="flex w-full flex-col gap-6" id="services">
@@ -51,6 +54,7 @@ const q = useTranslations(lang, "Services_Data");
     {
       services.map(({ id, Icon, demos = [] }) => {
         const title = q(`${id}.title`);
+        const page = findPage(pages, id, lang);
         const quoteHref = `mailto:${SITE.email}?subject=${encodeURIComponent(`${t("quoteSubject")}: ${title}`)}&body=${encodeURIComponent(t("quoteBody").replace("{service}", title))}`;
 
         return (
@@ -89,16 +93,27 @@ const q = useTranslations(lang, "Services_Data");
                 </div>
               )}
 
-              <a
-                href={quoteHref}
-                class="group/quote inline-flex w-fit items-center gap-1 text-sm font-medium text-blue-500/90 hover:underline underline-offset-4"
-              >
-                {t("CTAQuote")}
-                <ArrowRight
-                  className="size-3.5 transition-transform group-hover/quote:translate-x-0.5"
-                  aria-hidden="true"
-                />
-              </a>
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                {page && (
+                  <a
+                    href={pagePath(page)}
+                    class="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:underline underline-offset-4"
+                  >
+                    {p("seeService")}
+                    <span class="sr-only">: {title}</span>
+                  </a>
+                )}
+                <a
+                  href={quoteHref}
+                  class="group/quote inline-flex w-fit items-center gap-1 text-sm font-medium text-blue-500/90 hover:underline underline-offset-4"
+                >
+                  {t("CTAQuote")}
+                  <ArrowRight
+                    className="size-3.5 transition-transform group-hover/quote:translate-x-0.5"
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
             </CardContent>
           </Card>
         );

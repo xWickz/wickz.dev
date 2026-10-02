@@ -146,5 +146,17 @@
     "published": "Publicado",
     "minRead": "min de lectura",
     "by": "Por"
+  },
+  "Trust": {
+    "title": "Cómo trabajo",
+    "locationTitle": "Desde Venezuela",
+    "location": "Desarrollo sitios web para negocios y emprendedores desde Venezuela.",
+    "responseTitle": "Respuesta en menos de 24 h",
+    "response": "Normalmente respondo en menos de 24 horas por correo.",
+    "resultsTitle": "Resultados medibles",
+    "results": "Good Life Insurance consiguió <strong>+50 % de clientes</strong> y creció un 40 % con su sitio web.",
+    "processTitle": "Proceso de trabajo",
+    "faqTitle": "Preguntas frecuentes",
+    "more": "Más páginas"
   }
 }

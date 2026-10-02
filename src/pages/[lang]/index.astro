@@ -4,9 +4,13 @@ import Hero from "@/sections/Hero.astro";
 import Services from "@/sections/Services.astro";
 import PersonalProjects from "@/sections/PersonalProjects.astro";
 import WorkProjects from "@/sections/WorkProjects.astro";
+import Trust from "@/sections/Trust.astro";
 import ContactMe from "@/sections/ContactMe.astro";
+import FaqList from "@/components/ui/faq-list.astro";
+import { homeFaqs } from "@/config/home";
 import { useTranslations } from "@/i18n/utils";
-import { businessSchema } from "@/lib/schema";
+import { entryLang, getPages, pagePath } from "@/lib/routes";
+import { businessSchema, faqSchema } from "@/lib/schema";
 
 export function getStaticPaths() {
   return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
@@ -14,13 +18,21 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const t = useTranslations(lang, "SEO");
+const faqs = homeFaqs[lang === "en" ? "en" : "es"];
+
+// Los Service del JSON-LD apuntan a su página cuando existe
+const servicePaths = Object.fromEntries(
+  (await getPages())
+    .filter((e) => e.collection === "services" && entryLang(e) === lang)
+    .map((e) => [e.data.key, pagePath(e)]),
+);
 ---
 
 <Layout
   title={t("title")}
   description={t("description")}
   lang={lang}
-  jsonLd={businessSchema(lang)}
+  jsonLd={[...businessSchema(lang, servicePaths), faqSchema([...faqs])]}
 >
   <div
     class="flex w-full max-w-[100rem] flex-col gap-6 text-center sm:text-left mx-auto z-10"
@@ -29,6 +41,10 @@ const t = useTranslations(lang, "SEO");
     <Services lang={lang} />
     <WorkProjects lang={lang} />
     <PersonalProjects lang={lang} />
+    <Trust lang={lang} />
+    <div class="mt-12 text-left">
+      <FaqList title={useTranslations(lang, "Trust")("faqTitle")} faqs={[...faqs]} />
+    </div>
     <ContactMe lang={lang} />
   </div>
 </Layout>

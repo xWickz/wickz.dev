@@ -14,6 +14,7 @@ import { Separator } from "@/components/ui/Separator";
 
 // Importamos nuestra utilidad i18n
 import { useTranslations } from "@/i18n/utils";
+import { findPage, getPages, pagePath } from "@/lib/routes";
 
 interface Props {
   lang?: string;
@@ -23,6 +24,8 @@ const { lang = "es" } = Astro.props;
 
 const t = useTranslations(lang, "Projects");
 const q = useTranslations(lang, "Projects_Data");
+const p = useTranslations(lang, "Page");
+const pages = await getPages();
 ---
 
 <section class="flex w-full flex-col gap-6" id="projects">
@@ -57,6 +60,8 @@ const q = useTranslations(lang, "Projects_Data");
           CTAResults: t("CTAResults"),
         };
 
+        const casePage = findPage(pages, project.id, lang);
+
         return (
           <Card className="max-w-lg">
             <CardHeader>
@@ -86,6 +91,16 @@ const q = useTranslations(lang, "Projects_Data");
                 translations={translations}
               />
             </CardContent>
+            {casePage && (
+              <CardContent>
+                <a
+                  href={pagePath(casePage)}
+                  class="text-sm font-medium text-blue-500/90 hover:underline underline-offset-4"
+                >
+                  {p("readCase")} →
+                </a>
+              </CardContent>
+            )}
           </Card>
         );
       })

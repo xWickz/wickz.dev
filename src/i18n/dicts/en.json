@@ -146,5 +146,17 @@
     "published": "Published",
     "minRead": "min read",
     "by": "By"
+  },
+  "Trust": {
+    "title": "How I work",
+    "locationTitle": "Based in Venezuela",
+    "location": "I build websites for businesses and entrepreneurs from Venezuela.",
+    "responseTitle": "Reply within 24 h",
+    "response": "I usually reply by email within 24 hours.",
+    "resultsTitle": "Measurable results",
+    "results": "Good Life Insurance got <strong>+50% customers</strong> and grew by 40% with its website.",
+    "processTitle": "Work process",
+    "faqTitle": "Frequently asked questions",
+    "more": "More pages"
   }
 }
