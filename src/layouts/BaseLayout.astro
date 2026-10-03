@@ -146,6 +146,9 @@ const xDefault = alternates.find((a) => a.hreflang === DEFAULT_LANG);
         document.documentElement.classList.remove("dark");
       }
     </script>
+
+    <!-- Vercel Web Analytics (sin cookies; se activa en el panel de Vercel) -->
+    {import.meta.env.PROD && <script is:inline defer src="/_vercel/insights/script.js" />}
   </head>
   <body
     class="relative flex min-h-screen max-w-full flex-col items-center overflow-x-hidden bg-zinc-50 font-sans dark:bg-black text-foreground antialiased"
