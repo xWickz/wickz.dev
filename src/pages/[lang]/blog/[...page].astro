@@ -1,0 +1,98 @@
+---
+// Listado del blog: /es/blog/, /es/blog/2/, ... (solo español por ahora)
+import type { GetStaticPaths, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import Layout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
+import { useTranslations } from "@/i18n/utils";
+import { blogPath, getPosts, readingMinutes } from "@/lib/routes";
+import { breadcrumbSchema } from "@/lib/schema";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getPosts("es");
+  return paginate(posts, { pageSize: 10, params: { lang: "es" } });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props as { page: Page<CollectionEntry<"blog">> };
+const lang = "es";
+const t = useTranslations(lang, "Page");
+const fmt = new Intl.DateTimeFormat("es", { dateStyle: "long" });
+
+const crumbs = [
+  { name: t("home"), path: `/${lang}/` },
+  { name: t("blog"), path: `/${lang}/blog/` },
+];
+const pageSuffix = page.currentPage > 1 ? ` (página ${page.currentPage})` : "";
+---
+
+<Layout
+  title={`Blog de desarrollo web y negocios${pageSuffix} | wickz`}
+  description="Artículos sobre catálogos web, menús digitales, landing pages y cuánto cuesta tener presencia web para un negocio en Venezuela."
+  lang={lang}
+  translations={{ es: page.url.current + "/" }}
+  noindex={page.total === 0}
+  jsonLd={[breadcrumbSchema(crumbs)]}
+>
+  <div class="flex w-full max-w-[100rem] flex-col gap-8 mx-auto mt-8 z-10">
+    <header class="flex flex-col gap-4">
+      <Breadcrumbs label={t("breadcrumb")} items={crumbs} />
+      <h1
+        class="text-4xl sm:text-6xl font-bold tracking-tight text-black dark:text-zinc-200"
+      >
+        Blog de desarrollo web para negocios
+      </h1>
+      <p class="max-w-3xl text-lg text-zinc-600 dark:text-zinc-400 tracking-tight">
+        Guías claras sobre catálogos web, menús digitales con QR, landing pages
+        y lo que cuesta llevar un negocio a internet en Venezuela.
+      </p>
+    </header>
+
+    {
+      page.total === 0 ? (
+        <p class="text-zinc-600 dark:text-zinc-400">Pronto habrá artículos aquí.</p>
+      ) : (
+        <ul class="flex flex-col divide-y divide-zinc-200 dark:divide-zinc-800 max-w-3xl">
+          {page.data.map((post) => (
+            <li class="py-6">
+              <article class="flex flex-col gap-2">
+                <h2 class="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+                  <a href={blogPath(post)} class="hover:underline underline-offset-4">
+                    {post.data.h1}
+                  </a>
+                </h2>
+                <p class="text-zinc-600 dark:text-zinc-400">{post.data.description}</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400">
+                  <time datetime={post.data.published.toISOString()}>
+                    {fmt.format(post.data.published)}
+                  </time>
+                  {" · "}
+                  {readingMinutes(post.body)} {t("minRead")}
+                </p>
+              </article>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    {
+      page.lastPage > 1 && (
+        <nav aria-label="Paginación" class="flex items-center gap-4 text-sm font-semibold">
+          {page.url.prev && (
+            <a href={page.url.prev + "/"} rel="prev" class="hover:underline">
+              ← Más recientes
+            </a>
+          )}
+          <span class="text-zinc-600 dark:text-zinc-400">
+            Página {page.currentPage} de {page.lastPage}
+          </span>
+          {page.url.next && (
+            <a href={page.url.next + "/"} rel="next" class="hover:underline">
+              Anteriores →
+            </a>
+          )}
+        </nav>
+      )
+    }
+  </div>
+</Layout>

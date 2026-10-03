@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  faqs: { q: string; a: string }[];
+  id?: string;
+}
+const { title, faqs, id = "faq" } = Astro.props;
+---
+
+{
+  faqs.length > 0 && (
+    <section id={id} class="flex w-full flex-col gap-4">
+      <h2 class="text-3xl text-zinc-600 dark:text-zinc-200 font-bold tracking-tighter">
+        {title}
+      </h2>
+      <div class="divide-y divide-zinc-200 dark:divide-zinc-800 border-y border-zinc-200 dark:border-zinc-800 max-w-3xl">
+        {faqs.map(({ q, a }) => (
+          <details class="group py-4">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-zinc-800 dark:text-zinc-100 [&::-webkit-details-marker]:hidden">
+              <h3>{q}</h3>
+              <span
+                aria-hidden="true"
+                class="text-zinc-500 transition-transform group-open:rotate-45"
+              >
+                +
+              </span>
+            </summary>
+            <p class="mt-3 text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              {a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+  )
+}

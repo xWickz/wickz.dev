@@ -1,0 +1,161 @@
+---
+import "@/styles/global.css";
+import { Font } from "astro:assets";
+import Header from "@/sections/Header.astro";
+import Footer from "@/sections/Footer.astro";
+import { DEFAULT_LANG, SITE, SUPPORTED_LANGUAGES } from "@/lib/constants";
+import { siteSchema } from "@/lib/schema";
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+  /**
+   * Rutas de esta página en cada idioma (para hreflang y el toggle).
+   * Por defecto: la misma ruta con otro prefijo de idioma.
+   */
+  translations?: Partial<Record<string, string>>;
+  noindex?: boolean;
+  /** Nodos JSON-LD propios de la página (se suman a Person + WebSite). */
+  jsonLd?: Record<string, unknown>[];
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  lang = "es",
+  ogImage = "/og-image.png",
+  canonicalURL = Astro.url.pathname,
+  noindex = false,
+  jsonLd = [],
+} = Astro.props;
+
+const site = Astro.site || SITE.url;
+const ogImageAbsolute = new URL(ogImage, site).href;
+const canonicalAbsolute = new URL(canonicalURL, site).href;
+const toLocale = (l: string) => (l === "en" ? "en_US" : "es_VE");
+
+const rest = Astro.url.pathname.replace(/^\/[a-z]{2}(?=\/)/, "");
+const translations =
+  Astro.props.translations ??
+  Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}${rest}`]));
+const paths = Object.entries(translations).filter(
+  (e): e is [string, string] => !!e[1],
+);
+const alternates =
+  paths.length > 1
+    ? paths.map(([l, p]) => ({ hreflang: l, href: new URL(p, site).href }))
+    : [];
+// Toggle de idioma: la página traducida o, si no existe, el home del otro idioma
+const otherLang = lang === "en" ? "es" : "en";
+const altHref = translations[otherLang] ?? `/${otherLang}/`;
+const xDefault = alternates.find((a) => a.hreflang === DEFAULT_LANG);
+---
+
+<!doctype html>
+<html lang={lang} class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Font cssVariable="--font-geist" preload />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+    <meta name="theme-color" content="#18181b" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalAbsolute} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageAbsolute} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:locale" content={toLocale(lang)} />
+    {
+      alternates
+        .filter((a) => a.hreflang !== lang)
+        .map((a) => (
+          <meta property="og:locale:alternate" content={toLocale(a.hreflang)} />
+        ))
+    }
+    <meta property="og:site_name" content="wickz.dev" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalAbsolute} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbsolute} />
+    <meta name="twitter:image:alt" content={title} />
+    <meta name="twitter:creator" content="@wickzdev" />
+
+    <!-- Canonical + hreflang (solo páginas indexables) -->
+    {!noindex && <link rel="canonical" href={canonicalAbsolute} />}
+    {
+      !noindex &&
+        alternates.map((a) => (
+          <link rel="alternate" hreflang={a.hreflang} href={a.href} />
+        ))
+    }
+    {
+      !noindex && xDefault && (
+        <link rel="alternate" hreflang="x-default" href={xDefault.href} />
+      )
+    }
+
+    <!-- Structured Data (JSON-LD) -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [...siteSchema(lang), ...jsonLd],
+      })}
+    />
+
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="relative flex min-h-screen max-w-full flex-col items-center overflow-x-hidden bg-zinc-50 font-sans dark:bg-black text-foreground antialiased"
+  >
+    <Header lang={lang} altHref={altHref} />
+    <main
+      class="relative z-10 flex w-full flex-col items-center justify-start gap-16 px-4 pb-16 sm:items-start sm:px-5"
+    >
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

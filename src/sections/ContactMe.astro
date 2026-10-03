@@ -1,0 +1,37 @@
+---
+import { Separator } from "@/components/ui/Separator";
+import { SITE } from "@/lib/constants";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+const t = useTranslations(lang, "contact-me");
+---
+
+<Separator />
+<section class="flex flex-col">
+  <h2 class="font-bold text-zinc-600 dark:text-zinc-400">
+    {t("title")}
+  </h2>
+  <p
+    class="max-w-3xl text-4xl sm:text-7xl font-semibold tracking-tight text-zinc-600 dark:text-zinc-200 wrap-break-word"
+  >
+    {t("message")}
+    <br />
+    <span
+      class="text-zinc-400 dark:text-zinc-50 hover_blink hover:underline hover:underline-offset-14"
+    >
+      <a href={`mailto:${SITE.email}`} class="blink_effect break-all">
+        {SITE.email}
+      </a>
+    </span>
+  </p>
+  <p
+    class="mt-4 max-w-xl text-sm sm:text-base text-zinc-600 dark:text-zinc-400 tracking-tight"
+  >
+    {t("response")}
+  </p>
+</section>

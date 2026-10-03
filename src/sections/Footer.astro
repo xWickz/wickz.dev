@@ -1,0 +1,102 @@
+---
+import { Separator } from "@/components/ui/Separator";
+import CvDownload from "@/components/ui/cv-download.astro";
+import { useTranslations } from "@/i18n/utils";
+import { NAV_LINKS } from "@/lib/constants";
+import { entryLang, getPages, pagePath } from "@/lib/routes";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+const t = useTranslations(lang, "links");
+const p = useTranslations(lang, "Page");
+
+const pages = (await getPages()).filter((e) => entryLang(e) === lang);
+const groups = [
+  { title: p("services"), links: pages.filter((e) => e.collection === "services") },
+  { title: p("cases"), links: pages.filter((e) => e.collection === "cases") },
+];
+
+const socialLinks = [
+  { label: "X", href: "https://x.com/wickzdev" },
+  { label: "GitHub", href: "https://github.com/xWickz" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/santiago-griman/" },
+] as const;
+---
+
+<div class="px-5 w-full max-w-[100rem]">
+  <Separator />
+</div>
+<nav
+  aria-label={useTranslations(lang, "Trust")("more")}
+  class="grid w-full max-w-[100rem] gap-6 px-4 pt-10 text-sm sm:grid-cols-3 sm:px-5"
+>
+  {
+    groups.map(({ title, links }) => (
+      <div>
+        <p class="font-semibold text-zinc-800 dark:text-zinc-200">{title}</p>
+        <ul class="mt-2 flex flex-col gap-1.5">
+          {links.map((e) => (
+            <li>
+              <a href={pagePath(e)} class="text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-4">
+                {e.data.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+  {
+    lang === "es" && (
+      <div>
+        <p class="font-semibold text-zinc-800 dark:text-zinc-200">{p("blog")}</p>
+        <ul class="mt-2">
+          <li>
+            <a href="/es/blog/" class="text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-4">
+              Artículos y guías
+            </a>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+</nav>
+<footer
+  class="relative z-4 flex w-full max-w-[100rem] items-end justify-between px-4 pb-3 pt-12 mt-12 sm:px-5 border-zinc-200 dark:border-zinc-700"
+>
+  <div
+    class="flex items-center gap-3 text-zinc-600 dark:text-zinc-200 font-semibold text-sm"
+  >
+    <CvDownload lang={lang} />
+    {
+      socialLinks.map(({ label, href }) => (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener"
+          class="hover:underline hover:dark:text-zinc-100 hover:text-zinc-500"
+        >
+          {label}
+        </a>
+      ))
+    }
+  </div>
+  <nav
+    aria-label="Navegación secundaria"
+    class="font-bold text-zinc-600 dark:text-zinc-200 flex flex-col tracking-tight text-2xl"
+  >
+    {
+      Object.entries(NAV_LINKS).map(([name, href]) => (
+        <a
+          href={`/${lang}/${href}`}
+          class="hover:underline hover:dark:text-zinc-100 hover:text-zinc-500"
+        >
+          {t(name)}
+        </a>
+      ))
+    }
+  </nav>
+</footer>

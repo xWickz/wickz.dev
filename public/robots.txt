@@ -1,4 +1,18 @@
+# https://wickz.dev/robots.txt
+# Buscadores y asistentes de IA (GPTBot, OAI-SearchBot, ChatGPT-User,
+# ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended,
+# Applebot-Extended, CCBot...) tienen acceso completo para que el sitio
+# pueda aparecer y ser citado en sus respuestas.
 User-agent: *
 Allow: /
 
-Sitemap: https://wickz.dev/sitemap.xml
+# Scrapers sin valor de visibilidad
+User-agent: Bytespider
+User-agent: Diffbot
+User-agent: ImagesiftBot
+User-agent: Omgilibot
+User-agent: Omgili
+User-agent: Timpibot
+Disallow: /
+
+Sitemap: https://wickz.dev/sitemap-index.xml

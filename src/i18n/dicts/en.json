@@ -1,0 +1,162 @@
+{
+  "SEO": {
+    "title": "wickz (Santiago Griman) | Web Developer in Venezuela",
+    "description": "Web developer from Venezuela. I build web catalogs, QR digital menus, landing pages and custom web apps for businesses."
+  },
+  "ModeToggle": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Hero": {
+    "thisIs": "This is",
+    "shortDesc": "I build fast, scalable web apps for startups and businesses.",
+    "longDesc": "I'm Santiago Griman, also known as <strong>wickz</strong>. I build <strong>web catalogs</strong>, <strong>QR digital menus</strong>, landing pages and custom web apps, with <strong>simple architecture</strong> and clear communication.",
+    "CTASecondary": "Contact me",
+    "available": "Available for new projects",
+    "role": "Web developer from Venezuela"
+  },
+  "PersonalProjects": {
+    "featured": "Featured Projects",
+    "title": "Personal Projects",
+    "subtitle": "Projects",
+    "CTARepo": "View on GitHub",
+    "CTADemo": "View demo",
+    "CTANoDemo": "Demo unavailable",
+    "new": "NEW!"
+  },
+  "PersonalProjects_Data": {
+    "gd-search": {
+      "title": "GD Search",
+      "description": "What do you think of the game Geometry Dash? Check out the most popular level in this game."
+    },
+    "google-translator-ai": {
+      "title": "Google Translator with AI",
+      "description": "Taking things further! Using the AI-powered Google Translate API, I created this."
+    },
+    "javascript-projects": {
+      "title": "JavaScript Projects",
+      "description": "A collection of over +10 projects that I made to practice JavaScript."
+    },
+    "mini-forum-game": {
+      "title": "Mini Forum for a Game",
+      "description": "A small forum for the game Last War. Specifically for alliances!"
+    },
+    "bcv-rate-shortcut": {
+      "title": "BCV Rate Shortcut",
+      "description": "An iOS shortcut to check the current exchange rate from the BCV (Central Bank of Venezuela)."
+    },
+    "case-shell": {
+      "title": "Case-Shell",
+      "description": "Investigate technical incidents within a virtual environment, explore files, use the terminal, and solve the case as if you were inside the system. We built something so great that we came in <span class=\"text-amber-500 dark:text-amber-400 font-semibold\">🏆 4th place at the hackathon</span>"
+    },
+    "collections-dev": {
+      "title": "Collections for Developers",
+      "description": "Personal blog where I share projects, information, resources and more related to web development and programming. Do not search more, this is the place."
+    },
+    "notidev": {
+      "title": "NotiDev",
+      "description": "A platform to share daily news automatized with n8n"
+    },
+    "url-shortcut": {
+      "title": "URL Shortener",
+      "description": "A simple URL shortener built with React Frontend and AWS Services as Backend."
+    }
+  },
+  "Projects": {
+    "title": "Experience",
+    "CTAProblem": "Problem",
+    "CTASolution": "Solution",
+    "CTAResults": "Results"
+  },
+  "Projects_Data": {
+    "good-life-insurance": {
+      "time": "Jan. 2025 - Present",
+      "description": "Good Life Insurance is a small company that provides insurance services.",
+      "problem": "The company did not have a strong online presence, leading to <strong>the loss of potential customers</strong>, a <strong>slow and manual</strong> registration process, and a failure to <strong>provide information</strong> about the services it offers.",
+      "solution": "Through a collaborative effort, we successfully developed a professional website that addressed existing issues and strengthened the brand with a strong online presence.",
+      "results": "- The company now has a <strong>professional website</strong>.<br></br>- The registration process is now <strong>automated</strong>.<br></br>- The company has gained <strong>+50%</strong> more customers after gaining exposure on social media.<br></br>- The company has expanded by <strong>+40%</strong> following this growth.",
+      "stats": {
+        "clients": "more customers after gaining exposure on social media",
+        "growth": "company growth"
+      }
+    }
+  },
+  "Services": {
+    "title": "Services",
+    "subtitle": "Have an idea or business in mind? Here are the solutions I build to help you grow.",
+    "demo": "Demo:",
+    "demos": "Demos:",
+    "CTAQuote": "Request a quote",
+    "quoteSubject": "Quote request",
+    "quoteBody": "Hi Santiago,\n\nI am interested in your {service} service.\n\n- My business / project:\n- What I need:\n- When I need it:\n- Approximate budget:\n\nThanks!"
+  },
+  "Services_Data": {
+    "web-dev": {
+      "title": "Full-Stack Web Development",
+      "description": "Modern, secure, and scalable web applications custom-built with clean architecture and high-performance APIs."
+    },
+    "landing-pages": {
+      "title": "High-Converting Landing Pages",
+      "description": "Engaging landing pages engineered to convert visitors into customers, with lightning-fast load times and persuasive design."
+    },
+    "portfolios": {
+      "title": "Portfolios & Personal Sites",
+      "description": "Unique and memorable websites to showcase your personal brand, skills, and projects with an impeccable presentation."
+    },
+    "digital-menus": {
+      "title": "Digital Menus & QR Codes",
+      "description": "Interactive digital menus for restaurants and cafes, easily updatable in real-time and accessible instantly on mobile with no downloads."
+    },
+    "web-catalogs": {
+      "title": "Interactive Web Catalogs",
+      "description": "Structured, visual digital catalogs to display your products or services and streamline direct contact with buyers."
+    },
+    "cross-platform": {
+      "title": "Cross-Platform Apps",
+      "description": "Smooth mobile applications for iOS and Android sharing business logic, with polished aesthetics and native-grade performance."
+    }
+  },
+  "contact-me": {
+    "title": "Contact",
+    "message": "Let's make something memorable.",
+    "response": "Tell me about your idea by email. I usually reply within 24 hours."
+  },
+  "links": {
+    "home": "Home",
+    "services": "Services",
+    "personal-projects": "Projects",
+    "projects": "Experience"
+  },
+  "Page": {
+    "home": "Home",
+    "services": "Services",
+    "cases": "Case studies",
+    "blog": "Blog",
+    "breadcrumb": "Breadcrumb",
+    "faq": "Frequently asked questions",
+    "related": "You might also like",
+    "demos": "Demos",
+    "ctaTitle": "Have a project in mind?",
+    "ctaText": "Tell me what you need. I usually reply within 24 hours.",
+    "ctaButton": "Request a quote",
+    "seeService": "See details",
+    "readCase": "Read the full case",
+    "updated": "Updated",
+    "published": "Published",
+    "minRead": "min read",
+    "by": "By"
+  },
+  "Trust": {
+    "title": "How I work",
+    "locationTitle": "Based in Venezuela",
+    "location": "I build websites for businesses and entrepreneurs from Venezuela.",
+    "responseTitle": "Reply within 24 h",
+    "response": "I usually reply by email within 24 hours.",
+    "resultsTitle": "Measurable results",
+    "results": "Good Life Insurance got <strong>+50% customers</strong> and grew by 40% with its website.",
+    "processTitle": "Work process",
+    "faqTitle": "Frequently asked questions",
+    "more": "More pages"
+  }
+}
