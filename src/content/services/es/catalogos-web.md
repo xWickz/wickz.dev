@@ -6,7 +6,7 @@ description: Catálogos web con tus productos, fotos, precios y botón de WhatsA
 h1: Catálogo web para tu negocio
 lead: Un catálogo web es una página con todos tus productos, sus fotos y precios, que tus clientes abren desde un enlace sin descargar nada. Lo compartes por WhatsApp o Instagram y, cuando alguien quiere comprar, te escribe directamente.
 published: 2026-10-02
-related: [digital-menus, landing-pages, catalog-demos]
+related: [hardware-store-catalog, catalog-demos, digital-menus, landing-pages]
 # TODO (datos reales que faltan, añadir como FAQ cuando los tengas):
 # - Precio o rango de precio
 # - Tiempo de entrega habitual

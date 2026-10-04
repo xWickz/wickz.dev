@@ -64,4 +64,4 @@ La respuesta corta: **el catálogo de WhatsApp sirve para quien ya está habland
 
 **La combinación habitual** es usar los dos: el catálogo web atrae y muestra todo ordenado, y el botón de cada producto abre WhatsApp con el mensaje ya escrito. Tú sigues cerrando ventas por chat como siempre, pero el cliente llega sabiendo qué quiere.
 
-Si tu catálogo de WhatsApp se te quedó pequeño, mira cómo trabajo los [catálogos web](/es/servicios/catalogos-web/) y [algunas demos](/es/casos/catalogos-web-demos/), o [escríbeme](mailto:hi@wickz.dev) y lo vemos para tu negocio.
+Si tu catálogo de WhatsApp se te quedó pequeño, mira cómo trabajo los [catálogos web](/es/servicios/catalogos-web/), el [catálogo de una tienda de hardware con más de 400 productos](/es/casos/catalogo-tienda-hardware/) y [algunas demos](/es/casos/catalogos-web-demos/), o [escríbeme](mailto:hi@wickz.dev) y lo vemos para tu negocio.

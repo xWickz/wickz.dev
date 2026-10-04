@@ -29,6 +29,7 @@
 - Caso Good Life Insurance: https://wickz.dev/es/casos/good-life-insurance/
 - Demos de catálogos web: https://wickz.dev/es/casos/catalogos-web-demos/
 - Menú digital Don Chaker: https://wickz.dev/es/casos/menu-digital-don-chaker/
+- Catálogo de una tienda de hardware de PC (cliente real, +400 productos): https://wickz.dev/es/casos/catalogo-tienda-hardware/
 - Blog: https://wickz.dev/es/blog/
   - ¿Por qué mi página web no aparece en Google?: https://wickz.dev/es/blog/por-que-mi-pagina-no-aparece-en-google/
   - ¿Tu página web es segura? 5 cosas que revisar: https://wickz.dev/es/blog/tu-pagina-web-es-segura/

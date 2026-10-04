@@ -64,4 +64,4 @@ The short answer: **the WhatsApp catalog works for people who are already talkin
 
 **The usual combination** is using both: the web catalog attracts people and shows everything organized, and each product's button opens WhatsApp with the message already written. You keep closing sales over chat as always, but the customer arrives knowing what they want.
 
-If you've outgrown your WhatsApp catalog, see how I build [web catalogs](/en/services/web-catalogs/) and [some demos](/en/case-studies/web-catalog-demos/), or [email me](mailto:hi@wickz.dev) and we'll look at your business.
+If you've outgrown your WhatsApp catalog, see how I build [web catalogs](/en/services/web-catalogs/), the [catalog for a hardware store with over 400 products](/en/case-studies/hardware-store-catalog/) and [some demos](/en/case-studies/web-catalog-demos/), or [email me](mailto:hi@wickz.dev) and we'll look at your business.

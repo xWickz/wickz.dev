@@ -6,7 +6,7 @@ description: Web catalogs with your products, photos, prices and a WhatsApp butt
 h1: A web catalog for your business
 lead: A web catalog is a page with all your products, photos and prices that customers open from a link, with nothing to download. You share it on WhatsApp or Instagram, and when someone wants to buy, they message you directly.
 published: 2026-10-02
-related: [digital-menus, landing-pages, catalog-demos]
+related: [hardware-store-catalog, catalog-demos, digital-menus, landing-pages]
 demos:
   - label: Laptop catalog
     href: https://agn2ws.wickz.dev/
