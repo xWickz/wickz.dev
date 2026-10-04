@@ -1,4 +1,5 @@
 ---
+key: google-indexing
 title: ¿Por qué mi página web no aparece en Google?
 description: Las razones más comunes por las que una página web no sale en Google y qué hacer con cada una, explicadas sin tecnicismos.
 h1: ¿Por qué mi página web no aparece en Google?

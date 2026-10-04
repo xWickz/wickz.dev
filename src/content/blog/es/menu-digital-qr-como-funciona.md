@@ -1,13 +1,9 @@
 ---
+key: qr-menu-guide
 title: "Menú digital con QR: cómo funciona y cuánto cuesta"
 description: Qué es un menú digital con QR, cómo lo usan tus clientes, qué debe tener para que funcione en el celular y de qué depende su precio.
 h1: "Menú digital con QR: cómo funciona y cuánto cuesta"
 published: 2026-10-03
-draft: true
-# TODO antes de publicar (quitar draft: true cuando esté):
-# - Rango de precio real en la sección "¿Cuánto cuesta?"
-# - Tiempo de entrega habitual
-# - Confirmar si Don Chaker es cliente real o demo y ajustar la mención
 faqs:
   - q: ¿El cliente necesita descargar una aplicación para ver el menú?
     a: No. El QR abre una página web en el navegador del teléfono. Basta con apuntar la cámara al código.
@@ -46,7 +42,7 @@ Un menú digital no es solo poner la carta en internet. Para que el cliente encu
 - **Precios visibles** junto a cada plato.
 - **Un botón para escribirte por WhatsApp**, útil para pedidos y delivery.
 
-Como ejemplo, el [menú de Don Chaker](/es/casos/menu-digital-don-chaker/) organiza 15 categorías, tiene buscador de platos y una sección de promociones.
+Por ejemplo, el [menú que hice para Don Chaker](/es/casos/menu-digital-don-chaker/) organiza 15 categorías, tiene buscador de platos y una sección de promociones.
 
 ## ¿PDF o página web?
 
@@ -54,9 +50,7 @@ Muchos locales empiezan subiendo un PDF de la carta. Funciona, pero en el celula
 
 ## ¿Cuánto cuesta un menú digital con QR?
 
-<!-- TODO: rango de precio real -->
-
-El precio depende sobre todo de:
+Un menú digital con QR cuesta **entre 100 y 200 USD** y suele estar listo en **alrededor de una semana** desde que me envías la carta. El precio depende sobre todo de:
 
 - **Cuántos platos y categorías** tiene la carta.
 - **Si necesitas buscador, fotos o varios idiomas.**

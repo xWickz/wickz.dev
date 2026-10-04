@@ -12,12 +12,16 @@ demos:
     href: https://donchaker-menu.vercel.app/
     note: A menu with 15 categories, dish search, a deals section and reference prices.
 faqs:
+  - q: How much does a QR digital menu cost?
+    a: Between 100 and 200 USD, depending on how many dishes and categories your menu has and whether you need search, photos or several languages. I give you the exact price once I see your menu.
+  - q: How long does it take?
+    a: Usually about a week from when you send me the menu with dishes and prices.
   - q: Do my customers need to download an app?
     a: No. The QR code opens a regular web page in the phone's browser. It works with the camera of any modern phone.
   - q: What happens if I change a price or a dish runs out?
     a: You change it in the menu and the QR code stays the same, because it points to the page, not to the content. No need to reprint menus or codes.
   - q: Can the menu have search and categories?
-    a: Yes. The Don Chaker demo has 15 categories, from empanadas and arepas to Middle Eastern food and coffee, and a search that shows a clear message when a dish isn't found.
+    a: Yes. The Don Chaker menu has 15 categories, from empanadas and arepas to Middle Eastern food and coffee, and a search that shows a clear message when a dish isn't found.
   - q: Does it work for delivery or sharing on WhatsApp too?
     a: Yes. Besides the QR code on the table, the menu has its own link, so you can put it in your Instagram bio or send it on WhatsApp to anyone who asks for the menu.
 ---

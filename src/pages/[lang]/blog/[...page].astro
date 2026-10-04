@@ -1,35 +1,74 @@
 ---
-// Listado del blog: /es/blog/, /es/blog/2/, ... (solo español por ahora)
+// Listado del blog: /{lang}/blog/, /{lang}/blog/2/, ...
 import type { GetStaticPaths, Page } from "astro";
 import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/BaseLayout.astro";
 import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
 import { useTranslations } from "@/i18n/utils";
+import { SUPPORTED_LANGUAGES } from "@/lib/constants";
 import { blogPath, getPosts, readingMinutes } from "@/lib/routes";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const posts = await getPosts("es");
-  return paginate(posts, { pageSize: 10, params: { lang: "es" } });
+  const perLang = await Promise.all(
+    SUPPORTED_LANGUAGES.map(async (lang) =>
+      paginate(await getPosts(lang), { pageSize: 10, params: { lang } }),
+    ),
+  );
+  return perLang.flat();
 }) satisfies GetStaticPaths;
 
+const COPY = {
+  es: {
+    title: "Blog de desarrollo web y negocios",
+    description:
+      "Artículos sobre catálogos web, menús digitales, landing pages y cuánto cuesta tener presencia web para un negocio en Venezuela.",
+    h1: "Blog de desarrollo web para negocios",
+    lead: "Guías claras sobre catálogos web, menús digitales con QR, landing pages y lo que cuesta llevar un negocio a internet en Venezuela.",
+    empty: "{c.empty}",
+    pagination: "Paginación",
+    page: "página",
+    pageOf: (n: number, total: number) => `Página ${n} de ${total}`,
+    newer: "← Más recientes",
+    older: "Anteriores →",
+  },
+  en: {
+    title: "Web development blog for businesses",
+    description:
+      "Articles about web catalogs, digital menus, landing pages and what it takes to put a business online.",
+    h1: "Web development blog for businesses",
+    lead: "Clear guides on web catalogs, QR digital menus, landing pages and what it takes to take a business online.",
+    empty: "Articles coming soon.",
+    pagination: "Pagination",
+    page: "page",
+    pageOf: (n: number, total: number) => `Page ${n} of ${total}`,
+    newer: "← Newer",
+    older: "Older →",
+  },
+};
+
 const { page } = Astro.props as { page: Page<CollectionEntry<"blog">> };
-const lang = "es";
+const lang = Astro.params.lang as keyof typeof COPY;
+const c = COPY[lang];
 const t = useTranslations(lang, "Page");
-const fmt = new Intl.DateTimeFormat("es", { dateStyle: "long" });
+const fmt = new Intl.DateTimeFormat(lang, { dateStyle: "long" });
 
 const crumbs = [
   { name: t("home"), path: `/${lang}/` },
   { name: t("blog"), path: `/${lang}/blog/` },
 ];
-const pageSuffix = page.currentPage > 1 ? ` (página ${page.currentPage})` : "";
+const pageSuffix = page.currentPage > 1 ? ` (${c.page} ${page.currentPage})` : "";
 ---
 
 <Layout
-  title={`Blog de desarrollo web y negocios${pageSuffix} | wickz`}
-  description="Artículos sobre catálogos web, menús digitales, landing pages y cuánto cuesta tener presencia web para un negocio en Venezuela."
+  title={`${c.title}${pageSuffix} | wickz`}
+  description={c.description}
   lang={lang}
-  translations={{ es: page.url.current + "/" }}
+  translations={
+    page.currentPage === 1
+      ? Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/blog/`]))
+      : { [lang]: page.url.current + "/" }
+  }
   noindex={page.total === 0}
   jsonLd={[breadcrumbSchema(crumbs)]}
 >
@@ -39,11 +78,10 @@ const pageSuffix = page.currentPage > 1 ? ` (página ${page.currentPage})` : "";
       <h1
         class="text-4xl sm:text-6xl font-bold tracking-tight text-black dark:text-zinc-200"
       >
-        Blog de desarrollo web para negocios
+        {c.h1}
       </h1>
       <p class="max-w-3xl text-lg text-zinc-600 dark:text-zinc-400 tracking-tight">
-        Guías claras sobre catálogos web, menús digitales con QR, landing pages
-        y lo que cuesta llevar un negocio a internet en Venezuela.
+        {c.lead}
       </p>
     </header>
 
@@ -77,18 +115,18 @@ const pageSuffix = page.currentPage > 1 ? ` (página ${page.currentPage})` : "";
 
     {
       page.lastPage > 1 && (
-        <nav aria-label="Paginación" class="flex items-center gap-4 text-sm font-semibold">
+        <nav aria-label={c.pagination} class="flex items-center gap-4 text-sm font-semibold">
           {page.url.prev && (
             <a href={page.url.prev + "/"} rel="prev" class="hover:underline">
-              ← Más recientes
+              {c.newer}
             </a>
           )}
           <span class="text-zinc-600 dark:text-zinc-400">
-            Página {page.currentPage} de {page.lastPage}
+            {c.pageOf(page.currentPage, page.lastPage)}
           </span>
           {page.url.next && (
             <a href={page.url.next + "/"} rel="next" class="hover:underline">
-              Anteriores →
+              {c.older}
             </a>
           )}
         </nav>

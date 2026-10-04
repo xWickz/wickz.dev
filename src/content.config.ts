@@ -35,6 +35,7 @@ const cases = defineCollection({
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
   schema: z.object({
+    key: z.string(), // igual en ES y EN: une las traducciones
     title: z.string().max(60),
     description: z.string().max(155),
     h1: z.string(),

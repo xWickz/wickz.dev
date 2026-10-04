@@ -8,23 +8,24 @@ lead: Un menú digital con QR es la carta de tu restaurante convertida en una p�
 published: 2026-10-02
 related: [web-catalogs, landing-pages, don-chaker-menu]
 # TODO (datos reales que faltan, añadir como FAQ cuando los tengas):
-# - Precio o rango de precio
-# - Tiempo de entrega habitual
 # - ¿Quién actualiza precios y platos (el cliente o tú)? ¿Cómo?
 # - ¿Entregas el QR impreso / diseñado para mesas?
 # - ¿Incluye dominio/hosting?
-# - ¿Don Chaker es cliente real o demo? (ajustar redacción si es cliente)
 demos:
   - label: Menú Don Chaker
     href: https://donchaker-menu.vercel.app/
     note: Menú con 15 categorías, buscador de platos, sección de promociones y precios de referencia.
 faqs:
+  - q: ¿Cuánto cuesta un menú digital con QR?
+    a: Entre 100 y 200 USD, según cuántos platos y categorías tenga la carta y si necesitas buscador, fotos o varios idiomas. Te paso el precio exacto cuando vea tu carta.
+  - q: ¿Cuánto tarda en estar listo?
+    a: Normalmente alrededor de una semana desde que me envías la carta con los platos y precios.
   - q: ¿Mis clientes tienen que descargar una aplicación?
     a: No. El código QR abre una página web normal en el navegador del teléfono. Funciona con la cámara de cualquier celular moderno.
   - q: ¿Qué pasa si cambio un precio o se acaba un plato?
     a: Se cambia en el menú y el QR sigue siendo el mismo, porque apunta a la página y no al contenido. No hay que reimprimir cartas ni códigos.
   - q: ¿El menú puede tener buscador y categorías?
-    a: Sí. La demo de Don Chaker tiene 15 categorías, desde empanadas y arepas hasta comida árabe y cafetería, y un buscador que muestra un aviso cuando no encuentra el plato.
+    a: Sí. El menú de Don Chaker tiene 15 categorías, desde empanadas y arepas hasta comida árabe y cafetería, y un buscador que muestra un aviso cuando no encuentra el plato.
   - q: ¿Sirve también para delivery o para compartir por WhatsApp?
     a: Sí. Además del QR en la mesa, el menú tiene su propio enlace, así que puedes ponerlo en la bio de Instagram o mandarlo por WhatsApp a quien te pida la carta.
 ---

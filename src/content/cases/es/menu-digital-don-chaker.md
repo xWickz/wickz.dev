@@ -8,7 +8,6 @@ lead: Don Chaker es un farma-market y café con una carta muy amplia, de empanad
 published: 2026-10-02
 related: [digital-menus, web-catalogs]
 # TODO:
-# - Confirmar si Don Chaker es cliente real o una demo, y ajustar la redacción
 # - Resultados reales si los hay (menos preguntas por WhatsApp, pedidos, etc.)
 # - Captura del menú y foto del QR en mesa, si existen
 demos:

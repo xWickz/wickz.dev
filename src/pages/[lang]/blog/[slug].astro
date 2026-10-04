@@ -1,23 +1,33 @@
 ---
-// Artículo del blog: /es/blog/{slug}/
+// Artículo del blog: /{lang}/blog/{slug}/
 import { type CollectionEntry, render } from "astro:content";
 import Layout from "@/layouts/BaseLayout.astro";
 import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
 import FaqList from "@/components/ui/faq-list.astro";
 import CtaBlock from "@/components/ui/cta-block.astro";
 import { useTranslations } from "@/i18n/utils";
+import { SUPPORTED_LANGUAGES } from "@/lib/constants";
 import { blogPath, entryLang, entrySlug, getPosts, readingMinutes } from "@/lib/routes";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export async function getStaticPaths() {
-  const posts = await getPosts("es");
+  const posts = (await Promise.all(SUPPORTED_LANGUAGES.map(getPosts))).flat();
   return posts.map((post) => ({
     params: { lang: entryLang(post), slug: entrySlug(post) },
-    props: { post },
+    props: {
+      post,
+      // misma `key` en cada idioma = traducción (hreflang + toggle)
+      translations: Object.fromEntries(
+        posts.filter((p) => p.data.key === post.data.key).map((p) => [entryLang(p), blogPath(p)]),
+      ),
+    },
   }));
 }
 
-const { post } = Astro.props as { post: CollectionEntry<"blog"> };
+const { post, translations } = Astro.props as {
+  post: CollectionEntry<"blog">;
+  translations: Record<string, string>;
+};
 const { data } = post;
 const lang = entryLang(post);
 const t = useTranslations(lang, "Page");
@@ -36,7 +46,7 @@ const crumbs = [
   title={data.title}
   description={data.description}
   lang={lang}
-  translations={{ [lang]: path }}
+  translations={translations}
   noindex={data.draft}
   jsonLd={[
     breadcrumbSchema(crumbs),

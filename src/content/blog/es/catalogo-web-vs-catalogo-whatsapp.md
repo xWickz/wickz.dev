@@ -1,4 +1,5 @@
 ---
+key: catalog-vs-whatsapp
 title: Catálogo web vs. catálogo de WhatsApp Business
 description: Diferencias entre un catálogo web propio y el catálogo de WhatsApp Business, qué ofrece cada uno y cuándo conviene usar uno, el otro o ambos.
 h1: Catálogo web vs. catálogo de WhatsApp Business

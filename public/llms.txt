@@ -33,6 +33,12 @@
   - ¿Por qué mi página web no aparece en Google?: https://wickz.dev/es/blog/por-que-mi-pagina-no-aparece-en-google/
   - ¿Tu página web es segura? 5 cosas que revisar: https://wickz.dev/es/blog/tu-pagina-web-es-segura/
   - Catálogo web vs. catálogo de WhatsApp Business: https://wickz.dev/es/blog/catalogo-web-vs-catalogo-whatsapp/
+  - Menú digital con QR: cómo funciona y cuánto cuesta: https://wickz.dev/es/blog/menu-digital-qr-como-funciona/
+- Blog (EN): https://wickz.dev/en/blog/
+  - Why isn't my website showing up on Google?: https://wickz.dev/en/blog/why-my-website-is-not-on-google/
+  - Is your website secure? 5 things to check: https://wickz.dev/en/blog/is-your-website-secure/
+  - Web catalog vs. WhatsApp Business catalog: https://wickz.dev/en/blog/web-catalog-vs-whatsapp-catalog/
+  - QR digital menu: how it works and how much it costs: https://wickz.dev/en/blog/qr-digital-menu-how-it-works/
 - En inglés: https://wickz.dev/en/services/web-catalogs/, https://wickz.dev/en/services/qr-digital-menu/, https://wickz.dev/en/services/landing-pages/, https://wickz.dev/en/services/full-stack-web-development/, https://wickz.dev/en/case-studies/good-life-insurance/
 
 ## Perfiles
