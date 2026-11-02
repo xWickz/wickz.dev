@@ -6,6 +6,7 @@ description: A real web catalog for a PC parts store in Venezuela, with over 400
 h1: Web catalog for a PC hardware store
 lead: I built the web catalog for a brick-and-mortar PC parts store in Venezuela. It organizes over 400 products in 9 categories, with search, filters, a cart and prebuilt PC bundles and a WhatsApp button to close the order over chat.
 published: 2026-10-04
+updated: 2026-11-02
 related: [web-catalogs, catalog-demos]
 # Client unnamed until they give permission. See the ES version.
 faqs:
@@ -24,6 +25,15 @@ A web catalog with the store's entire inventory, designed to be browsed on a pho
 - **Customizable PC bundles**, a quick way to sell complete builds.
 - **A WhatsApp button** to close the sale over chat.
 - **The shop's address and social links**, for people who prefer to buy in person.
+
+## Results
+
+According to the store owner, since the catalog went live:
+
+- **More customers come in**, and most of them browse the catalog before messaging.
+- **They arrive ready to buy**: they've already picked their parts and ask about a specific order, not "what do you have?".
+- **They buy more, and better**: it's easier to put together an order with several products or ask for a complete bundle.
+- **It saves a lot of time**: the owner no longer sends photos, lists and prices one by one in every chat.
 
 ## Why it works
 
