@@ -1,7 +1,7 @@
 {
   "SEO": {
-    "title": "wickz (Santiago Griman) | Web Developer in Venezuela",
-    "description": "Web developer from Venezuela. I build web catalogs, QR digital menus, landing pages and custom web apps for businesses."
+    "title": "wickz (Santiago Griman) | Freelance Remote Web Developer",
+    "description": "Freelance web developer based in Venezuela, working remotely worldwide. Web catalogs, QR menus, landing pages and custom web apps for businesses."
   },
   "ModeToggle": {
     "light": "Light",
@@ -14,7 +14,7 @@
     "longDesc": "I'm Santiago Griman, also known as <strong>wickz</strong>. I build <strong>web catalogs</strong>, <strong>QR digital menus</strong>, landing pages and custom web apps, with <strong>simple architecture</strong> and clear communication.",
     "CTASecondary": "Contact me",
     "available": "Available for new projects",
-    "role": "Web developer from Venezuela"
+    "role": "Freelance web developer, remote"
   },
   "PersonalProjects": {
     "featured": "Featured Projects",
@@ -149,8 +149,8 @@
   },
   "Trust": {
     "title": "How I work",
-    "locationTitle": "Based in Venezuela",
-    "location": "I build websites for businesses and entrepreneurs from Venezuela.",
+    "locationTitle": "Based in Venezuela, working remotely",
+    "location": "I work remotely with businesses and entrepreneurs in any country, in English or Spanish.",
     "responseTitle": "Reply within 24 h",
     "response": "I usually reply by email within 24 hours.",
     "resultsTitle": "Measurable results",

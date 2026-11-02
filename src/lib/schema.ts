@@ -23,6 +23,8 @@ const ADDRESS = {
 
 const AREA_SERVED = [
   { "@type": "Country", name: "Venezuela" },
+  // Trabajo en remoto
+  { "@type": "Place", name: "Worldwide" },
 ];
 
 export function siteSchema(lang: string) {

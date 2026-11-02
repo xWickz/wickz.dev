@@ -4,9 +4,9 @@
  */
 
 export const SITE = {
-  title: "wickz (Santiago Griman) | Desarrollador web de Venezuela",
+  title: "wickz (Santiago Griman) | Desarrollador web freelance remoto",
   description:
-    "Desarrollador web en Venezuela. Creo catálogos web, menús digitales con QR, landing pages y apps a medida para negocios y emprendedores.",
+    "Desarrollador web freelance desde Venezuela, en remoto para todo el mundo. Catálogos web, menús QR, landing pages y apps a medida para negocios.",
   url: "https://wickz.dev",
   author: "Santiago Griman",
   email: "hi@wickz.dev",
