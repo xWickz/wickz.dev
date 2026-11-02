@@ -1,9 +1,10 @@
 ---
 key: website-security
-title: Is your website secure? 5 things to check
-description: Five security checks any business owner can run on their website without knowing how to code, and what to do if something fails.
-h1: Is your website secure? 5 things to check
+title: How to Tell if a Website Is Secure (and Yours Too)
+description: "Check if a website is secure in 2 minutes: padlock, address and Google Safe Browsing. Plus 5 checks to know if your own business site is safe."
+h1: How to tell if a website is secure (and if yours is)
 published: 2026-10-04
+updated: 2026-11-02
 faqs:
   - q: Can a small website be attacked too?
     a: Yes. Most attacks are automated, programs that crawl the internet looking for known flaws regardless of the size of the business.
@@ -12,12 +13,27 @@ faqs:
   - q: What do I do if I think my site was hacked?
     a: Change the passwords for your hosting, domain and admin panel, tell whoever built the site and restore a clean backup. Search Console warns you if Google detects malicious content.
 ---
+**Short answer:** a website is secure enough to use if its address starts with `https://`, the domain is spelled exactly right, and Google Safe Browsing doesn't flag it. That takes two minutes. If the site is **yours**, there are five more things to check, further down.
 
-Many websites go live and nobody checks on them again. They work, they look good, and security gets left for later. The problem is that when something goes wrong, you find out late: a customer tells you your site redirects somewhere else, or Google flags it as dangerous.
+## Checking a website you're visiting
 
-You don't need to know how to code to do a basic check. These are five things you can verify yourself.
+Before you type a password, card number or personal data into a site:
 
-## 1. It loads over HTTPS (the padlock)
+1. **Look at the address bar.** It should start with `https://`. If the browser says "Not secure", don't type anything sensitive.
+2. **Read the domain letter by letter.** Scam sites copy real ones with small changes: `paypa1.com`, `amazon-offers.shop`, `mybank.secure-login.com`. The real domain is the part right before `.com`, `.net` or the country ending.
+3. **Run it through [Google Safe Browsing](https://transparencyreport.google.com/safe-browsing/search).** Paste the address and Google tells you whether it has detected malware or phishing on it.
+4. **Look for the business outside its own site.** Search its name plus "reviews" or "scam". A real business has a footprint: a Google Maps listing, social profiles, a phone number that works.
+5. **Distrust urgency.** Countdown timers, "only 2 left" and prices far below everyone else's are the classic signs of a fake store.
+
+The padlock alone isn't proof: it only means the connection is encrypted, and scam sites get free certificates too.
+
+## Is your own website secure? 5 checks
+
+If you own the site, a visitor can't see the problems that matter most. Many business websites go live and nobody checks on them again, and when something goes wrong you find out late: a customer tells you your site redirects somewhere else, or Google flags it as dangerous. You don't need to know how to code to run these checks.
+
+
+
+### 1. It loads over HTTPS (the padlock)
 
 Open your site and look at the address bar. It should start with `https://` and show a padlock or settings icon, not a "Not secure" warning.
 
@@ -25,7 +41,7 @@ HTTPS encrypts what travels between the visitor and your site. Without it, the d
 
 **If it fails:** most hosting providers offer the certificate for free. Ask your provider or whoever built the site.
 
-## 2. Who has access to your domain and hosting
+### 2. Who has access to your domain and hosting
 
 List the accounts your website depends on:
 
@@ -39,7 +55,7 @@ It's very common for the domain to be registered under the developer's name or a
 
 **If it fails:** ask for the domain and hosting to be moved to an account you own, change the passwords and turn on two-step verification wherever you can.
 
-## 3. Forms aren't an open door
+### 3. Forms aren't an open door
 
 If your site has a contact, sign-up or order form, check:
 
@@ -49,7 +65,7 @@ If your site has a contact, sign-up or order form, check:
 
 **If it fails:** a form can be protected with validation and an anti-spam system. It's a small fix for whoever maintains the site.
 
-## 4. The software is up to date
+### 4. The software is up to date
 
 If your site runs on WordPress or another system with plugins, every outdated plugin is a possible way in. Automated attacks look for exactly that: old versions with known flaws.
 
@@ -57,7 +73,7 @@ If your site runs on WordPress or another system with plugins, every outdated pl
 
 Static sites, which have no admin panel or exposed database, have far less to update. That's why they're often a good choice for landing pages and catalogs.
 
-## 5. There's a backup
+### 5. There's a backup
 
 Ask your hosting provider or whoever maintains your site: **if the site gets deleted tomorrow, how do we get it back?**
 

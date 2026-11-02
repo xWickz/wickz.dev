@@ -1,9 +1,10 @@
 ---
 key: website-security
-title: ¿Tu página web es segura? 5 cosas que revisar
-description: Cinco revisiones de seguridad que cualquier dueño de negocio puede hacer en su página web, sin saber programar, y qué hacer si algo falla.
-h1: ¿Tu página web es segura? 5 cosas que revisar
+title: Cómo saber si una página web es segura (y la tuya)
+description: "Cómo saber si una página web es segura en 2 minutos: candado, dirección y Google Safe Browsing. Y 5 revisiones para saber si la tuya lo es."
+h1: Cómo saber si una página web es segura (y si la tuya lo es)
 published: 2026-10-03
+updated: 2026-11-02
 faqs:
   - q: ¿Una página pequeña también puede ser atacada?
     a: Sí. La mayoría de los ataques son automáticos, programas que recorren internet buscando fallos conocidos sin importar el tamaño del negocio.
@@ -12,12 +13,27 @@ faqs:
   - q: ¿Qué hago si creo que mi página fue hackeada?
     a: Cambia las contraseñas de hosting, dominio y panel de administración, avisa a quien te hizo la web y restaura una copia de seguridad limpia. Search Console te avisa si Google detecta contenido malicioso.
 ---
+**Respuesta corta:** una página web es segura para usarla si su dirección empieza por `https://`, el dominio está escrito exactamente bien y Google Safe Browsing no la marca como peligrosa. Eso toma dos minutos. Si la página es **tuya**, hay cinco cosas más que revisar, más abajo.
 
-Muchas páginas web se publican y nadie vuelve a revisarlas. Funcionan, se ven bien, y la seguridad queda para después. El problema es que, cuando algo falla, te enteras tarde: un cliente te avisa de que tu web redirige a otro sitio, o Google la marca como peligrosa.
+## Cómo revisar una página que estás visitando
 
-No hace falta saber programar para hacer una revisión básica. Estas son cinco cosas que puedes comprobar tú mismo.
+Antes de escribir una contraseña, un número de tarjeta o datos personales en un sitio:
 
-## 1. Que cargue con HTTPS (el candado)
+1. **Mira la barra de direcciones.** Debe empezar por `https://`. Si el navegador dice "No seguro", no escribas nada sensible.
+2. **Lee el dominio letra por letra.** Las páginas fraudulentas copian a las reales con cambios pequeños: `paypa1.com`, `amazon-ofertas.shop`, `mibanco.login-seguro.com`. El dominio real es la parte justo antes de `.com`, `.net` o la terminación del país.
+3. **Pásala por [Google Safe Browsing](https://transparencyreport.google.com/safe-browsing/search?hl=es).** Pegas la dirección y Google te dice si ha detectado malware o phishing en ella.
+4. **Busca el negocio fuera de su propia web.** Busca su nombre más "opiniones" o "estafa". Un negocio real deja huella: ficha en Google Maps, redes sociales, un teléfono que contesta.
+5. **Desconfía de la urgencia.** Contadores regresivos, "solo quedan 2" y precios muy por debajo de todos los demás son las señales clásicas de una tienda falsa.
+
+El candado por sí solo no es prueba: solo significa que la conexión va cifrada, y las páginas fraudulentas también consiguen certificados gratis.
+
+## ¿Tu página web es segura? 5 revisiones
+
+Si la página es tuya, el visitante no ve los problemas que más importan. Muchas webs de negocio se publican y nadie vuelve a revisarlas, y cuando algo falla te enteras tarde: un cliente te avisa de que tu web redirige a otro sitio, o Google la marca como peligrosa. No hace falta saber programar para hacer estas revisiones.
+
+
+
+### 1. Que cargue con HTTPS (el candado)
 
 Abre tu página y mira la barra de direcciones. Debe empezar por `https://` y mostrar un candado o un ícono de ajustes, no un aviso de "No seguro".
 
@@ -25,7 +41,7 @@ HTTPS cifra lo que viaja entre el visitante y tu web. Sin él, los datos de un f
 
 **Si falla:** la mayoría de hostings ofrecen el certificado gratis. Pídeselo a tu proveedor o a quien hizo la web.
 
-## 2. Quién tiene acceso a tu dominio y hosting
+### 2. Quién tiene acceso a tu dominio y hosting
 
 Haz una lista de las cuentas de las que depende tu página:
 
@@ -39,7 +55,7 @@ Es muy común que el dominio quede registrado a nombre del programador o de un e
 
 **Si falla:** pide que el dominio y el hosting se pasen a una cuenta tuya, cambia las contraseñas y activa la verificación en dos pasos donde se pueda.
 
-## 3. Que los formularios no sean una puerta abierta
+### 3. Que los formularios no sean una puerta abierta
 
 Si tu web tiene formulario de contacto, de registro o de pedidos, revisa:
 
@@ -49,7 +65,7 @@ Si tu web tiene formulario de contacto, de registro o de pedidos, revisa:
 
 **Si falla:** un formulario se puede proteger con validación y un sistema antispam. Es un ajuste pequeño para quien mantiene la web.
 
-## 4. Que el software esté actualizado
+### 4. Que el software esté actualizado
 
 Si tu página está hecha con WordPress u otro sistema con plugins, cada plugin desactualizado es un posible punto de entrada. Los ataques automáticos buscan justamente versiones viejas con fallos conocidos.
 
@@ -57,7 +73,7 @@ Si tu página está hecha con WordPress u otro sistema con plugins, cada plugin 
 
 Las páginas estáticas, que no tienen panel ni base de datos expuesta, tienen mucho menos que actualizar. Por eso suelen ser una buena opción para landing pages y catálogos.
 
-## 5. Que exista una copia de seguridad
+### 5. Que exista una copia de seguridad
 
 Pregunta a tu hosting o a quien mantiene tu web: **si mañana la página se borra, ¿cómo la recuperamos?**
 
