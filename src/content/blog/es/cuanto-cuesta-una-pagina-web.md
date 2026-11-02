@@ -4,7 +4,7 @@ title: "¿Cuánto cuesta una página web en 2026? Precios reales"
 description: "Precios de una página web en 2026: landing page, catálogo web, menú QR y apps a medida. Qué incluye cada uno, qué se paga cada año y cómo no pagar de más."
 h1: ¿Cuánto cuesta una página web en 2026?
 published: 2026-11-02
-draft: true
+draft: false
 faqs:
   - q: ¿Hay que pagar algo todos los meses?
     a: Siempre se paga el dominio, unos 10 a 15 USD al año. El alojamiento de una página estática puede ser gratis. El mantenimiento mensual es opcional y solo vale la pena si vas a cambiar contenido a menudo.
@@ -44,7 +44,7 @@ Todos incluyen diseño adaptado al teléfono, la configuración de Google Search
 |---|---|
 | Dominio (`tunegocio.com`) | 10 a 15 USD al año |
 | Alojamiento de una página estática | 0 a 20 USD al mes |
-| Mantenimiento (cambios, actualizaciones) | Opcional, desde 25 USD al mes |
+| Mantenimiento (cambios, actualizaciones) | Opcional, de 50 a 100 USD al mes según el proyecto |
 
 Una página estática, sin panel de administración ni base de datos expuesta, casi no necesita mantenimiento. Es una de las razones por las que suelo recomendarlas para landings y catálogos: pagas una vez y funciona.
 

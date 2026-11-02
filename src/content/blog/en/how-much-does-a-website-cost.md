@@ -4,7 +4,7 @@ title: "How Much Does a Website Cost in 2026? Real Prices"
 description: "Website prices in 2026: landing pages, web catalogs, QR menus and custom apps. What each includes, what you pay every year and how not to overpay."
 h1: How much does a website cost in 2026?
 published: 2026-11-02
-draft: true
+draft: false
 faqs:
   - q: Do I have to pay something every month?
     a: You always pay for the domain, about 10 to 15 USD a year. Hosting a static site can be free. Monthly maintenance is optional and only worth it if you'll change content often.
@@ -44,7 +44,7 @@ All of them include a phone-friendly design, Google Search Console setup, publis
 |---|---|
 | Domain (`yourbusiness.com`) | 10 to 15 USD a year |
 | Hosting for a static site | 0 to 20 USD a month |
-| Maintenance (changes, updates) | Optional, from 25 USD a month |
+| Maintenance (changes, updates) | Optional, 50 to 100 USD a month depending on the project |
 
 A static site, with no admin panel or exposed database, needs almost no maintenance. It's one of the reasons I usually recommend them for landing pages and catalogs: you pay once and it works.
 
