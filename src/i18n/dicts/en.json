@@ -1,7 +1,7 @@
 {
   "SEO": {
     "title": "wickz (Santiago Griman) | Freelance Remote Web Developer",
-    "description": "Freelance web developer based in Venezuela, working remotely worldwide. Web catalogs, QR menus, landing pages and custom web apps for businesses."
+    "description": "Freelance web developer based in Venezuela, working remotely worldwide. Website audits, web catalogs, QR menus, landing pages and custom web apps for businesses."
   },
   "ModeToggle": {
     "light": "Light",
@@ -11,7 +11,7 @@
   "Hero": {
     "thisIs": "This is",
     "shortDesc": "I build fast, scalable web apps for startups and businesses.",
-    "longDesc": "I'm Santiago Griman, also known as <strong>wickz</strong>. I build <strong>web catalogs</strong>, <strong>QR digital menus</strong>, landing pages and custom web apps, with <strong>simple architecture</strong> and clear communication.",
+    "longDesc": "I'm Santiago Griman, also known as <strong>wickz</strong>. I build <strong>web catalogs</strong>, <strong>QR digital menus</strong>, landing pages and custom web apps, and run <strong>website audits</strong> (speed, SEO, security), with <strong>simple architecture</strong> and clear communication.",
     "CTASecondary": "Contact me",
     "available": "Available for new projects",
     "role": "Freelance web developer, remote"
@@ -99,6 +99,10 @@
     "landing-pages": {
       "title": "High-Converting Landing Pages",
       "description": "Engaging landing pages engineered to convert visitors into customers, with lightning-fast load times and persuasive design."
+    },
+    "web-audit": {
+      "title": "Website Audits: Speed, SEO & Security",
+      "description": "In-depth review of your site's speed, SEO, security and mobile experience, with a prioritized report of exactly what to fix first."
     },
     "portfolios": {
       "title": "Portfolios & Personal Sites",

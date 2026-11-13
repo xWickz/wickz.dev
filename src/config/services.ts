@@ -2,6 +2,7 @@ import {
   Globe,
   QrCode,
   Rocket,
+  ScanSearch,
   ShoppingBag,
   Smartphone,
   Sparkles,
@@ -16,6 +17,10 @@ export const services: Service[] = [
   {
     id: "landing-pages",
     Icon: Rocket,
+  },
+  {
+    id: "web-audit",
+    Icon: ScanSearch,
   },
   {
     id: "portfolios",

@@ -4,6 +4,7 @@ type IconComponent = (props: Record<string, any>) => any;
 type ServiceId =
   | "web-dev"
   | "landing-pages"
+  | "web-audit"
   | "portfolios"
   | "digital-menus"
   | "web-catalogs"

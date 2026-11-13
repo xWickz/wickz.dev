@@ -20,7 +20,7 @@ export const homeFaqs = {
   es: [
     {
       q: "¿Qué servicios ofreces?",
-      a: "Catálogos web, menús digitales con QR, landing pages, portafolios, desarrollo web full-stack a medida y apps multiplataforma para negocios y emprendedores.",
+      a: "Auditorías web (velocidad, SEO y seguridad), catálogos web, menús digitales con QR, landing pages, portafolios, desarrollo web full-stack a medida y apps multiplataforma para negocios y emprendedores.",
     },
     {
       q: "¿Qué diferencia hay entre un catálogo web, un menú digital y una landing page?",
@@ -42,7 +42,7 @@ export const homeFaqs = {
   en: [
     {
       q: "What services do you offer?",
-      a: "Web catalogs, QR digital menus, landing pages, portfolios, custom full-stack web development and cross-platform apps for businesses and entrepreneurs.",
+      a: "Website audits (speed, SEO and security), web catalogs, QR digital menus, landing pages, portfolios, custom full-stack web development and cross-platform apps for businesses and entrepreneurs.",
     },
     {
       q: "What's the difference between a web catalog, a digital menu and a landing page?",
