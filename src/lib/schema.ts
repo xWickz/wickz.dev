@@ -161,6 +161,7 @@ export function articleSchema(opts: {
   headline: string;
   description: string;
   path: string;
+  image?: string;
   lang: string;
   published: Date;
   updated?: Date;
@@ -174,7 +175,7 @@ export function articleSchema(opts: {
     url,
     mainEntityOfPage: url,
     inLanguage: opts.lang,
-    image: `${SITE.url}/og-image.png`,
+    image: `${SITE.url}${opts.image ?? "/og-image.png"}`,
     datePublished: opts.published.toISOString(),
     dateModified: (opts.updated ?? opts.published).toISOString(),
     author: { "@id": PERSON_ID },

@@ -32,6 +32,7 @@ const { data } = post;
 const lang = entryLang(post);
 const t = useTranslations(lang, "Page");
 const path = blogPath(post);
+const ogImage = `/og/${lang}/${entrySlug(post)}.png`;
 const { Content } = await render(post);
 const fmt = new Intl.DateTimeFormat(lang, { dateStyle: "long" });
 
@@ -49,6 +50,7 @@ const crumbs = [
   translations={translations}
   noindex={data.draft}
   ogType="article"
+  ogImage={ogImage}
   jsonLd={[
     breadcrumbSchema(crumbs),
     articleSchema({
@@ -56,6 +58,7 @@ const crumbs = [
       headline: data.h1,
       description: data.description,
       path,
+      image: ogImage,
       lang,
       published: data.published,
       updated: data.updated,

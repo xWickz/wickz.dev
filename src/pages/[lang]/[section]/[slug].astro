@@ -44,6 +44,7 @@ const lang = entryLang(entry);
 const t = useTranslations(lang, "Page");
 const { data } = entry;
 const path = pagePath(entry);
+const ogImage = `/og/${lang}/${entrySlug(entry)}.png`;
 const isService = entry.collection === "services";
 const { Content } = await render(entry);
 
@@ -70,6 +71,7 @@ const jsonLd = [
         headline: data.h1,
         description: data.description,
         path,
+        image: ogImage,
         lang,
         published: data.published,
         updated: data.updated,
@@ -82,6 +84,7 @@ const jsonLd = [
   title={data.title}
   description={data.description}
   lang={lang}
+  ogImage={ogImage}
   translations={translationsOf(entry, all)}
   jsonLd={jsonLd}
 >
