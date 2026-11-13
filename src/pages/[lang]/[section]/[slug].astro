@@ -51,11 +51,9 @@ const related = data.related
   .map((key) => findPage(all, key, lang))
   .filter((e): e is PageEntry => !!e);
 
+// Sin nivel intermedio: no hay página índice de servicios/casos (solo anclas del home)
 const crumbs = [
   { name: t("home"), path: `/${lang}/` },
-  isService
-    ? { name: t("services"), path: `/${lang}/#services` }
-    : { name: t("cases"), path: `/${lang}/#projects` },
   { name: data.name, path },
 ];
 
