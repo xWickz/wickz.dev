@@ -23,6 +23,8 @@ faqs:
     a: Sí. Trabajo totalmente en remoto con clientes de distintos países, y puedo escribir el informe en español o en inglés.
 ---
 
+**Pruébalo gratis ahora:** pega la dirección de tu sitio en la [herramienta de auditoría gratuita](https://audit.wickz.dev/es/?utm_source=wickz.dev&utm_medium=service-page&utm_campaign=audit-tool) y recibe en segundos un informe de SEO, seguridad y velocidad.
+
 ## Cuándo conviene una auditoría
 
 - Tu sitio va lento, sobre todo en el celular.

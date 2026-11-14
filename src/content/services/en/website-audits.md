@@ -23,6 +23,8 @@ faqs:
     a: Yes. I work fully remote with clients in different countries, and I can write the report in English or Spanish.
 ---
 
+**Try it free right now:** paste your site's address into the [free website audit tool](https://audit.wickz.dev/en/?utm_source=wickz.dev&utm_medium=service-page&utm_campaign=audit-tool) and get an SEO, security and speed report in seconds.
+
 ## When an audit makes sense
 
 - Your site is slow, especially on phones.
