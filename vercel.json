@@ -20,8 +20,14 @@
     },
     {
       "source": "/",
+      "has": [{ "type": "header", "key": "accept-language", "value": "^en.*" }],
+      "destination": "/en/",
+      "statusCode": 302
+    },
+    {
+      "source": "/",
       "destination": "/es/",
-      "statusCode": 301
+      "statusCode": 302
     },
     {
       "source": "/sitemap.xml",
