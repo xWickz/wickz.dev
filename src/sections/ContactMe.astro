@@ -1,6 +1,6 @@
 ---
 import { Separator } from "@/components/ui/Separator";
-import { SITE } from "@/lib/constants";
+import { SITE, mailto } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 
 interface Props {
@@ -24,7 +24,7 @@ const t = useTranslations(lang, "contact-me");
     <span
       class="text-zinc-400 dark:text-zinc-50 hover_blink hover:underline hover:underline-offset-14"
     >
-      <a href={`mailto:${SITE.email}`} class="blink_effect break-all">
+      <a href={mailto(`${t("mailSubject")} [contacto]`, t("mailBody"))} class="blink_effect break-all">
         {SITE.email}
       </a>
     </span>

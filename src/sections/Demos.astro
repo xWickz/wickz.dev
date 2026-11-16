@@ -1,0 +1,77 @@
+---
+// Galería de demos en vivo; la lista sale de los `demos` de config/services.ts
+import { ArrowUpRight } from "lucide-react";
+import { Separator } from "@/components/ui/Separator";
+import { services } from "@/config/services";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+const t = useTranslations(lang, "Demos");
+const q = useTranslations(lang, "Services_Data");
+const demos = services.flatMap(({ id, demos = [] }) =>
+  demos.map((demo) => ({ ...demo, service: q(`${id}.title`) })),
+);
+---
+
+<section class="flex w-full flex-col gap-6" id="demos">
+  <div class="mt-12">
+    <div class="relative block">
+      <div
+        class="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,#d4d4d8_0px,#d4d4d8_2px,transparent_1px,transparent_10px)]"
+        aria-hidden="true"
+      >
+      </div>
+      <h2
+        class="pl-1 max-w-2xl text-4xl text-zinc-600 dark:text-zinc-200 font-bold tracking-tighter hover_blink select-none"
+      >
+        <span class="blink_effect">{t("title")}</span>
+      </h2>
+    </div>
+    <p
+      class="mt-2 text-zinc-600 dark:text-zinc-400 text-sm sm:text-base max-w-2xl font-normal tracking-tight"
+    >
+      {t("subtitle")}
+    </p>
+  </div>
+
+  <Separator />
+
+  <ul class="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      demos.map(({ label, href, image, service }) => (
+        <li>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex h-full flex-col overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 text-left hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+          >
+            <img
+              src={image}
+              alt={`${t("alt")} ${label}`}
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+              class="aspect-[8/5] w-full object-cover object-top border-b border-zinc-200 dark:border-zinc-800"
+            />
+            <div class="flex items-center justify-between gap-2 p-4">
+              <div>
+                <p class="font-semibold text-zinc-900 dark:text-zinc-100">{label}</p>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400">{service}</p>
+              </div>
+              <span class="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-blue-500/90 group-hover:underline underline-offset-4">
+                {t("cta")}
+                <ArrowUpRight className="size-3.5" aria-hidden="true" />
+              </span>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

@@ -1,5 +1,5 @@
 ---
-import { Clock, MapPin, TrendingUp } from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
 import { Separator } from "@/components/ui/Separator";
 import { process } from "@/config/home";
 import { useTranslations } from "@/i18n/utils";
@@ -15,7 +15,6 @@ const steps = process[lang === "en" ? "en" : "es"];
 const signals = [
   { Icon: MapPin, title: t("locationTitle"), text: t("location") },
   { Icon: Clock, title: t("responseTitle"), text: t("response") },
-  { Icon: TrendingUp, title: t("resultsTitle"), text: t("results") },
 ];
 ---
 
@@ -37,7 +36,7 @@ const signals = [
 
   <Separator />
 
-  <ul class="grid gap-4 sm:grid-cols-3">
+  <ul class="grid gap-4 sm:grid-cols-2">
     {
       signals.map(({ Icon, title, text }) => (
         <li class="flex gap-3 items-start text-left">

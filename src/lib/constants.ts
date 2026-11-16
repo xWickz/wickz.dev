@@ -17,8 +17,10 @@ export const NAV_LINKS = {
   home: "#home",
   services: "#services",
   projects: "#projects",
-  "personal-projects": "#personal-projects",
 } as const;
+
+export const mailto = (subject: string, body: string) =>
+  `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
 export const SUPPORTED_LANGUAGES = ["es", "en"] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];

@@ -11,8 +11,9 @@
   "Hero": {
     "thisIs": "This is",
     "shortDesc": "I build fast, scalable web apps for startups and businesses.",
-    "longDesc": "I'm Santiago Griman, also known as <strong>wickz</strong>. I build <strong>web catalogs</strong>, <strong>QR digital menus</strong>, landing pages and custom web apps, and run <strong>website audits</strong> (speed, SEO, security), with <strong>simple architecture</strong> and clear communication.",
+    "longDesc": "I build <strong>web catalogs</strong>, <strong>QR digital menus</strong> and <strong>landing pages</strong> for businesses. I also <strong>audit</strong> your current site.",
     "CTASecondary": "Contact me",
+    "CTAAudit": "Audit your site for free",
     "available": "Available for new projects",
     "role": "Freelance web developer, remote"
   },
@@ -85,11 +86,14 @@
   "Services": {
     "title": "Services",
     "subtitle": "Have an idea or business in mind? Here are the solutions I build to help you grow.",
-    "demo": "Demo:",
-    "demos": "Demos:",
-    "CTAQuote": "Request a quote",
+    "group": {
+      "sell": "To sell",
+      "capture": "To win clients",
+      "custom": "Custom work"
+    },
+    "CTAQuote": "Get a quote",
     "quoteSubject": "Quote request",
-    "quoteBody": "Hi Santiago,\n\nI am interested in your {service} service.\n\n- My business / project:\n- What I need:\n- When I need it:\n- Approximate budget:\n\nThanks!"
+    "quoteBody": "Hi Santiago,\n\nI am interested in your {service} service.\n\n- My business / project:\n- What I need:\n- When I need it:\n- Approximate budget:\n- My WhatsApp (optional, if we continue there):\n\nThanks!"
   },
   "Services_Data": {
     "web-dev": {
@@ -121,15 +125,23 @@
       "description": "Smooth mobile applications for iOS and Android sharing business logic, with polished aesthetics and native-grade performance."
     }
   },
+  "Demos": {
+    "title": "Live demos",
+    "subtitle": "Open them on your phone: this is how your catalog or menu could look.",
+    "cta": "View demo",
+    "alt": "Screenshot of the demo"
+  },
   "contact-me": {
     "title": "Contact",
     "message": "Let's make something memorable.",
-    "response": "Tell me about your idea by email. I usually reply within 24 hours."
+    "response": "I reply by email within 24 hours and, if it suits you, we can continue on WhatsApp.",
+    "cta": "Email me",
+    "mailSubject": "Contact from wickz.dev",
+    "mailBody": "Hi Santiago,\n\n- My business / project:\n- What I need:\n- My WhatsApp (optional, if we continue there):\n\nThanks!"
   },
   "links": {
     "home": "Home",
     "services": "Services",
-    "personal-projects": "Projects",
     "projects": "Experience"
   },
   "Page": {
@@ -157,8 +169,6 @@
     "location": "I work remotely with businesses and entrepreneurs in any country, in English or Spanish.",
     "responseTitle": "Reply within 24 h",
     "response": "I usually reply by email within 24 hours.",
-    "resultsTitle": "Measurable results",
-    "results": "Good Life Insurance got <strong>+50% customers</strong> and grew by 40% with its website.",
     "processTitle": "Work process",
     "faqTitle": "Frequently asked questions",
     "more": "More pages"

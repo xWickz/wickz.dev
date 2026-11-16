@@ -1,0 +1,33 @@
+---
+// Proyectos personales: /{lang}/lab/ (fuera del home)
+import Layout from "@/layouts/BaseLayout.astro";
+import PersonalProjects from "@/sections/PersonalProjects.astro";
+import { SUPPORTED_LANGUAGES } from "@/lib/constants";
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+
+const COPY = {
+  es: {
+    title: "Lab: proyectos personales | wickz",
+    description:
+      "Proyectos personales y experimentos de Santiago Griman (wickz): herramientas, demos y código abierto.",
+  },
+  en: {
+    title: "Lab: personal projects | wickz",
+    description:
+      "Personal projects and experiments by Santiago Griman (wickz): tools, demos and open source.",
+  },
+};
+
+const lang = Astro.params.lang as keyof typeof COPY;
+const c = COPY[lang];
+---
+
+<Layout title={c.title} description={c.description} lang={lang}>
+  <div class="flex w-full max-w-[100rem] flex-col gap-6 mx-auto z-10">
+    <h1 class="sr-only">{c.title}</h1>
+    <PersonalProjects lang={lang} />
+  </div>
+</Layout>

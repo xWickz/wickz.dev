@@ -13,12 +13,17 @@ type ServiceId =
 interface ServiceDemo {
   label: string;
   href: string;
+  /** Captura en public/demos/ (800×500). */
+  image: string;
 }
+
+type ServiceGroup = "sell" | "capture" | "custom";
 
 interface Service {
   id: ServiceId;
   Icon: IconComponent;
+  group: ServiceGroup;
   demos?: ServiceDemo[];
 }
 
-export type { Service, ServiceDemo, ServiceId };
+export type { Service, ServiceDemo, ServiceGroup, ServiceId };

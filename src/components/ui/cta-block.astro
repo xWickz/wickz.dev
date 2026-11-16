@@ -1,7 +1,7 @@
 ---
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/i18n/utils";
-import { SITE } from "@/lib/constants";
+import { SITE, mailto } from "@/lib/constants";
 
 interface Props {
   lang: string;
@@ -15,7 +15,7 @@ const s = useTranslations(lang, "Services");
 
 const subject = service ? `${s("quoteSubject")}: ${service}` : s("quoteSubject");
 const body = s("quoteBody").replace("{service}", service ?? "");
-const href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+const href = mailto(`${subject} [pagina]`, body);
 ---
 
 <section

@@ -1,11 +1,8 @@
 ---
 // src/components/Hero.astro
-import GitHub from "../components/icons/GitHub.astro";
-import XformerlyTwitter from "../components/icons/X.astro";
-import { ButtonGroup } from "@/components/ui/button-group";
 import { Button } from "@/components/ui/button";
 
-import { SITE } from "@/lib/constants";
+import { mailto } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 
 interface Props {
@@ -15,6 +12,7 @@ interface Props {
 const { lang = "es" } = Astro.props;
 
 const t = useTranslations(lang, "Hero");
+const c = useTranslations(lang, "contact-me");
 ---
 
 <section class="z-10 mt-12 relative flex w-full flex-col" id="home">
@@ -54,31 +52,17 @@ const t = useTranslations(lang, "Hero");
     <div
       class="mt-4 flex items-center justify-center sm:items-start sm:justify-start"
     >
-      <ButtonGroup>
-        <Button variant="positive" href={`mailto:${SITE.email}`}>
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+        <Button variant="positive" href={mailto(`${c("mailSubject")} [hero]`, c("mailBody"))}>
           {t("CTASecondary")}
         </Button>
         <Button
           variant="outline"
-          href="https://x.com/wickzdev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1"
+          href={`https://audit.wickz.dev/${lang}/?utm_source=wickz.dev&utm_medium=hero&utm_campaign=audit-tool`}
         >
-          <XformerlyTwitter class="size-3" />
-          Twitter
+          {t("CTAAudit")}
         </Button>
-        <Button
-          variant="outline"
-          href="https://github.com/xWickz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1"
-        >
-          <GitHub class="size-3" />
-          GitHub
-        </Button>
-      </ButtonGroup>
+      </div>
     </div>
   </div>
 </section>

@@ -1,8 +1,9 @@
 ---
 import Layout from "@/layouts/BaseLayout.astro";
 import Hero from "@/sections/Hero.astro";
+import ProofBar from "@/sections/ProofBar.astro";
 import Services from "@/sections/Services.astro";
-import PersonalProjects from "@/sections/PersonalProjects.astro";
+import Demos from "@/sections/Demos.astro";
 import WorkProjects from "@/sections/WorkProjects.astro";
 import Trust from "@/sections/Trust.astro";
 import ContactMe from "@/sections/ContactMe.astro";
@@ -38,10 +39,11 @@ const servicePaths = Object.fromEntries(
     class="flex w-full max-w-[100rem] flex-col gap-6 text-center sm:text-left mx-auto z-10"
   >
     <Hero lang={lang} />
+    <ProofBar lang={lang} />
     <Services lang={lang} />
-    <WorkProjects lang={lang} />
-    <PersonalProjects lang={lang} />
+    <Demos lang={lang} />
     <Trust lang={lang} />
+    <WorkProjects lang={lang} />
     <div class="mt-12 text-left">
       <FaqList title={useTranslations(lang, "Trust")("faqTitle")} faqs={[...faqs]} />
     </div>

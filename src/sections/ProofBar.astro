@@ -1,0 +1,45 @@
+---
+// Banda de prueba social bajo el Hero: cifras del caso Good Life (config/projects.ts)
+import { Projects } from "@/config/projects";
+import { useTranslations } from "@/i18n/utils";
+import { findPage, getPages, pagePath } from "@/lib/routes";
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = "es" } = Astro.props;
+const q = useTranslations(lang, "Projects_Data");
+const p = useTranslations(lang, "Page");
+const project = Projects[0];
+const casePage = findPage(await getPages(), project.id, lang);
+---
+
+<section
+  aria-label={project.title}
+  class="flex flex-col gap-3 rounded-xl border border-zinc-200 dark:border-zinc-800 px-5 py-4 sm:flex-row sm:items-center sm:gap-8 text-left"
+>
+  {
+    project.stats.map((stat) => (
+      <p class="flex items-baseline gap-2">
+        <span class="text-2xl font-bold tracking-tight text-blue-500/90">{stat.value}</span>
+        <span class="text-sm text-zinc-600 dark:text-zinc-400">
+          {q(`${project.id}.stats.${stat.key}`)}
+        </span>
+      </p>
+    ))
+  }
+  <p class="text-sm font-semibold text-zinc-800 dark:text-zinc-200 sm:ml-auto">
+    {project.title}
+    {
+      casePage && (
+        <a
+          href={pagePath(casePage)}
+          class="ml-2 font-medium text-blue-500/90 hover:underline underline-offset-4"
+        >
+          {p("readCase")} →
+        </a>
+      )
+    }
+  </p>
+</section>
