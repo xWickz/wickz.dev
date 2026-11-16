@@ -1,7 +1,7 @@
 ---
 key: website-security
-title: Cómo saber si una página web es segura (y la tuya)
-description: "Cómo saber si una página web es segura en 2 minutos: candado, dirección y Google Safe Browsing. Y 5 revisiones para saber si la tuya lo es."
+title: "Cómo saber si una web es segura (+ análisis gratis)"
+description: "Cómo saber si una página web es segura en 2 minutos: candado, dominio y Safe Browsing. ¿Tienes una web? Analízala gratis y haz estas 5 revisiones."
 h1: Cómo saber si una página web es segura (y si la tuya lo es)
 published: 2026-10-03
 updated: 2026-11-02
@@ -14,6 +14,8 @@ faqs:
     a: Cambia las contraseñas de hosting, dominio y panel de administración, avisa a quien te hizo la web y restaura una copia de seguridad limpia. Search Console te avisa si Google detecta contenido malicioso.
 ---
 **Respuesta corta:** una página web es segura para usarla si su dirección empieza por `https://`, el dominio está escrito exactamente bien y Google Safe Browsing no la marca como peligrosa. Eso toma dos minutos. Si la página es **tuya**, hay cinco cosas más que revisar, más abajo.
+
+> **¿Tienes una página web?** [Analízala gratis](https://audit.wickz.dev/es/?utm_source=wickz.dev&utm_medium=blog&utm_campaign=website-security) y recibe un informe de su seguridad, velocidad y SEO.
 
 ## Cómo revisar una página que estás visitando
 
@@ -29,9 +31,7 @@ El candado por sí solo no es prueba: solo significa que la conexión va cifrada
 
 ## ¿Tu página web es segura? 5 revisiones
 
-Si la página es tuya, el visitante no ve los problemas que más importan. Muchas webs de negocio se publican y nadie vuelve a revisarlas, y cuando algo falla te enteras tarde: un cliente te avisa de que tu web redirige a otro sitio, o Google la marca como peligrosa. No hace falta saber programar para hacer estas revisiones.
-
-
+Si la página es tuya, el visitante no ve los problemas que más importan. Muchas webs de negocio se publican y nadie vuelve a revisarlas, y cuando algo falla te enteras tarde: un cliente te avisa de que tu web redirige a otro sitio, o Google la marca como peligrosa. No hace falta saber programar para hacer estas revisiones, y la [herramienta de auditoría gratis](https://audit.wickz.dev/es/?utm_source=wickz.dev&utm_medium=blog&utm_campaign=website-security) hace varias por ti.
 
 ### 1. Que cargue con HTTPS (el candado)
 

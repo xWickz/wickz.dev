@@ -1,7 +1,7 @@
 ---
 key: website-security
-title: How to Tell if a Website Is Secure (and Yours Too)
-description: "Check if a website is secure in 2 minutes: padlock, address and Google Safe Browsing. Plus 5 checks to know if your own business site is safe."
+title: "Is This Website Secure? Check in 2 Minutes (+ Free Scan)"
+description: "Check if a website is safe in 2 minutes: padlock, domain and Google Safe Browsing. Own a site? Scan it for free and run these 5 security checks."
 h1: How to tell if a website is secure (and if yours is)
 published: 2026-10-04
 updated: 2026-11-02
@@ -14,6 +14,8 @@ faqs:
     a: Change the passwords for your hosting, domain and admin panel, tell whoever built the site and restore a clean backup. Search Console warns you if Google detects malicious content.
 ---
 **Short answer:** a website is secure enough to use if its address starts with `https://`, the domain is spelled exactly right, and Google Safe Browsing doesn't flag it. That takes two minutes. If the site is **yours**, there are five more things to check, further down.
+
+> **Own a website?** [Scan it for free](https://audit.wickz.dev/en/?utm_source=wickz.dev&utm_medium=blog&utm_campaign=website-security) and get a report on its security, speed and SEO.
 
 ## Checking a website you're visiting
 
@@ -29,9 +31,7 @@ The padlock alone isn't proof: it only means the connection is encrypted, and sc
 
 ## Is your own website secure? 5 checks
 
-If you own the site, a visitor can't see the problems that matter most. Many business websites go live and nobody checks on them again, and when something goes wrong you find out late: a customer tells you your site redirects somewhere else, or Google flags it as dangerous. You don't need to know how to code to run these checks.
-
-
+If you own the site, a visitor can't see the problems that matter most. Many business websites go live and nobody checks on them again, and when something goes wrong you find out late: a customer tells you your site redirects somewhere else, or Google flags it as dangerous. You don't need to know how to code to run these checks, and the [free audit tool](https://audit.wickz.dev/en/?utm_source=wickz.dev&utm_medium=blog&utm_campaign=website-security) does several of them for you.
 
 ### 1. It loads over HTTPS (the padlock)
 

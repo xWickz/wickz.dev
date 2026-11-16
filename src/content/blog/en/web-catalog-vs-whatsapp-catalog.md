@@ -17,6 +17,8 @@ If you sell on WhatsApp, you probably already know the WhatsApp Business catalog
 
 The short answer: **the WhatsApp catalog works for people who are already talking to you; a web catalog also works for people who don't know you yet.**
 
+> **See a real one:** [open this demo catalog](https://agn2ws.wickz.dev/) on your phone. Each product has its own WhatsApp button to ask about it. [More demos →](/en/case-studies/web-catalog-demos/)
+
 ## What each one is
 
 **WhatsApp Business catalog.** A feature of the app where you upload products with a photo, description and price. Your contacts see it from your WhatsApp profile.

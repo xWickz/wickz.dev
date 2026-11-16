@@ -17,6 +17,8 @@ Si vendes por WhatsApp, probablemente ya conoces el catálogo de WhatsApp Busine
 
 La respuesta corta: **el catálogo de WhatsApp sirve para quien ya está hablando contigo; el catálogo web sirve también para quien todavía no te conoce.**
 
+> **Mira uno real:** [abre este catálogo de demo](https://agn2ws.wickz.dev/) en tu teléfono. Cada producto tiene su propio botón de WhatsApp para preguntar por él. [Más demos →](/es/casos/catalogos-web-demos/)
+
 ## Qué es cada uno
 
 **Catálogo de WhatsApp Business.** Una función de la aplicación donde cargas productos con foto, descripción y precio. Tus contactos lo ven desde tu perfil de WhatsApp.
