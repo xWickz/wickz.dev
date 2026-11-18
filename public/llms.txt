@@ -36,12 +36,16 @@
   - ¿Tu página web es segura? 5 cosas que revisar: https://wickz.dev/es/blog/tu-pagina-web-es-segura/
   - Catálogo web vs. catálogo de WhatsApp Business: https://wickz.dev/es/blog/catalogo-web-vs-catalogo-whatsapp/
   - Menú digital con QR: cómo funciona y cuánto cuesta: https://wickz.dev/es/blog/menu-digital-qr-como-funciona/
+  - Audité 286 portafolios: 1 de cada 3 está en blanco para ChatGPT: https://wickz.dev/es/blog/portafolios-invisibles-para-la-ia/
+  - llms.txt en 5 minutos: plantilla para copiar y pegar: https://wickz.dev/es/blog/plantilla-llms-txt/
 - Blog (EN): https://wickz.dev/en/blog/
   - How much does a website cost in 2026?: https://wickz.dev/en/blog/how-much-does-a-website-cost/
   - Why isn't my website showing up on Google?: https://wickz.dev/en/blog/why-my-website-is-not-on-google/
   - Is your website secure? 5 things to check: https://wickz.dev/en/blog/is-your-website-secure/
   - Web catalog vs. WhatsApp Business catalog: https://wickz.dev/en/blog/web-catalog-vs-whatsapp-catalog/
   - QR digital menu: how it works and how much it costs: https://wickz.dev/en/blog/qr-digital-menu-how-it-works/
+  - I audited 286 developer portfolios: 1 in 3 is a blank page to ChatGPT: https://wickz.dev/en/blog/portfolios-invisible-to-ai/
+  - llms.txt in 5 minutes: a copy-paste template: https://wickz.dev/en/blog/llms-txt-template/
 - En inglés: https://wickz.dev/en/services/web-catalogs/, https://wickz.dev/en/services/qr-digital-menu/, https://wickz.dev/en/services/landing-pages/, https://wickz.dev/en/services/full-stack-web-development/, https://wickz.dev/en/case-studies/good-life-insurance/
 
 ## Perfiles
