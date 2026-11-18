@@ -1,54 +1,44 @@
 # wickz.dev
 
-> wickz (también wickzdev) es la marca de Santiago Griman, desarrollador web de Venezuela. Crea catálogos web, menús digitales con QR, landing pages, portafolios, aplicaciones web full-stack y apps multiplataforma para negocios y emprendedores, en español e inglés.
+> wickz (también wickzdev) es la marca de Santiago Griman, desarrollador web full-stack de Venezuela. Crea catálogos web, menús digitales con QR, landing pages, portafolios, aplicaciones web full-stack y apps multiplataforma para negocios y emprendedores, en español e inglés.
 
-## Quién es
-- Nombre: Santiago Griman (marca: wickz / wickzdev)
-- Rol: desarrollador web full-stack
-- Ubicación: Venezuela
-- Contacto: hi@wickz.dev (responde normalmente en menos de 24 horas)
+Contacto: hi@wickz.dev (responde normalmente en menos de 24 horas). Caso destacado: Good Life Insurance (2025–actualidad), sitio web y registro de clientes automatizado para una aseguradora pequeña, con +50% de clientes tras exponerse en redes y +40% de crecimiento de la empresa.
 
 ## Servicios
-- Catálogos web: muestrarios digitales para exhibir productos y facilitar el contacto con compradores. Demos: https://agn2ws.wickz.dev/, https://h66det.wickz.dev/, https://f3dpwm.wickz.dev/, https://hsfuxg.wickz.dev/
-- Menús digitales con QR: cartas para restaurantes, actualizables y accesibles desde el móvil sin descargar nada. Demo: https://donchaker-menu.vercel.app/
-- Landing pages: páginas de aterrizaje rápidas, enfocadas en convertir visitantes en clientes.
-- Desarrollo web full-stack: aplicaciones web a medida con APIs.
-- Portafolios y sitios personales.
-- Apps multiplataforma (iOS y Android).
+- [Catálogos web](https://wickz.dev/es/servicios/catalogos-web/): muestrarios digitales para exhibir productos y facilitar el contacto con compradores
+- [Menú digital con QR](https://wickz.dev/es/servicios/menu-digital-qr/): cartas para restaurantes, actualizables y accesibles desde el móvil sin descargar nada
+- [Landing pages](https://wickz.dev/es/servicios/landing-pages/): páginas de aterrizaje rápidas, enfocadas en convertir visitantes en clientes
+- [Desarrollo web full-stack](https://wickz.dev/es/servicios/desarrollo-web-full-stack/): aplicaciones web a medida con APIs; también portafolios, sitios personales y apps para iOS y Android
 
-## Caso destacado
-- Good Life Insurance (2025–actualidad): sitio web profesional y registro de clientes automatizado para una aseguradora pequeña. Resultado: +50% de clientes tras exponerse en redes y +40% de crecimiento de la empresa.
+## Casos
+- [Good Life Insurance](https://wickz.dev/es/casos/good-life-insurance/): sitio web y registro de clientes automatizado para una aseguradora pequeña
+- [Catálogo de una tienda de hardware de PC](https://wickz.dev/es/casos/catalogo-tienda-hardware/): cliente real, más de 400 productos
+- [Demos de catálogos web](https://wickz.dev/es/casos/catalogos-web-demos/): cuatro catálogos de ejemplo navegables
+- [Menú digital Don Chaker](https://wickz.dev/es/casos/menu-digital-don-chaker/): menú QR de un restaurante
 
-## Páginas clave
-- Inicio (ES): https://wickz.dev/es/
-- Home (EN): https://wickz.dev/en/
-- Catálogos web: https://wickz.dev/es/servicios/catalogos-web/
-- Menú digital con QR: https://wickz.dev/es/servicios/menu-digital-qr/
-- Landing pages: https://wickz.dev/es/servicios/landing-pages/
-- Desarrollo web full-stack: https://wickz.dev/es/servicios/desarrollo-web-full-stack/
-- Caso Good Life Insurance: https://wickz.dev/es/casos/good-life-insurance/
-- Demos de catálogos web: https://wickz.dev/es/casos/catalogos-web-demos/
-- Menú digital Don Chaker: https://wickz.dev/es/casos/menu-digital-don-chaker/
-- Catálogo de una tienda de hardware de PC (cliente real, +400 productos): https://wickz.dev/es/casos/catalogo-tienda-hardware/
-- Blog: https://wickz.dev/es/blog/
-  - ¿Cuánto cuesta una página web en 2026?: https://wickz.dev/es/blog/cuanto-cuesta-una-pagina-web/
-  - ¿Por qué mi página web no aparece en Google?: https://wickz.dev/es/blog/por-que-mi-pagina-no-aparece-en-google/
-  - ¿Tu página web es segura? 5 cosas que revisar: https://wickz.dev/es/blog/tu-pagina-web-es-segura/
-  - Catálogo web vs. catálogo de WhatsApp Business: https://wickz.dev/es/blog/catalogo-web-vs-catalogo-whatsapp/
-  - Menú digital con QR: cómo funciona y cuánto cuesta: https://wickz.dev/es/blog/menu-digital-qr-como-funciona/
-  - Audité 286 portafolios: 1 de cada 3 está en blanco para ChatGPT: https://wickz.dev/es/blog/portafolios-invisibles-para-la-ia/
-  - llms.txt en 5 minutos: plantilla para copiar y pegar: https://wickz.dev/es/blog/plantilla-llms-txt/
-- Blog (EN): https://wickz.dev/en/blog/
-  - How much does a website cost in 2026?: https://wickz.dev/en/blog/how-much-does-a-website-cost/
-  - Why isn't my website showing up on Google?: https://wickz.dev/en/blog/why-my-website-is-not-on-google/
-  - Is your website secure? 5 things to check: https://wickz.dev/en/blog/is-your-website-secure/
-  - Web catalog vs. WhatsApp Business catalog: https://wickz.dev/en/blog/web-catalog-vs-whatsapp-catalog/
-  - QR digital menu: how it works and how much it costs: https://wickz.dev/en/blog/qr-digital-menu-how-it-works/
-  - I audited 286 developer portfolios: 1 in 3 is a blank page to ChatGPT: https://wickz.dev/en/blog/portfolios-invisible-to-ai/
-  - llms.txt in 5 minutes: a copy-paste template: https://wickz.dev/en/blog/llms-txt-template/
-- En inglés: https://wickz.dev/en/services/web-catalogs/, https://wickz.dev/en/services/qr-digital-menu/, https://wickz.dev/en/services/landing-pages/, https://wickz.dev/en/services/full-stack-web-development/, https://wickz.dev/en/case-studies/good-life-insurance/
+## Blog
+- [¿Cuánto cuesta una página web en 2026?](https://wickz.dev/es/blog/cuanto-cuesta-una-pagina-web/): precios por tipo de sitio
+- [¿Por qué mi página web no aparece en Google?](https://wickz.dev/es/blog/por-que-mi-pagina-no-aparece-en-google/): causas comunes y cómo arreglarlas
+- [¿Tu página web es segura? 5 cosas que revisar](https://wickz.dev/es/blog/tu-pagina-web-es-segura/): revisiones básicas de seguridad
+- [Checklist de auditoría web](https://wickz.dev/es/blog/checklist-auditoria-web/): 10 revisiones gratis en 30 minutos
+- [Catálogo web vs. catálogo de WhatsApp Business](https://wickz.dev/es/blog/catalogo-web-vs-catalogo-whatsapp/): comparación para tiendas
+- [Menú digital con QR: cómo funciona y cuánto cuesta](https://wickz.dev/es/blog/menu-digital-qr-como-funciona/): guía para restaurantes
+- [Audité 286 portafolios: 1 de cada 3 está en blanco para ChatGPT](https://wickz.dev/es/blog/portafolios-invisibles-para-la-ia/): estudio de visibilidad en IA
+- [llms.txt en 5 minutos](https://wickz.dev/es/blog/plantilla-llms-txt/): plantilla para copiar y pegar
 
-## Perfiles
-- GitHub: https://github.com/xWickz
-- X: https://x.com/wickzdev
-- LinkedIn: https://www.linkedin.com/in/santiago-griman/
+## English
+- [Home](https://wickz.dev/en/): the same services, in English
+- [Web catalogs](https://wickz.dev/en/services/web-catalogs/)
+- [QR digital menu](https://wickz.dev/en/services/qr-digital-menu/)
+- [Landing pages](https://wickz.dev/en/services/landing-pages/)
+- [Full-stack web development](https://wickz.dev/en/services/full-stack-web-development/)
+- [Good Life Insurance case study](https://wickz.dev/en/case-studies/good-life-insurance/)
+- [I audited 286 developer portfolios: 1 in 3 is a blank page to ChatGPT](https://wickz.dev/en/blog/portfolios-invisible-to-ai/): AI-visibility study
+- [llms.txt in 5 minutes](https://wickz.dev/en/blog/llms-txt-template/): a copy-paste template
+
+## Optional
+- [Blog en español](https://wickz.dev/es/blog/)
+- [Blog in English](https://wickz.dev/en/blog/): website cost, Google visibility, security and audit checklist guides
+- [GitHub](https://github.com/xWickz)
+- [X](https://x.com/wickzdev)
+- [LinkedIn](https://www.linkedin.com/in/santiago-griman/)
