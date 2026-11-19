@@ -1,7 +1,7 @@
 ---
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/i18n/utils";
-import { SITE, mailto } from "@/lib/constants";
+import { SITE, mailto, whatsapp } from "@/lib/constants";
 
 interface Props {
   lang: string;
@@ -11,6 +11,7 @@ interface Props {
 
 const { lang, service } = Astro.props;
 const t = useTranslations(lang, "Page");
+const c = useTranslations(lang, "contact-me");
 const s = useTranslations(lang, "Services");
 
 const subject = service ? `${s("quoteSubject")}: ${service}` : s("quoteSubject");
@@ -27,6 +28,14 @@ const href = mailto(`${subject} [pagina]`, body);
   <p class="text-zinc-600 dark:text-zinc-400">{t("ctaText")}</p>
   <div class="flex flex-wrap items-center gap-3">
     <Button variant="positive" href={href}>{t("ctaButton")}</Button>
+    <a
+      href={whatsapp(c("waText"))}
+      target="_blank"
+      rel="noopener"
+      class="text-sm font-semibold text-green-600 hover:underline underline-offset-4"
+    >
+      {c("waCta")}
+    </a>
     <a
       href={`mailto:${SITE.email}`}
       class="text-sm text-zinc-600 dark:text-zinc-400 hover:underline underline-offset-4"

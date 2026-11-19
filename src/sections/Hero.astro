@@ -2,7 +2,7 @@
 // src/components/Hero.astro
 import { Button } from "@/components/ui/button";
 
-import { mailto } from "@/lib/constants";
+import { whatsapp } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 
 interface Props {
@@ -53,8 +53,8 @@ const c = useTranslations(lang, "contact-me");
       class="mt-4 flex items-center justify-center sm:items-start sm:justify-start"
     >
       <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-        <Button variant="positive" href={mailto(`${c("mailSubject")} [hero]`, c("mailBody"))}>
-          {t("CTASecondary")}
+        <Button variant="positive" href={whatsapp(c("waText"))} target="_blank" rel="noopener">
+          {c("waCta")}
         </Button>
         <Button
           variant="outline"

@@ -3,7 +3,7 @@ import "@/styles/global.css";
 import { Font } from "astro:assets";
 import Header from "@/sections/Header.astro";
 import Footer from "@/sections/Footer.astro";
-import { DEFAULT_LANG, GA_ID, SITE, SUPPORTED_LANGUAGES, mailto } from "@/lib/constants";
+import { DEFAULT_LANG, GA_ID, SITE, SUPPORTED_LANGUAGES, whatsapp } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 import { siteSchema } from "@/lib/schema";
 
@@ -190,10 +190,12 @@ const c = useTranslations(lang, "contact-me");
     <Footer lang={lang} />
     <!-- CTA fijo en móvil; el pb-20 del body evita que tape el footer -->
     <a
-      href={mailto(`${c("mailSubject")} [movil]`, c("mailBody"))}
+      href={whatsapp(c("waText"))}
+      target="_blank"
+      rel="noopener"
       class="sm:hidden fixed inset-x-4 bottom-4 z-50 rounded-lg bg-green-600 py-3 text-center text-sm font-semibold text-white shadow-lg active:scale-95 transition-transform"
     >
-      {c("cta")}
+      {c("waCta")}
     </a>
   </body>
 </html>

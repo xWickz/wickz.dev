@@ -1,6 +1,6 @@
 ---
 import { Separator } from "@/components/ui/Separator";
-import { SITE, mailto } from "@/lib/constants";
+import { SITE, mailto, whatsapp } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 
 interface Props {
@@ -34,4 +34,12 @@ const t = useTranslations(lang, "contact-me");
   >
     {t("response")}
   </p>
+  <a
+    href={whatsapp(t("waText"))}
+    target="_blank"
+    rel="noopener"
+    class="mt-4 w-fit rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
+  >
+    {t("waCta")}
+  </a>
 </section>

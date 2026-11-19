@@ -19,6 +19,10 @@ export const NAV_LINKS = {
   projects: "#projects",
 } as const;
 
+/** WhatsApp de negocios, formato wa.me (sin + ni 0 inicial). */
+export const whatsapp = (text: string) =>
+  `https://wa.me/584220343035?text=${encodeURIComponent(text)}`;
+
 export const mailto = (subject: string, body: string) =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 

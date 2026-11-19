@@ -12,7 +12,6 @@
     "thisIs": "Este es",
     "shortDesc": "Construyo aplicaciones web rápidas y escalables para startups y empresas.",
     "longDesc": "Hago <strong>catálogos web</strong>, <strong>menús digitales con QR</strong> y <strong>landing pages</strong> para negocios. También <strong>audito</strong> tu sitio actual.",
-    "CTASecondary": "Contáctame",
     "CTAAudit": "Audita tu web gratis",
     "available": "Disponible para nuevos proyectos",
     "role": "Desarrollador web freelance, en remoto"
@@ -134,7 +133,9 @@
   "contact-me": {
     "title": "Contacto",
     "message": "Hagamos algo memorable.",
-    "response": "Te respondo por correo en menos de 24 horas y, si conviene, seguimos por WhatsApp.",
+    "response": "Escríbeme por correo o por WhatsApp; respondo en menos de 24 horas.",
+    "waCta": "Escríbeme por WhatsApp",
+    "waText": "Hola Santiago, vi tu web wickz.dev y me interesa un proyecto.",
     "cta": "Escríbeme",
     "mailSubject": "Contacto desde wickz.dev",
     "mailBody": "Hola Santiago,\n\n- Mi negocio / proyecto:\n- Qué necesito:\n- Mi WhatsApp (opcional, te lo pido si seguimos por ahí):\n\n¡Gracias!"
