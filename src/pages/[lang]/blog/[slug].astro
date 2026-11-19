@@ -5,7 +5,7 @@ import Layout from "@/layouts/BaseLayout.astro";
 import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
 import FaqList from "@/components/ui/faq-list.astro";
 import CtaBlock from "@/components/ui/cta-block.astro";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { SUPPORTED_LANGUAGES } from "@/lib/constants";
 import { blogPath, entryLang, entrySlug, getPosts, readingMinutes } from "@/lib/routes";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
@@ -30,7 +30,7 @@ const { post, translations } = Astro.props as {
 };
 const { data } = post;
 const lang = entryLang(post);
-const t = useTranslations(lang, "Page");
+const t = getTranslations(lang, "Page");
 const path = blogPath(post);
 const ogImage = `/og/${lang}/${entrySlug(post)}.png`;
 const { Content } = await render(post);

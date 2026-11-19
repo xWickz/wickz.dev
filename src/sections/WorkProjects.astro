@@ -13,7 +13,7 @@ import {
 import { Separator } from "@/components/ui/Separator";
 
 // Importamos nuestra utilidad i18n
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { findPage, getPages, pagePath } from "@/lib/routes";
 
 interface Props {
@@ -22,9 +22,9 @@ interface Props {
 
 const { lang = "es" } = Astro.props;
 
-const t = useTranslations(lang, "Projects");
-const q = useTranslations(lang, "Projects_Data");
-const p = useTranslations(lang, "Page");
+const t = getTranslations(lang, "Projects");
+const q = getTranslations(lang, "Projects_Data");
+const p = getTranslations(lang, "Page");
 const pages = await getPages();
 ---
 

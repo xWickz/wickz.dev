@@ -3,7 +3,7 @@
  * e IAs entiendan que la persona, la marca y los servicios son lo mismo.
  */
 import { services } from "@/config/services";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { SITE } from "@/lib/constants";
 
 export const PERSON_ID = `${SITE.url}/#person`;
@@ -28,7 +28,7 @@ const AREA_SERVED = [
 ];
 
 export function siteSchema(lang: string) {
-  const t = useTranslations(lang, "SEO");
+  const t = getTranslations(lang, "SEO");
   return [
     {
       "@type": "Person",
@@ -91,8 +91,8 @@ export function businessSchema(
   lang: string,
   servicePaths: Partial<Record<string, string>> = {},
 ) {
-  const t = useTranslations(lang, "SEO");
-  const q = useTranslations(lang, "Services_Data");
+  const t = getTranslations(lang, "SEO");
+  const q = getTranslations(lang, "Services_Data");
 
   const serviceNodes = services.map(({ id }) => {
     const path = servicePaths[id];

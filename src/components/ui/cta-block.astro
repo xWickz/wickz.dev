@@ -1,6 +1,6 @@
 ---
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { SITE, mailto, whatsapp } from "@/lib/constants";
 
 interface Props {
@@ -10,9 +10,9 @@ interface Props {
 }
 
 const { lang, service } = Astro.props;
-const t = useTranslations(lang, "Page");
-const c = useTranslations(lang, "contact-me");
-const s = useTranslations(lang, "Services");
+const t = getTranslations(lang, "Page");
+const c = getTranslations(lang, "contact-me");
+const s = getTranslations(lang, "Services");
 
 const subject = service ? `${s("quoteSubject")}: ${service}` : s("quoteSubject");
 const body = s("quoteBody").replace("{service}", service ?? "");

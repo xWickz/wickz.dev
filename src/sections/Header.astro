@@ -3,7 +3,7 @@ import { socialMedia } from "@/config/social-media";
 import ThemeToggle from "@/components/ui/theme-toggle.astro";
 import LanguageToggle from "@/components/ui/language-toggle.astro";
 import CvDownload from "@/components/ui/cv-download.astro";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { NAV_LINKS } from "@/lib/constants";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { lang = "es", altHref } = Astro.props;
-const t = useTranslations(lang, "links");
+const t = getTranslations(lang, "links");
 ---
 
 <header

@@ -1,7 +1,7 @@
 ---
 import { Separator } from "@/components/ui/Separator";
 import CvDownload from "@/components/ui/cv-download.astro";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { NAV_LINKS } from "@/lib/constants";
 import { entryLang, getPages, pagePath } from "@/lib/routes";
 
@@ -10,8 +10,8 @@ interface Props {
 }
 
 const { lang = "es" } = Astro.props;
-const t = useTranslations(lang, "links");
-const p = useTranslations(lang, "Page");
+const t = getTranslations(lang, "links");
+const p = getTranslations(lang, "Page");
 
 const pages = (await getPages()).filter((e) => entryLang(e) === lang);
 const groups = [
@@ -30,7 +30,7 @@ const socialLinks = [
   <Separator />
 </div>
 <nav
-  aria-label={useTranslations(lang, "Trust")("more")}
+  aria-label={getTranslations(lang, "Trust")("more")}
   class="grid w-full max-w-[100rem] gap-6 px-4 pt-10 text-sm sm:grid-cols-3 sm:px-5"
 >
   {

@@ -4,7 +4,7 @@ import { Font } from "astro:assets";
 import Header from "@/sections/Header.astro";
 import Footer from "@/sections/Footer.astro";
 import { DEFAULT_LANG, GA_ID, SITE, SUPPORTED_LANGUAGES, whatsapp } from "@/lib/constants";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { siteSchema } from "@/lib/schema";
 
 interface Props {
@@ -55,7 +55,7 @@ const alternates =
 const otherLang = lang === "en" ? "es" : "en";
 const altHref = translations[otherLang] ?? `/${otherLang}/`;
 const xDefault = alternates.find((a) => a.hreflang === DEFAULT_LANG);
-const c = useTranslations(lang, "contact-me");
+const c = getTranslations(lang, "contact-me");
 ---
 
 <!doctype html>
@@ -131,12 +131,11 @@ const c = useTranslations(lang, "contact-me");
 
     <script is:inline>
       const theme = (() => {
-        if (
-          typeof localStorage !== "undefined" &&
-          localStorage.getItem("theme")
-        ) {
-          return localStorage.getItem("theme");
-        }
+        let saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch {}
+        if (saved) return saved;
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
           return "dark";
         }

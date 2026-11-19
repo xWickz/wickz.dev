@@ -2,7 +2,7 @@
 import ExternalLink from "@/components/icons/ExternalLink.astro";
 import GitHub from "@/components/icons/GitHub.astro";
 import { personalProjects } from "@/config/personal-projects";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 
 interface Props {
   lang?: string;
@@ -10,7 +10,7 @@ interface Props {
 
 const { lang = "es" } = Astro.props;
 
-const t = useTranslations(lang, "PersonalProjects_Data");
+const t = getTranslations(lang, "PersonalProjects_Data");
 
 const featuredProjects = personalProjects.slice(0, 2);
 const isEn = lang === "en";

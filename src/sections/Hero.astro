@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 
 import { whatsapp } from "@/lib/constants";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 
 interface Props {
   lang?: string;
@@ -11,8 +11,8 @@ interface Props {
 
 const { lang = "es" } = Astro.props;
 
-const t = useTranslations(lang, "Hero");
-const c = useTranslations(lang, "contact-me");
+const t = getTranslations(lang, "Hero");
+const c = getTranslations(lang, "contact-me");
 ---
 
 <section class="z-10 mt-12 relative flex w-full flex-col" id="home">

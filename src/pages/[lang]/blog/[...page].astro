@@ -4,7 +4,7 @@ import type { GetStaticPaths, Page } from "astro";
 import type { CollectionEntry } from "astro:content";
 import Layout from "@/layouts/BaseLayout.astro";
 import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { SUPPORTED_LANGUAGES } from "@/lib/constants";
 import { blogPath, getPosts, readingMinutes } from "@/lib/routes";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -50,7 +50,7 @@ const COPY = {
 const { page } = Astro.props as { page: Page<CollectionEntry<"blog">> };
 const lang = Astro.params.lang as keyof typeof COPY;
 const c = COPY[lang];
-const t = useTranslations(lang, "Page");
+const t = getTranslations(lang, "Page");
 const fmt = new Intl.DateTimeFormat(lang, { dateStyle: "long" });
 
 const crumbs = [

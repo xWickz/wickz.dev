@@ -3,15 +3,15 @@
 import { ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/Separator";
 import { services } from "@/config/services";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 
 interface Props {
   lang?: string;
 }
 
 const { lang = "es" } = Astro.props;
-const t = useTranslations(lang, "Demos");
-const q = useTranslations(lang, "Services_Data");
+const t = getTranslations(lang, "Demos");
+const q = getTranslations(lang, "Services_Data");
 const demos = services.flatMap(({ id, demos = [] }) =>
   demos.map((demo) => ({ ...demo, service: q(`${id}.title`) })),
 );

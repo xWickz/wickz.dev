@@ -1,7 +1,7 @@
 ---
 // Banda de prueba social bajo el Hero: cifras del caso Good Life (config/projects.ts)
 import { Projects } from "@/config/projects";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { findPage, getPages, pagePath } from "@/lib/routes";
 
 interface Props {
@@ -9,8 +9,8 @@ interface Props {
 }
 
 const { lang = "es" } = Astro.props;
-const q = useTranslations(lang, "Projects_Data");
-const p = useTranslations(lang, "Page");
+const q = getTranslations(lang, "Projects_Data");
+const p = getTranslations(lang, "Page");
 const project = Projects[0];
 const casePage = findPage(await getPages(), project.id, lang);
 ---

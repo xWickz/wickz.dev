@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/Card";
 import { Separator } from "@/components/ui/Separator";
 
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 
 interface Props {
   lang?: string;
@@ -20,8 +20,8 @@ interface Props {
 
 const { lang = "es" } = Astro.props;
 
-const t = useTranslations(lang, "PersonalProjects");
-const q = useTranslations(lang, "PersonalProjects_Data");
+const t = getTranslations(lang, "PersonalProjects");
+const q = getTranslations(lang, "PersonalProjects_Data");
 const compactProjects = personalProjects.slice(2);
 ---
 

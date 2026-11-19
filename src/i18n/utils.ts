@@ -5,7 +5,7 @@ type TranslationDict = Record<string, unknown>;
 
 const dictionaries: Record<string, TranslationDict> = { es, en };
 
-export function useTranslations(lang: string, namespace?: string) {
+export function getTranslations(lang: string, namespace?: string) {
   const dict = (dictionaries[lang] ?? dictionaries.es) as Record<
     string,
     unknown

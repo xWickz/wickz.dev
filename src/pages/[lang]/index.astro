@@ -9,7 +9,7 @@ import Trust from "@/sections/Trust.astro";
 import ContactMe from "@/sections/ContactMe.astro";
 import FaqList from "@/components/ui/faq-list.astro";
 import { homeFaqs } from "@/config/home";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import { entryLang, getPages, pagePath } from "@/lib/routes";
 import { businessSchema, faqSchema } from "@/lib/schema";
 
@@ -18,7 +18,7 @@ export function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const t = useTranslations(lang, "SEO");
+const t = getTranslations(lang, "SEO");
 const faqs = homeFaqs[lang === "en" ? "en" : "es"];
 
 // Los Service del JSON-LD apuntan a su página cuando existe
@@ -45,7 +45,7 @@ const servicePaths = Object.fromEntries(
     <Trust lang={lang} />
     <WorkProjects lang={lang} />
     <div class="mt-12 text-left">
-      <FaqList title={useTranslations(lang, "Trust")("faqTitle")} faqs={[...faqs]} />
+      <FaqList title={getTranslations(lang, "Trust")("faqTitle")} faqs={[...faqs]} />
     </div>
     <ContactMe lang={lang} />
   </div>

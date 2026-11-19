@@ -7,7 +7,7 @@ import Layout from "@/layouts/BaseLayout.astro";
 import Breadcrumbs from "@/components/ui/breadcrumbs.astro";
 import FaqList from "@/components/ui/faq-list.astro";
 import CtaBlock from "@/components/ui/cta-block.astro";
-import { useTranslations } from "@/i18n/utils";
+import { getTranslations } from "@/i18n/utils";
 import {
   type PageEntry,
   SECTIONS,
@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 
 const { entry, all } = Astro.props as { entry: PageEntry; all: PageEntry[] };
 const lang = entryLang(entry);
-const t = useTranslations(lang, "Page");
+const t = getTranslations(lang, "Page");
 const { data } = entry;
 const path = pagePath(entry);
 const ogImage = `/og/${lang}/${entrySlug(entry)}.png`;
