@@ -27,3 +27,6 @@ export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 export const DEFAULT_LANG: SupportedLanguage = "es";
 
 export const CV_PATH = "/files/cv.pdf" as const;
+
+/** ID de medición de Google Analytics 4 (G-XXXXXXXXXX). Vacío = sin GA. */
+export const GA_ID = "G-5BYS6W4CPQ";

@@ -3,7 +3,7 @@ import "@/styles/global.css";
 import { Font } from "astro:assets";
 import Header from "@/sections/Header.astro";
 import Footer from "@/sections/Footer.astro";
-import { DEFAULT_LANG, SITE, SUPPORTED_LANGUAGES, mailto } from "@/lib/constants";
+import { DEFAULT_LANG, GA_ID, SITE, SUPPORTED_LANGUAGES, mailto } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
 import { siteSchema } from "@/lib/schema";
 
@@ -152,6 +152,31 @@ const c = useTranslations(lang, "contact-me");
 
     <!-- Vercel Web Analytics (sin cookies; se activa en el panel de Vercel) -->
     {import.meta.env.PROD && <script is:inline defer src="/_vercel/insights/script.js" />}
+
+    <!-- Google Analytics 4; los clics a correo/WhatsApp se envían como generate_lead -->
+    {
+      import.meta.env.PROD && GA_ID && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+          <script is:inline define:vars={{ GA_ID }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", GA_ID);
+            document.addEventListener("click", (e) => {
+              const a = e.target.closest?.('a[href^="mailto:"], a[href*="wa.me/"]');
+              if (a)
+                gtag("event", "generate_lead", {
+                  method: a.href.startsWith("mailto:") ? "email" : "whatsapp",
+                  link_url: a.href,
+                });
+            });
+          </script>
+        </>
+      )
+    }
   </head>
   <body
     class="relative flex min-h-screen max-w-full flex-col items-center overflow-x-hidden bg-zinc-50 font-sans dark:bg-black text-foreground antialiased pb-20 sm:pb-0"
