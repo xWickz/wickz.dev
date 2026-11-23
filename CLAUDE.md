@@ -50,7 +50,7 @@ Solicitud HTTP
 | **Zero JS por defecto** | Todo es HTML/CSS estático. Solo los acordeones y toggles cargan JS. |
 | **Islas de interactividad** | `client:visible` en WorkAccordion, FeaturedProjects cards. |
 | **i18n estática** | `getStaticPaths()` genera `/es/` y `/en/` en build time. |
-| **Traducciones tipadas** | `useTranslations(lang, namespace)` selecciona el diccionario correcto. |
+| **Traducciones tipadas** | `getTranslations(lang, namespace)` selecciona el diccionario correcto. |
 | **CSS atómico** | Tailwind 4 con `@theme` y CSS variables de shadcn. |
 | **Componentes server-first** | Astro components para todo lo que no necesita JS. |
 
@@ -78,7 +78,7 @@ Estrategia: Rutas por prefijo (/es/ y /en/) con SSG.
 ```
 
 - **Traducciones**: `src/i18n/dicts/{lang}.json`
-- **Utilidades**: `src/i18n/utils.ts` → `useTranslations(lang, namespace)`
+- **Utilidades**: `src/i18n/utils.ts` → `getTranslations(lang, namespace)`
 - **Idiomas**: `es` (default), `en` — definidos en `src/lib/constants.ts`
 - **Toggle**: `src/components/ui/language-toggle.astro` — alterna entre `/es/` y `/en/`
 
@@ -98,7 +98,7 @@ Estrategia: Rutas por prefijo (/es/ y /en/) con SSG.
 | **CSS minificado con LightningCSS** | `vite.build.cssMinify: "lightningcss"` |
 | **HTML comprimido** | `compressHTML: true` |
 | **Estilos inline automáticos** | `build.inlineStylesheets: "auto"` |
-| **Fuente auto-hosteada** | `@fontsource-variable/geist` (sin Google Fonts externo) |
+| **Fuente auto-hosteada** | API `fonts` de Astro (fontsource, con preload) |
 | **Imágenes WebP** | `public/featured-projects/` usa `.webp` |
 | **Videos con `preload="metadata"`** | Solo carga metadatos hasta hover |
 | **React lazy hydration** | `client:visible` solo hidrata al entrar en viewport |
