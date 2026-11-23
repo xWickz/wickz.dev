@@ -1,5 +1,3 @@
-import type { ComponentType, SVGProps } from "react";
-
 type SocialPlatform =
   | "GitHub"
   | "LinkedIn"
@@ -8,7 +6,6 @@ type SocialPlatform =
   | "Instagram"
   | "Gmail";
 
-type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
 interface BaseLink {
   label: string;

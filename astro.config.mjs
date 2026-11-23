@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { readdirSync, readFileSync } from "node:fs";
 
 // lastmod del sitemap: `updated` o `published` del frontmatter, por slug
+/** @type {Record<string, string>} */
 const lastmod = {};
 for (const dir of ["blog", "services", "cases"]) {
   for (const lang of ["es", "en"]) {
@@ -18,6 +19,7 @@ for (const dir of ["blog", "services", "cases"]) {
     }
   }
 }
+/** @param {string} url */
 const slugDate = (url) => {
   const p = new URL(url).pathname;
   return Object.entries(lastmod).find(([k]) => p.endsWith(k.slice(3)))?.[1];

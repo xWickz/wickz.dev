@@ -20,7 +20,7 @@ const casePage = findPage(await getPages(), project.id, lang);
   class="flex flex-col gap-3 rounded-xl border border-zinc-200 dark:border-zinc-800 px-5 py-4 sm:flex-row sm:items-center sm:gap-8 text-left"
 >
   {
-    project.stats.map((stat) => (
+    project.stats?.map((stat) => (
       <p class="flex items-baseline gap-2">
         <span class="text-2xl font-bold tracking-tight text-blue-500/90">{stat.value}</span>
         <span class="text-sm text-zinc-600 dark:text-zinc-400">

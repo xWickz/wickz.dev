@@ -1,10 +1,8 @@
 ---
 import Layout from "@/layouts/BaseLayout.astro";
-import { getTranslations } from "@/i18n/utils";
-import { SUPPORTED_LANGUAGES, DEFAULT_LANG } from "@/lib/constants";
+import { DEFAULT_LANG } from "@/lib/constants";
 
 const lang = Astro.url.pathname.startsWith("/en") ? "en" : DEFAULT_LANG;
-const t = getTranslations(lang, "SEO");
 ---
 
 <Layout
