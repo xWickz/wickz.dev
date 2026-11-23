@@ -58,9 +58,9 @@
       "title": "NotiDev",
       "description": "Una plataforma para compartir noticias diarias automatizada con n8n"
     },
-    "url-shortcut": {
-      "title": "Acortador de Enlaces",
-      "description": "Un acortador de enlaces simple construido con React en el Frontend y servicios de AWS en el Backend."
+    "site-audit": {
+      "title": "Auditoría de sitios web",
+      "description": "Analiza cualquier URL en segundos: SEO, redes sociales, contenido, rastreo, visibilidad en IA, seguridad y velocidad, con el arreglo de cada problema."
     }
   },
   "Projects": {
@@ -143,7 +143,8 @@
   "links": {
     "home": "Inicio",
     "services": "Servicios",
-    "projects": "Experiencia"
+    "projects": "Experiencia",
+    "lab": "Proyectos"
   },
   "Page": {
     "home": "Inicio",

@@ -17,6 +17,7 @@ export const NAV_LINKS = {
   home: "#home",
   services: "#services",
   projects: "#projects",
+  lab: "lab/",
 } as const;
 
 /** WhatsApp de negocios, formato wa.me (sin + ni 0 inicial). */

@@ -1,6 +1,7 @@
 
 type TechLabel =
   | "React"
+  | "Astro"
   | "Next.js"
   | "TypeScript"
   | "JavaScript"

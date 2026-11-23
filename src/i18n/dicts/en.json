@@ -58,9 +58,9 @@
       "title": "NotiDev",
       "description": "A platform to share daily news automatized with n8n"
     },
-    "url-shortcut": {
-      "title": "URL Shortener",
-      "description": "A simple URL shortener built with React Frontend and AWS Services as Backend."
+    "site-audit": {
+      "title": "Website Audit",
+      "description": "Analyze any URL in seconds: SEO, social cards, content, crawlability, AI visibility, security and speed, with a fix for every issue."
     }
   },
   "Projects": {
@@ -143,7 +143,8 @@
   "links": {
     "home": "Home",
     "services": "Services",
-    "projects": "Experience"
+    "projects": "Experience",
+    "lab": "Projects"
   },
   "Page": {
     "home": "Home",

@@ -36,15 +36,12 @@ export const personalProjects: Project[] = [
 
   // NORMAL
   {
-    id: "url-shortcut",
-    href: "https://github.com/xWickz/url-shortener",
-    demo: "https://shortener.wickz.dev/",
+    id: "site-audit",
+    demo: "https://audit.wickz.dev/",
     newproject: true,
     stack: [
-      { label: "React", Icon: React },
-      { label: "AWS Lambda" },
-      { label: "AWS DynamoDB" },
-      { label: "API Gateway" },
+      { label: "Astro" },
+      { label: "TypeScript", Icon: TypeScript },
     ],
   },
   {

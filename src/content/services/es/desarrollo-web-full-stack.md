@@ -35,7 +35,6 @@ faqs:
 Algunos ejemplos reales, con su código o demo disponibles:
 
 - **Good Life Insurance.** Sitio profesional y registro de clientes automatizado para una aseguradora. Resultado: +50 % de clientes y +40 % de crecimiento de la empresa. [Ver el caso](/es/casos/good-life-insurance/).
-- **Acortador de enlaces.** Frontend en React y backend sin servidores en AWS (Lambda, DynamoDB y API Gateway). [Ver demo](https://shortener.wickz.dev/).
 - **CaseShell.** Plataforma para investigar incidentes técnicos dentro de un entorno virtual con terminal y archivos, hecha con Next.js y TypeScript. Quedó en 4.º lugar en una hackatón. [Ver demo](https://caseshell.wickz.dev).
 - **NotiDev.** Plataforma de noticias diarias publicada de forma automática con n8n, construida con TanStack Start. [Ver demo](https://notidev.vercel.app).
 - **Foro para Last War.** Foro para grupos de un videojuego con Vue y Supabase. [Ver demo](https://rott-guides.vercel.app/).
